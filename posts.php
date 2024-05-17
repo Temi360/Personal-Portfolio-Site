@@ -11,9 +11,9 @@
       <!-- nav bar -->
         <div class="navbar">
             <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="posts.html">Posts</a></li>
-                <li><a href="photos.html">Photo Album</a></li>
+                <li><a href="index.php">About Me</a></li>
+                <li><a href="posts.php">Posts</a></li>
+                <li><a href="photos.php">Photo Album</a></li>
             </ul>
         </div>
         <div class="header-container">
