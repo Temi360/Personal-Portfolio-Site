@@ -29,7 +29,7 @@ body{
   /* Style rule set for individual li link */
 .navbar ul li a {
     color: #4056A1;
-    font-size: 25px;
+    font-size: 35px;
     text-decoration: none;
 }
   
@@ -56,13 +56,12 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding:10px;
+    padding:0px;
     justify-content:space-evenly;
 }
 /* text */
 h1{
-    padding: 20px;
-    width:70%;
+    width:100%;
     font-size:210px;
     font-family: "variex", sans-serif;
     font-weight: 700;
@@ -80,8 +79,8 @@ h2{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 h3{
-    padding: 20px;
-    font-size:40px;
+    padding: 10px;
+    font-size:60px;
     font-family: "basic-sans", sans-serif;
     font-weight: 400;
     font-style: italic;
@@ -94,7 +93,7 @@ p{
 }
 /* images */
 #turtle{
-    margin-top:-500px;
+    margin-top:-800px;
     margin-left:1050px;
     width:500px;
     height:500px;
@@ -168,6 +167,28 @@ a:hover{
     width: 100%; 
     bottom: 0; 
 } */
+/* Post page */
+article {
+    background-color: white;
+    margin-left:20px;
+    /* Set padding */
+    padding:20px;
+    width: 80%;
+    border: 4px solid #63452a; 
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+.meta {
+    color: #888;
+    font-size:1em;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
 /* media queries */ 
 @media screen and (max-width:600px){
     body{
