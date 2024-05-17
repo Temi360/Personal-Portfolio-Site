@@ -60,9 +60,14 @@ body{
     justify-content:space-evenly;
     padding:20px;
 }
+.headerone{
+    width:50%;
+}
+.headertwo{
+    width:50%;
+}
 /* text */
 h1{
-    width:50%;
     font-size:150px;
     font-family: "variex", sans-serif;
     font-weight: 700;
