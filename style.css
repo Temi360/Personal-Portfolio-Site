@@ -1,14 +1,63 @@
 body{
+    margin:0;
+    padding:0;
     background-color:#f8f5e7;
     font-family: "basic-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+/* navbar */
+/* General style rule set for all items in ul */
+.navbar ul {
+    background-color:#f8f5e7;
+    list-style: none;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    width: 100%;
+    margin-top: 0 px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+  
+/* Style rule set for individual li */
+.navbar ul li {
+    float: left;
+    margin: 0px;
+}
+  
+  /* Style rule set for individual li link */
+.navbar ul li a {
+    color: #4056A1;
+    font-size: 25px;
+    text-decoration: none;
+}
+  
+.navbar a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+  
+.navbar a:hover {
+    font-weight: bold;
+}
+/*  icons*/
+#linkedin{
+    width:100px;
+    height:100px;
+    margin-left:-220px;
+    margin-bottom:100px;
+}
+/* header */
 .header-container{
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     align-items: center;
     padding:10px;
+    justify-content:space-evenly;
 }
 /* text */
 h1{
@@ -109,4 +158,19 @@ a:hover{
     color:#ffff;
     transition: color 0.3s ease;
 
+}
+/* footer 
+ footer{
+    background-color:#f8f5e7;
+    position:fixed;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; 
+    bottom: 0; 
+} */
+/* media queries */ 
+@media screen and (max-width:600px){
+    body{
+        background-color:white;
+    }
 }
