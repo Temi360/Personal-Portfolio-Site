@@ -19,12 +19,53 @@
         <div class="header-container">
             <h1>Daily Blog</h1>
         </div>
-        <article>
-            <h3>1st day of real job</h3>
-            <p class="meta">Posted on January 1, 2024 by Temi Ijisesan</p>
-            <p>woke up, eat, drove car. successs!</p>
-            <a href="#" class="read-more">Read more...</a>
-        </article>
+        <!--post divs-->
+        <div class="all_post-container">
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>1st day of real job</h4></div>
+            <div class="posttwo"><p class="meta">Posted on January 1, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>Hungry times</h4></div>
+            <div class="posttwo"><p class="meta">Posted on January 1, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>Really sad today</h4></div>
+            <div class="posttwo"><p class="meta">Posted on March 3, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        </div>
+        <div class="all_post-container">
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>What is the meaning of life?</h4></div>
+            <div class="posttwo"><p class="meta">Posted on May 1, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>Picnic Day!</h4></div>
+            <div class="posttwo"><p class="meta">Posted on May 13, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        <div class="post-container">
+            <img id="leaf"src="leaf.png">
+            <div class="postone"><h4>Dog Thoughts</h4></div>
+            <div class="posttwo"><p class="meta">Posted on May 16, 2024 by Temi Ijisesan</p></div>
+            <div class="postthree"><p>woke up, ate, drove car. successs!</p></div>
+            <div class="postfour"><a href="#" class="read-more">Read more...</a></div>
+        </div>
+        </div>
     </body>
 
 </html>

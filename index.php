@@ -17,7 +17,7 @@
     </div>
     <body>
         <div class="header-container">
-           <div class="header1"><h1>This<br><span style="color:#d8a311">is Temi!</span></h1></div>
+           <div class="header1"><h1>This<br><span>is Temi!</span></h1></div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
         <marquee><h3><i>Welcome to the site where I talk about myself extensively!</i></h3></marquee>
@@ -51,7 +51,7 @@
                 </ul>
             <img id="milk" alt="milkimage"src="milk.png">
         </div>
-        <h3>This is the end. Not the end of your life, but the end of my ted talk. Thanks for learning about meee!</h3>
+        <marquee><h3>This is the end. Not the end of your life, but the end of my ted talk. Thanks for learning about meee!</h3></marquee>
         <!-- linkedin and github -->
             <button><a href="#top">Go to Top</a></button></button>
             <a target="_blank" href="https://www.linkedin.com/in/temi-ijisesan-692829257/#/"><img id="linkedin" src="linkedin.png"></a>
