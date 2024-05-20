@@ -28,8 +28,8 @@ body{
   
   /* Style rule set for individual li link */
 .navbar ul li a {
-    color: #4056A1;
-    font-size: 35px;
+    color: #395B50;
+    font-size: 20px;
     text-decoration: none;
 }
   
@@ -45,20 +45,28 @@ body{
     font-weight: bold;
 }
 /*  icons*/
-#linkedin{
-    width:100px;
-    height:100px;
-    margin-left:-220px;
-    margin-bottom:100px;
+.social-icons {
+    display:flex;
+    flex-direction:row;
+    margin:0;
+}
+.social-icons a {
+    display: inline-block;
+    color: white;
+}
+.social-icons a:hover {
+    size:3em;
+
 }
 /* header */
 .header-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding:0px;
+    padding:30px;
     justify-content:space-evenly;
     padding:20px;
+    margin-bottom:200px;
 }
 .headerone{
     width:50%;
@@ -68,12 +76,12 @@ body{
 }
 /* text */
 h1{
+    margin-bottom:20px;
     font-size:150px;
     font-family: "variex", sans-serif;
     font-weight: 700;
     font-style: normal;
     color:#C5D86D;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
 }
 h2{
@@ -81,8 +89,7 @@ h2{
     font-family: "variex", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color:#E43D12;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color:#1F2F16;
 }
 h3{
     padding: 10px;
@@ -90,15 +97,15 @@ h3{
     font-family: "basic-sans", sans-serif;
     font-weight: 400;
     font-style: italic;
-    color:#63452a;
+    color:#5A7684;
 }
 p{
     font-size:25px;
-    color:#63452a;
-
+    color:#1F2F16;
 }
 /* images */
 #turtle{
+    opacity:85%;
     width:500px;
     height:500px;
 }
@@ -120,14 +127,19 @@ p{
     width:600px;
     height:500px; 
 }
+/* index page divs */
 .facts{
-    width:70%;
+    width:100%;
     margin: 35px;
-    background-color:white;
-    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
-    border: 4px solid white; /* Adding a border for clarity */
     padding: 20px; /* Adding padding to the content inside the box */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Adjust the values to control the shadow */
+   /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Adjust the values to control the shadow */
+}
+.facts1{
+    width:100%;
+    background-color:#8A9946;
+    /* background-color:white; */
+    padding: 20px; /* Adding padding to the content inside the box */
+   /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Adjust the values to control the shadow */
 }
 /* links */
 a{

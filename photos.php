@@ -11,9 +11,13 @@
         <!-- nav bar -->
         <div class="navbar">
             <ul>
-                <li><a href="index.php">About Me</a></li>
-                <li><a href="posts.php">Posts</a></li>
-                <li><a href="photos.php">Photo Album</a></li>
+                <li><a href="index.php">ABOUT ME</a></li>
+                <li><a href="posts.php">BLOG</a></li>
+                <li><a href="photos.php">PHOTO ALBUM</a></li>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/temi-ijisesan-692829257/"><img src="linkedin2.png" alt="LinkedIn" height="30" width="30"></a>
+                    <a href="https://www.instagram.com/the_dawn_of_art/"><img src="instagram.png" alt="Instagram" height="30" width="30"></a>
+                </div>
             </ul>
         </div>
         <div class="header-container">
