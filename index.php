@@ -1,30 +1,13 @@
+<?php
+    include("init.php");
+    echoHeader();
+    
+?>
 <html>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Temi</title>
-    <!-- external stylesheet links -->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url("https://use.typekit.net/agw6ozp.css");
-      </style>
-    </head>
-    <!-- nav bar -->
-    <div class="navbar">
-        <ul>
-            <li><a href="index.php">ABOUT ME</a></li>
-            <li><a href="posts.php">BLOG</a></li>
-            <li><a href="photos.php">PHOTO ALBUM</a></li>
-            <div class="social-icons">
-                <a target="_blank"href="https://www.linkedin.com/in/temi-ijisesan-692829257/"><img src="linkedin2.png" alt="LinkedIn" height="30" width="30"></a>
-                <a target="_blank"href="https://www.instagram.com/the_dawn_of_art/"><img src="instagram.png" alt="Instagram" height="30" width="30"></a>
-            </div>
-        </ul>
-    </div>
     <body>
         <div class="header-container">
            <div class="header1"><h1>This<br><span>is Temi!</span></h1>
-           <p style="color:#8A9946; margin-top:100px;"> Welcome to my very cool, fun world. Feel free to look around, <br>sus out the vibes, and have a good time. I promise I don't bite</p>
+           <p style="color:#8A9946; margin-top:100px;"> Welcome to my very cool, fun world. Feel free to look around, <br>sus out the vibes, and have a good time. I promise I don't bite.</p>
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
@@ -61,6 +44,7 @@
             <!-- <button><a href="#top">Go to Top</a></button></button> -->
         <!-- attribution -->
         <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a>
-        
-    </body>
-</html>
+<?php
+     echoFooter();
+?>   
+
