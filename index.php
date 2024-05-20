@@ -20,7 +20,6 @@
            <div class="header1"><h1>This<br><span>is Temi!</span></h1></div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
-        <marquee><h3><i>Welcome to the site where I talk about myself extensively!</i></h3></marquee>
         <div id="basic"class="facts">
             <h2>The Basics</h2>
                     <ul>
