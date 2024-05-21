@@ -9,7 +9,7 @@
             'Author' => 'Temi Ijisesan',
             'Body' => 'I need to start making schedules every day because I\'ve been soooo lazy. Everyday
             I get home from work I just rot in my bed. I need help bro. I usually use notion during the school year, but I\'m too lazy to do that too. 
-            Like Ik imma regret not doing stuff with my life after work, but my willingness to be productive just isnt strong enough right now.'
+            Like Ik imma regret not doing stuff with my life after work, but my willingness to be productive just isn\'t strong enough right now.'
         ],
         2 => [
             'Id' =>2,

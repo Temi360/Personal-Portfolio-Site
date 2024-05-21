@@ -21,8 +21,13 @@ if(isset($postinfo['Image'])){
 echo(
     "<div class='headerone'>"
 );
+//back button
 echo(
-    "<a href='blogPosts.php'><img class='backButton'src='back.png'></a>"
+    "<img id='backButton'class='postDirectionButton'src='back.png'>"
+);
+//forward button 
+echo(
+    "<img id='forwardButton'class='postDirectionButton'src='back.png'>"
 );
 if(isset($postinfo['Title'])){
     echo (
@@ -51,3 +56,15 @@ if(isset($postinfo['Body'])){
     );
 }
 ?>
+<!-- <script>
+let forwardButton = document.getElementById("forwardButton");
+function postGallery(){
+    //if statement to make sure id isn;t last post
+    if ($postinfo['Id']<count($getAllPosts())){
+        //change post id to next one 
+        $postinfo = getPost($_REQUEST["postId +1"]);
+    }
+}
+//click listener 
+forwardButton.addEventListener("click", postGallery);
+</script> -->
