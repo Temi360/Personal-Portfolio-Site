@@ -4,18 +4,29 @@ include("init.php");
 echoHeader();
 
 echo(
-    "<br></br>"
+    "<br><br>"
 );
 //back button
-echo(
-    "<a href='blogPosts.php'><img class='backButton'src='back.png'</a>"
-);
 // calls get post function
 $postinfo = getPost($_REQUEST["postId"]);
-
+echo(
+    "<div class='header-container'>"
+);
+if(isset($postinfo['Image'])){
+    echo (
+        "<img style='height=200px;width=200px;margin:40px;'src='".$postinfo['Image']."'<br>"
+        
+    );
+}
+echo(
+    "<div class='headerone'>"
+);
+echo(
+    "<a href='blogPosts.php'><img class='backButton'src='back.png'></a>"
+);
 if(isset($postinfo['Title'])){
     echo (
-        "<h2 style='color:#C5D86D;'>".$postinfo['Title']."</h2>"
+        "<h1 style='color:#C5D86D;font-size:100px;'>".$postinfo['Title']."</h1>"
         
     );
 }
@@ -25,16 +36,17 @@ if(isset($postinfo['Author'])&&isset($postinfo['DateCreated'])){
         
     );
 }
-
-if(isset($postinfo['Image'])){
-    echo (
-        "<img style='height=200px;width=200px;'src='".$postinfo['Image']."'<br>"
-        
-    );
-}
+echo(
+    "</div>"
+);
+echo(
+    "</div>"
+);
 if(isset($postinfo['Body'])){
     echo (
-        "<p>".$postinfo['Body']."</p>"
+        "<div class='blogText-container'>
+            <p>".$postinfo['Body']."</p>
+        </div>"
         
     );
 }

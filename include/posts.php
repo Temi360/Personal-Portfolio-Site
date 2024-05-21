@@ -3,10 +3,11 @@
    $Posts = [
         1 => [
             'Id' =>1,
-            'Image' => 'summer.png',
+            'Image' => 'summer.jpg',
             'Title' => 'Second summer in college',
             'DateCreated' => '05/19/2024',
             'Author' => 'Temi Ijisesan',
+            'Preview'
             'Body' => 'I need to start making schedules every day because I\'ve been soooo lazy. Everyday
             I get home from work I just rot in my bed. I need help bro. I usually use notion during the school year, but I\'m too lazy to do that too. 
             Like Ik imma regret not doing stuff with my life after work, but my willingness to be productive just isnt strong enough right now.'

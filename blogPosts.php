@@ -7,6 +7,8 @@
         <div class="header-container">
             <h1>Daily Blog</h1>
         </div>
+        <h3 style="text-align:center;color:#8A9946">Read all my weird thoughts here (:</h3>
+        <br></br>
             <?php
                 // include("posts.php");
                 $AllPosts = getAllPosts();
