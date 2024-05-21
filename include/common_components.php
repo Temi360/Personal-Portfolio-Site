@@ -15,7 +15,7 @@
     <!-- nav bar -->
     <div class='navbar'>
         <ul>
-            <li><a href='index.php'>ABOUT ME</a></li>
+            <li><a href='index.php'><h2 style='font-size:25px;color:#395B50;margin-top:0;'>Temi</h2></a></li>
             <li><a href='blogPosts.php'>BLOG</a></li>
             <li><a href='photos.php'>PHOTO ALBUM</a></li>
             <div class='social-icons'>
@@ -27,8 +27,7 @@
     }
     function echoFooter($pageTitle = ""){
         echo ("
-                    </body>
+              </body>
             </html>
-
         ");
     }

@@ -13,11 +13,11 @@
                 echo (" <div class='all_post-container'>");
                 foreach(getAllPosts() as $post){
                     echo ("
-                        <div class='post-container'>
+                        <a href=view_posts.php?postId=".$post['Id']."><div class='post-container'>
                             <img src=".$post['Image'].">
-                            <p>".$post['DateCreated']."</p>
-                            <h3><a href=view_posts.php?postId=".$post['Id'].">".$post['Id'].". ".$post['Title']."</a></h3>
-                        </div>
+                            <p><strong>".$post['DateCreated']."</strong></p>
+                            <h4>".$post['Title']."</h4>
+                        </div></a>
                     ");
                 }
                 echo ("</div>");

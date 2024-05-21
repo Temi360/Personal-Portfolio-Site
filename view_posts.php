@@ -3,24 +3,25 @@ include("init.php");
 
 echoHeader();
 
+echo(
+    "<br></br>"
+);
+//back button
+echo(
+    "<a href='blogPosts.php'><img class='backButton'src='back.png'</a>"
+);
 // calls get post function
 $postinfo = getPost($_REQUEST["postId"]);
 
-if(isset($postinfo['DateCreated'])){
-    echo (
-        "<p style='margin-top:100px;'>".$postinfo['DateCreated']."</p>"
-        
-    );
-}
 if(isset($postinfo['Title'])){
     echo (
-        "<h2>".$postinfo['Title']."</h2>"
+        "<h2 style='color:#C5D86D;'>".$postinfo['Title']."</h2>"
         
     );
 }
-if(isset($postinfo['Author'])){
+if(isset($postinfo['Author'])&&isset($postinfo['DateCreated'])){
     echo (
-        "<p>".$postinfo['Author']."</p>"
+        "<p><strong>".$postinfo['DateCreated']."</strong> | ".$postinfo['Author']."</p>"
         
     );
 }

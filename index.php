@@ -8,10 +8,19 @@
         <div class="header-container">
            <div class="header1"><h1>This<br><span>is Temi!</span></h1>
            <p style="color:#8A9946; margin-top:100px;"> Welcome to my very cool, fun world. Feel free to look around, <br>sus out the vibes, and have a good time. I promise I don't bite.</p>
+           <!-- <a href="#aboutMe"><button>Wanna Learn More?</button></a> -->
+           <a href="blogPosts.php"><button>Read my Blog!</button></a>
+
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
-        <img style="margin-top:-220px;margin-left:100px;opacity:50%;"src="green.png"><br>
+        <!-- <div id="aboutMe">
+            <p style="color:#8A9946; margin-top:100px;"> My name is Temi Ijisesan, and I am a 19 year old Junior at WashU studying Communication Design and HCI! I am passion about the intersection of Design and Tech as well as <br>Art Education Disparities around the globe!
+                In my free time I enjoy knitting, watching Love Island, and Sleeping, a lot. Also, this website was fully coded by me! 
+        </div> -->
+       
+        <!-- <button> See Blog -></button>
+        <button> See Portfolio </button> -->
         <!-- <div id="basic"class="facts">
             <h2>The Basics</h2>
                     <ul>
@@ -44,7 +53,7 @@
         </div> -->
             <!-- <button><a href="#top">Go to Top</a></button></button> -->
         <!-- attribution -->
-        <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a>
+        <!-- <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a> -->
 <?php
      echoFooter();
 ?>   
