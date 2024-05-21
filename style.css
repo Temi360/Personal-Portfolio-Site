@@ -85,6 +85,7 @@ h1{
 
 }
 h2{
+    padding:20px;
     font-size:50px;
     font-family: "variex", sans-serif;
     font-weight: 400;
@@ -92,6 +93,7 @@ h2{
     color:#1F2F16;
 }
 h3{
+    padding:20px;
     padding: 10px;
     font-size:50px;
     font-family: "basic-sans", sans-serif;
@@ -100,6 +102,7 @@ h3{
     color:#5A7684;
 }
 p{
+    padding:20px;
     font-size:25px;
     color:#1F2F16;
 }
@@ -146,7 +149,7 @@ a{
     text-decoration:none
 }
 a:hover{
-    color:#0000;
+    color:#C5D86D;
     transition: color 0.3s ease;
 
 }
