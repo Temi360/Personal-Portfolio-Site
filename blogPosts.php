@@ -10,12 +10,17 @@
             <?php
                 // include("posts.php");
                 $AllPosts = getAllPosts();
+                echo (" <div class='all_post-container'>");
                 foreach(getAllPosts() as $post){
                     echo ("
-
-                        <h3><a href=view_posts.php?postId=".$post['Id'].">".$post['Id'].". ".$post['Title']."</a></h3>"
-                    );
+                        <div class='post-container'>
+                            <img src=".$post['Image'].">
+                            <p>".$post['DateCreated']."</p>
+                            <h3><a href=view_posts.php?postId=".$post['Id'].">".$post['Id'].". ".$post['Title']."</a></h3>
+                        </div>
+                    ");
                 }
+                echo ("</div>");
                 ?>
                <!--post divs-->
         <!-- <div class="all_post-container"> -->

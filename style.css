@@ -10,6 +10,7 @@ body{
 /* General style rule set for all items in ul */
 .navbar ul {
     background-color:#FFEDDF;
+    border-bottom: 2px solid #8A9946;;
     list-style: none;
     overflow: hidden;
     position: fixed;
@@ -85,7 +86,7 @@ h1{
 
 }
 h2{
-    padding:20px;
+    padding-left:10px;
     font-size:50px;
     font-family: "variex", sans-serif;
     font-weight: 400;
@@ -93,17 +94,16 @@ h2{
     color:#1F2F16;
 }
 h3{
-    padding:20px;
-    padding: 10px;
-    font-size:50px;
+    padding-left:10px;
+    font-size:35px;
     font-family: "basic-sans", sans-serif;
     font-weight: 400;
     font-style: italic;
     color:#5A7684;
 }
 p{
-    padding:20px;
-    font-size:25px;
+    padding:10px;
+    font-size:20px;
     color:#1F2F16;
 }
 /* images */
@@ -145,6 +145,7 @@ p{
 }
 /* links */
 a{
+    padding:10px;
     color:#63452a;
     text-decoration:none
 }
@@ -191,8 +192,6 @@ button:hover{
     justify-content: center;
 }
 .post-container {
-    display: flex;
-    flex-direction: column;
     background-color: white;
     /* Set padding*/
     padding:20px;

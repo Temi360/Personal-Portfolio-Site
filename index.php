@@ -11,7 +11,8 @@
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
-        <div id="basic"class="facts">
+        <img style="margin-top:-220px;margin-left:100px;opacity:50%;"src="green.png"><br>
+        <!-- <div id="basic"class="facts">
             <h2>The Basics</h2>
                     <ul>
                         <li><p>19</p></li>
@@ -40,7 +41,7 @@
                     <li><p>I've seen the movie Tangled over <strong>100</strong> times.</br> I actually memorized in when I was like 8 </p></li>
                 </ul>
             <img id="milk" alt="milkimage"src="milk.png">
-        </div>
+        </div> -->
             <!-- <button><a href="#top">Go to Top</a></button></button> -->
         <!-- attribution -->
         <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a>

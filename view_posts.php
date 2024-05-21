@@ -25,6 +25,12 @@ if(isset($postinfo['Author'])){
     );
 }
 
+if(isset($postinfo['Image'])){
+    echo (
+        "<img style='height=200px;width=200px;'src='".$postinfo['Image']."'<br>"
+        
+    );
+}
 if(isset($postinfo['Body'])){
     echo (
         "<p>".$postinfo['Body']."</p>"
