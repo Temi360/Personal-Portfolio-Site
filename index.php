@@ -7,54 +7,77 @@
     <body>
         <div class="header-container">
            <div class="header1"><h1>This<br><span>is Temi!</span></h1>
-           <p style="color:#8A9946; margin-top:100px;"> Welcome to my very cool, fun world. Feel free to look around, <br>sus out the vibes, and have a good time. I promise I don't bite.</p>
+           <p style="color:#8A9946; margin-top:100px; margin-bottom:50px"> Welcome to my very cool, fun world. Feel free to look around,<br> sus out the vibes,and have a good time. I promise I don't bite.</p>
            <!-- <a href="#aboutMe"><button>Wanna Learn More?</button></a> -->
            <a href="blogPosts.php"><button>Read my Blog!</button></a>
 
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>
-        <!-- <div id="aboutMe">
-            <p style="color:#8A9946; margin-top:100px;"> My name is Temi Ijisesan, and I am a 19 year old Junior at WashU studying Communication Design and HCI! I am passion about the intersection of Design and Tech as well as <br>Art Education Disparities around the globe!
-                In my free time I enjoy knitting, watching Love Island, and Sleeping, a lot. Also, this website was fully coded by me! 
-        </div> -->
-       
-        <!-- <button> See Blog -></button>
-        <button> See Portfolio </button> -->
-        <!-- <div id="basic"class="facts">
-            <h2>The Basics</h2>
-                    <ul>
-                        <li><p>19</p></li>
-                        <li><p>Scorpio but suprisingly agreeable</p></li>
-                        <li><p>INFJ last time I checked</p></li>
-                        <li><p>Proud Illinois and Semi-Chicago Native</p></li>
-                        <li><p>1 brother, mom and dad, and <span style="color:#d8a311"><strong>cute dog</strong></span></p></li>
-                    </ul>
-            <img id="shiba" alt="shibaimage"src="shiba.png">
-        </div>
-        <div id="hobbies"class="facts1">
-            <h2>Hobbies</h2>
-                <ul>
-                    <li><p>Knitting(As mentioned)</p></li>
-                    <li><p><span style="color:#d8a311"><strong>Sleeping</strong></span> -> No joke, I take sleeping quite seriously</p></li>
-                    <li><p>I love painting honestly because I love being super messy</p></li>
-                    <li><p>I've done theater in different forms since middle school</br>but idk if thats a hobby.doesn't seeem casual enough imo</p></li>
-                </ul>
-            <img id="knit" alt="knittingimage"src="knitting.png">
-        </div>
-        <div id="funfacts"class="facts">
-            <h2>Fun Facts</h2>
-                <ul>
-                    <li><p>I hated computer science in highschool</p></li>
-                    <li><p>I am lactose intolerant unfortunately, but</br> will still take any chance I get to eat ice-cream </p></li>
-                    <li><p>I've seen the movie Tangled over <strong>100</strong> times.</br> I actually memorized in when I was like 8 </p></li>
-                </ul>
-            <img id="milk" alt="milkimage"src="milk.png">
-        </div> -->
-            <!-- <button><a href="#top">Go to Top</a></button></button> -->
-        <!-- attribution -->
-        <!-- <a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a> -->
+        <!-- Sign in form -->
+        <div class="container">
+        <h2>Sign In</h2>
+        <form action=" " method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        <a href="#" class="link"><button>Sign Up for An Account</button></a>
+    </div>
 <?php
+    // <!-- User sign in -->
+    function checkDatabase($email, $password){
+        $isUser = dbQuery ("
+        SELECT * 
+        FROM users
+        WHERE email = :email;
+        ",
+        [
+            "email" => $email,
+        ]
+        )->fetchAll();
+        $isPassword = dbQuery ("
+        SELECT * 
+        FROM users
+        WHERE password = :password;
+        ",
+        [
+            "password" => $password,
+        ]
+        )->fetchAll();
+        if($isUser!=null&&$isPassword!=null){
+            echo("Ur in the database!");
+        }
+        else{
+            echo("You're not yet registered.");
+        
+        }
+
+    //    debugOutput($isUser);
+    //    debugOutput($isPassword);
+    //     // if ($isUser)
+    return $isUser;
+    }
+    if(isset($_REQUEST['email'])&&isset($_REQUEST['password'])){
+        if(empty($_REQUEST['email'])){
+            echo ("Please enter an email address");
+        }
+        else if(empty($_REQUEST['password'])){
+            echo ("Please enter a password");
+
+        }
+        else {
+        checkDatabase($_REQUEST['email'],$_REQUEST['password']);
+        // header("Location:index.php?");
+        // exit;
+        }
+    }
      echoFooter();
 ?>   
 

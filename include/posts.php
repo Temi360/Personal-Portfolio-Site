@@ -67,8 +67,6 @@
 function getPost($PostId){
     // $AllPosts = getAllPosts();
     // Make another call to dbQuery to get One post based on the postId passed to this function
-    echo("THE POST ID is:");
-    echo($PostId);
     // die;
     $SpecificPost = dbQuery("
         SELECT * 
@@ -78,3 +76,5 @@ function getPost($PostId){
 
     return $SpecificPost;
 }
+
+

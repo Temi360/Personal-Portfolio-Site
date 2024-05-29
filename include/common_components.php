@@ -1,6 +1,10 @@
 <?php
+    // $user = $_REQUEST['email'];
+    // $password = $_REQUEST['password'];
     function echoHeader($pageTitle = ""){
-    echo ("
+    //username
+    // global $user;
+        echo ("
     <html>
     <head>
     <meta charset='UTF-8'>
@@ -15,15 +19,14 @@
     <!-- nav bar -->
     <div class='navbar'>
         <ul>
-            <li><a href='index.php'><h2 style='font-size:25px;color:#395B50;margin-top:0;'>Temi</h2></a></li>
+            <li><a href='index.php'><h2 style='font-size:25px;font-weight:700;color:#395B50;margin-top:0;'>Temi</h2></a></li>
             <li><a href='blogPosts.php'>BLOG</a></li>
             <li><a href='photos.php'>PHOTO ALBUM</a></li>
             <div class='social-icons'>
                 <a target='_blank'href='https://www.linkedin.com/in/temi-ijisesan-692829257/'><img src='linkedin2.png' alt='LinkedIn' height='30' width='30'></a>
                 <a target='_blank'href='https://www.instagram.com/the_dawn_of_art/'><img src='instagram.png' alt='Instagram' height='30' width='30'></a>
             </div>
-        </ul>
-    </div> ");
+    </div>");
     }
     function echoFooter($pageTitle = ""){
         echo ("
