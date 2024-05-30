@@ -13,3 +13,4 @@
 		include('include/posts.php');
     include('include/helper_functions.php');
     include('include/comments.php');
+    include('javascript.php');

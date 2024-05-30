@@ -1,6 +1,8 @@
 body{
     margin:0;
     padding:0;
+    width: 100%;
+    height: 100%;
     background-color: #FFEDDF;
     font-family: "basic-sans", sans-serif;
     font-weight: 400;
@@ -87,7 +89,7 @@ img{
 .social-icons {
     display:flex;
     flex-direction:row;
-    margin-top:-10px;
+    margin-top:-5px;
 }
 .social-icons a {
     display: inline-block;
@@ -95,6 +97,53 @@ img{
 }
 .social-icons a:hover {
     size:3em;
+
+}
+#temiIcon{
+    font-size:25px;
+    font-weight:700;
+    color:#395B50;
+    margin-top:0;
+}
+#temiIcon:hover{
+    color:#C5D86D;
+    font-size:1.2em;
+    transition: color, font-size 0.1s ease;
+}
+/* user */
+ #userProfile{
+    display:flex;
+    flex-direction:row;
+    float: right;
+    margin-top:-60px;
+    padding: 14px 20px;
+
+} 
+.userName {
+    /* font-weight:bold; */
+    color: #8A9946;
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    margin:15px;
+}
+.profileImage {
+    width:50px;
+    height:50px;
+    border: 3px dotted #d8caab;
+    border-radius:50%;
+
+}
+.signForm{
+    border: 4px solid #C5D86D;
+    border-radius:5%;
+    /* width: 30%; */
+    width: 500px;
+    margin-left: 35%;
+    text-align: center;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
 
 }
 /* header */
@@ -166,6 +215,8 @@ a:hover{
 button,
 .button{
   /* Set padding */
+  margin-top:10px;
+  margin-bottom:10px;
   padding:20px;
   font-family: "basic-sans", sans-serif;
   /* Set font size */
@@ -180,8 +231,9 @@ button,
   cursor: pointer;
 }
 .button{
+    margin-bottom:10px;
     float:right;
-    bottom:20px;
+    /* bottom:20px; */
 }
 /* button hover */
 button:hover{
@@ -196,7 +248,7 @@ button:hover{
 
 }
 /* back button */
-.backButton{
+.arrows{
     opacity:60%;
     margin-top:40px;
     margin-left:0px;
@@ -204,7 +256,7 @@ button:hover{
     width:50px;
 
 }
-.backButton:hover{
+.arrows:hover{
     opacity:30%;
     transition: opacity 0.3s ease;
 }
@@ -247,16 +299,36 @@ button:hover{
     margin-top:-20px;
     transition: opacity, margin 0.3s ease;
 }
+#showComments{
+    display: flex;
+    flex-direction: row;
+}
+.downArrow{
+    opacity:60%;
+    /* margin-left:290px; */
+    /* margin-top:-100px; */
+    height:50px;
+    width:50px; 
+    transform: rotate(180deg);  
+}
+.upArrow{
+    transform:none;  
+
+}
 /* Individual Post Page */
 .blogComment-container {
     /* background-color: white; */
     /* Set padding*/
+    display:none;
     padding:10px;
     margin:40px;
     border:4px dotted #d8caab;
     border-radius:25px;
     /* border: 2px solid #8A9946;  */
     /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
+}
+.blogComment-containerOpen{
+    display:block;
 }
 .addComment-container {
     padding:20px;
@@ -272,7 +344,7 @@ button:hover{
 #commentContent{
     height:300px;
     width:100%;
-    margin:10px;
+    margin:0px;
     background-color:#FFEDDF;
     border:4px solid #d8caab;
     border-radius:25px;
@@ -300,4 +372,13 @@ button:hover{
     body{
         background-color:white;
     }
+}
+/* javascript */
+.hiddenJsButton{
+    display:none;
+}
+
+.visibleJsButton{
+    display:block;
+    font-size:20px;
 }

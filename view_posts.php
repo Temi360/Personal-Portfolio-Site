@@ -56,9 +56,9 @@
 <div class='addComment-container'>
     <form action='' method='post'>
        <label for="commentName"><h4>Username or email:</h4></label><input type='text' name='commentName' id='commentName'/><br></br>
-            <input type='text' name='commentContent' id='commentContent'height='50px' width='30px'/>
+            <input type='text' name='commentContent' id='commentContent'/>
             <!-- hidden scroll input field -->
-            <input type='submit' class='Button' value= 'Add Comment'> 
+            <input type='submit' class='Button' value= 'Add Comment'>
     </form>
 </div>  
 
@@ -97,6 +97,11 @@ if(isset($_REQUEST['commentName'])&&isset($_REQUEST['commentContent'])){
         exit;
     }
 }
+echo ("
+    <div id='showComments'>
+    <h4>Show Comments</h4><a onclick = 'showComments()'><img style = 'margin-top:0px;'class='downArrow' src='downArrow.png'></a>
+    </div>
+    ");
     foreach($commentInfo as $comment){
         echo(
             "

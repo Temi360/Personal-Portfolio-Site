@@ -1,8 +1,11 @@
 <?php
     include("init.php");
+    include("signIn.php");
     echoHeader();
     
 ?>
+
+
 <html>
     <body>
         <div class="header-container">
@@ -10,6 +13,7 @@
            <p style="color:#8A9946; margin-top:100px; margin-bottom:50px"> Welcome to my very cool, fun world. Feel free to look around,<br> sus out the vibes,and have a good time. I promise I don't bite.</p>
            <!-- <a href="#aboutMe"><button>Wanna Learn More?</button></a> -->
            <a href="blogPosts.php"><button>Read my Blog!</button></a>
+           <a href=" "><button style = 'margin-left:20px;'>Sign In</button></a>
 
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
@@ -28,56 +32,25 @@
             </div>
             <button type="submit" class="btn">Sign In</button>
         </form>
-        <a href="#" class="link"><button>Sign Up for An Account</button></a>
+        <a href="sign_up.php" class="link"><button>Sign Up for An Account</button></a>
+        <!-- <a href="#" class="link"><button>Sign Out</button></a> -->
     </div>
 <?php
-    // <!-- User sign in -->
-    function checkDatabase($email, $password){
-        $isUser = dbQuery ("
-        SELECT * 
-        FROM users
-        WHERE email = :email;
-        ",
-        [
-            "email" => $email,
-        ]
-        )->fetchAll();
-        $isPassword = dbQuery ("
-        SELECT * 
-        FROM users
-        WHERE password = :password;
-        ",
-        [
-            "password" => $password,
-        ]
-        )->fetchAll();
-        if($isUser!=null&&$isPassword!=null){
-            echo("Ur in the database!");
-        }
-        else{
-            echo("You're not yet registered.");
-        
-        }
+        if(isset($_REQUEST['email'])&&isset($_REQUEST['password'])){
+            if(empty($_REQUEST['email'])){
+                echo ("Please enter an email address");
+            }
+            else if(empty($_REQUEST['password'])){
+                echo ("Please enter a password");
 
-    //    debugOutput($isUser);
-    //    debugOutput($isPassword);
-    //     // if ($isUser)
-    return $isUser;
-    }
-    if(isset($_REQUEST['email'])&&isset($_REQUEST['password'])){
-        if(empty($_REQUEST['email'])){
-            echo ("Please enter an email address");
+            }
+            else {
+            checkDatabase($_REQUEST['email'],$_REQUEST['password']);
+            header("Location:index.php?");
+            exit;
+            }
         }
-        else if(empty($_REQUEST['password'])){
-            echo ("Please enter a password");
-
-        }
-        else {
-        checkDatabase($_REQUEST['email'],$_REQUEST['password']);
-        // header("Location:index.php?");
-        // exit;
-        }
-    }
+    // }
      echoFooter();
 ?>   
 
