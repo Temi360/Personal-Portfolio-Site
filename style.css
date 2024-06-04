@@ -275,6 +275,21 @@ button:hover{
     flex-direction:row;
     justify-content:center;
 }
+.signIn-container{
+    border: 4px solid #C5D86D;
+    border-radius:5%;
+    /* width: 30%; */
+    width: 500px;
+    margin-left: 35%;
+    text-align: center;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    display:none
+}
+.signIn-containerOpen{
+    display:block;
+}
 /* Blog Post page */
 .all_post-container{
     display:flex;
@@ -381,4 +396,9 @@ button:hover{
 .visibleJsButton{
     display:block;
     font-size:20px;
+}
+/* ajax test */
+#AjaxTestText{
+    font-size:20px;
+    color:red;
 }

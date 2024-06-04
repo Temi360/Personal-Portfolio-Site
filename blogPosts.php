@@ -9,7 +9,7 @@
         </div>
         <h3 style="text-align:center;color:#8A9946">Read all my weird thoughts here (:</h3>
         <!-- TO DO: Implement Filter By Function -->
-        <p>Filter By</filter>
+        <!-- <p>Filter By</filter> -->
         <br></br>
             <?php
                 echo (" <div class='all_post-container'>");

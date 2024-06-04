@@ -53,17 +53,32 @@
     );
     ?>
 <!-- adding a comment -->
+<script>
+      function commentRequest(postId){
+        var content = document.getElementById('commentContent');
+        var author = document.getElementById('commentName');
+        console.log('test');
+            // // param1='.$_REQUEST['commentContent'].'&param2='.$_REQUEST['commentName'].'&param3='.$postId.
+            fetch('ajax_endpoint.php?content='+ content+'postId='+ postId +'author='+ author).then(
+                response => response.text()//response.text is what's getting returned out of response
+            ).then(
+                const para = document.createElement("p");
+                para.innerText
+                theStuff => document.getElementById('AjaxTestText').innerHTML = theStuff                
+            );
+        }
+</script>
 <div class='addComment-container'>
-    <form action='' method='post'>
+    <!-- <form action =''method='POST'> -->
        <label for="commentName"><h4>Username or email:</h4></label><input type='text' name='commentName' id='commentName'/><br></br>
             <input type='text' name='commentContent' id='commentContent'/>
             <!-- hidden scroll input field -->
-            <input type='submit' class='Button' value= 'Add Comment'>
-    </form>
-</div>  
-
+            <input onclick = 'return commentRequest($postId)' type='submit' class='Button' value= 'Add Comment'>
+    <!-- </form> -->
+</div> 
+ <!--ajax request text  -->
+ <p id='AjaxTestText'></p>
 <?php
-// If we read directly from the request instead of passing variables  
 function saveThisComment($content, $author, $postId){
     $now = date_create('now');
     $datePosted= date_format($now, 'Y-m-d');
@@ -80,26 +95,26 @@ function saveThisComment($content, $author, $postId){
     ]
     );
 }
-if(isset($_REQUEST['commentName'])&&isset($_REQUEST['commentContent'])){
-    if(empty($_REQUEST['commentName'])){
-        echo ("Fill name now");
-        exit;
-    }
-    else if(empty($_REQUEST['commentContent'])){
-        echo ("no, stupid, content now!");
-        exit;
-    }
-    else {
-        saveThisComment($_REQUEST['commentContent'],$_REQUEST['commentName'],$postId);
+
+// if(isset($_REQUEST['commentName'])&&isset($_REQUEST['commentContent'])){
+//     if(empty($_REQUEST['commentName'])){
+//         echo ("Fill name now");
+//         exit;
+//     }
+//     else if(empty($_REQUEST['commentContent'])){
+//         echo ("no, stupid, content now!");
+//         exit;
+//     }
+//     else {
+//         saveThisComment($_REQUEST['commentContent'],$_REQUEST['commentName'],$postId);
         
-        header("Location:view_posts.php?postId=".$postId);
-        // echo "<script>window.scrollTo(0, ". (int)$_GET['scrollPosition'] ." );</script>";
-        exit;
-    }
-}
+//         header("Location:view_posts.php?postId=".$postId);
+//         exit;
+//     }
+// }
 echo ("
     <div id='showComments'>
-    <h4>Show Comments</h4><a onclick = 'showComments()'><img style = 'margin-top:0px;'class='downArrow' src='downArrow.png'></a>
+    <h4 id = 'showCommentText'>Show Comments</h4><a onclick = 'showComments()'><img style = 'margin-top:0px;'class='downArrow' src='downArrow.svg'></a>
     </div>
     ");
     foreach($commentInfo as $comment){

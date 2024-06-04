@@ -21,22 +21,35 @@
     function showComments(){
       for(let i = 0;i< document.getElementsByClassName("blogComment-container").length; i++){
         var hiddenCommentDiv = document.getElementsByClassName("blogComment-container")[i];
+        var downArrow = document.getElementsByClassName("downArrow")[0];
+        var commentText = document.getElementById("showCommentText");
         var listofClassesAppliedToComments =  hiddenCommentDiv.classList;
         if (listofClassesAppliedToComments.contains("blogComment-containerOpen")){
                 hiddenCommentDiv.classList.remove("blogComment-containerOpen");
+                downArrow.classList.remove("upArrow");
+                commentText.innerHTML = "Show Comments"
+
         }
         else{
                 hiddenCommentDiv.classList.add("blogComment-containerOpen");
+                downArrow.classList.add("upArrow");
+                commentText.innerHTML = "Hide Comments"
+
+
         }
       }
-    //   flip arrow
-      var downArrow = document.getElementsByClassName("downArrow")[0];
-      var listofClassesAppliedToDownArrow =  downArrow.classList;
-      if (listofClassesAppliedToDownArrow.contains("upArrow")){
-                downArrow.classList.remove("upArrow");
+      
+    }
+    function showSignIn(){
+        console.log("signin");
+        var hiddenSignInDiv = document.getElementsByClassName("signIn-container")[0];
+        var listofClassesAppliedToSignIn = hiddenSignInDiv.classList;
+        if (listofClassesAppliedToSignIn.contains("signIn-containerOpen")){
+            hiddenSignInDiv.classList.remove("signIn-containerOpen");
         }
         else{
-                downArrow.classList.add("upArrow");
+            hiddenSignInDiv.classList.add("signIn-containerOpen");
+
         }
 
     }
