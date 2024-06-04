@@ -1,0 +1,92 @@
+body{
+
+}
+
+
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /* <uniquifier>: Use a unique and descriptive class name */
+ /* <weight>: Use a value from 100 to 900 */
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+/* colors */
+.grey{
+    color: #F5F5F5;
+
+}
+.black{
+    color: #020001;
+
+}
+.orange{
+    color: #F14D08;
+
+}
+.purple{
+    color: #9CAFFE;
+}
+
+/* text */
+/* headers */
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+    font-size: 25px;
+}
+
+
+
+/* welcome page */
+.navbar{
+    position: fixed;
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    z-index: 1;
+    background-color: #020001;
+    color:#F5F5F5;
+
+}
+.navbar ul {   
+    list-style: none;
+    overflow: hidden;
+
+}
+  
+/* Style rule set for individual li */
+.navbar ul li {
+    margin-right:150px;
+    text-decoration: none;
+    float: left;
+}
+  
+/* Style rule set for individual li link */
+.navbar ul li a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+  
+#homeIconNavbarDiv{
+    margin-top: -5px;
+    /* margin-right: 320px; */
+
+}
+#designerArtistStoryteller{
+
+}
+#contactPosition{
+    margin-top:7px;
+}
