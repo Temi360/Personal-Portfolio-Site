@@ -91,10 +91,13 @@ h3{
     margin-top:7px;
 }
 #welcomePageName{
-    margin-left: 100px;
-    margin-top: 140px;
+    margin: auto;
+    margin-top:200px;
+
 }
 #welcomePageIconClick{
+    margin-top: 600px;
+    margin-right: 200px;
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
@@ -102,6 +105,12 @@ h3{
     transform: rotate(90deg);
     transition: transform 0.3s ease;
 }
+.WelcomePageNameAndIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
 #clickMe{
     float: right;
     margin-right: 200px;
@@ -109,7 +118,7 @@ h3{
 }
 /* loading page */
 #loadingIcon{
-    margin-top:60px;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     display: block;

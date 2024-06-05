@@ -18,10 +18,12 @@
                     <li id='contactPosition'><img src = 'images/contact.svg'></li>
                 </ul>
             </div>
-            <div>
+            <div class = 'WelcomePageNameAndIcon'>
                 <img id = 'welcomePageName' src = 'images/TEMI.svg'>
-                <a href= 'loading_page.php'><img id = 'welcomePageIconClick' src = 'images/welcome_page_iconClick.svg'></a>
+                <img id = 'welcomePageIconClick' src = 'images/welcome_page_iconClick.svg'>
             </div>
             <img id = 'clickMe' src = 'images/click_me.svg'>
+
+            
 
     </html>
