@@ -20,9 +20,9 @@
             </div>
             <div class = 'WelcomePageNameAndIcon'>
                 <img id = 'welcomePageName' src = 'images/TEMI.svg'>
-                <img id = 'welcomePageIconClick' src = 'images/welcome_page_iconClick.svg'>
+                <div><a href = 'loading_page.php'><img id = 'welcomePageIconClick' src = 'images/welcome_page_iconClick.svg'></div></a>
             </div>
-            <img id = 'clickMe' src = 'images/click_me.svg'>
+            <a href = 'loading_page.php'><img id = 'clickMe' src = 'images/click_me.svg'></a>
 
             
 

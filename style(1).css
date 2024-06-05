@@ -85,6 +85,12 @@ h3{
 #homeIconNavbarDiv{
     margin-top: -15px;
 }
+#homeIconNavbarDiv:hover{
+
+    transform: rotate(-50deg);
+    transition: transform, 0.3s ease;
+
+}
 #designerArtistStoryteller{
     /* margin-left: 300px;
     margin-right: 300px; */
@@ -105,7 +111,7 @@ h3{
 }
 #welcomePageIconClick:hover{
     /* fill: #F14D08; */
-    transform: rotate(90deg);
+    transform: rotate(50deg);
     transition: transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
