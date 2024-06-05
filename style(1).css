@@ -53,22 +53,26 @@ h3{
 .navbar{
     position: fixed;
     display: flex;
-    width:100%;
+    width: 100%;
     flex-direction: row;
+    justify-content: space-around;
     z-index: 1;
     background-color: #020001;
-    color:#F5F5F5;
+    color: #F5F5F5;
+    margin: 0;
 
 }
 .navbar ul {   
     list-style: none;
     overflow: hidden;
+    margin: 0;
 
 }
   
 /* Style rule set for individual li */
 .navbar ul li {
-    margin-right:150px;
+    padding-top: 25px;
+    margin-right: 150px;
     text-decoration: none;
     float: left;
 }
@@ -80,11 +84,11 @@ h3{
 }
   
 #homeIconNavbarDiv{
-    margin-top: -5px;
-    /* margin-right: 320px; */
-
+    margin-top: -15px;
 }
 #designerArtistStoryteller{
+    /* margin-left: 300px;
+    margin-right: 300px; */
 
 }
 #contactPosition{
@@ -113,8 +117,8 @@ h3{
 
 #clickMe{
     float: right;
-    margin-right: 200px;
-    margin-top: -270px;
+    margin-right: 12%;
+    margin-top: -17%;
 }
 /* loading page */
 #loadingIcon{
