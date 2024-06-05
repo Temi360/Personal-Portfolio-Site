@@ -12,8 +12,8 @@
         <!-- <body> -->
             <div class = 'navbar'>
                 <ul class = ''>
-                    <li id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/welcome_page_home_icon.svg'></a></li>
-                    <li id='designerArtistStoryteller'><img src = 'images/designer_artist_storyteller.svg'></li>
+                    <li id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(welcome_page).svg'></a></li>
+                    <li id='designerArtistStoryteller'><img src = 'images/designer_artist_storyteller(welcome_page).svg'></li>
                     <li><img src = 'images/work.svg'></li>
                     <li id='contactPosition'><img src = 'images/contact.svg'></li>
                 </ul>
