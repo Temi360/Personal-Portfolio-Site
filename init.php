@@ -1,6 +1,6 @@
 <?php
     date_default_timezone_set('America/Chicago');
-    session_start();
+    // session_start();
 
     include('include/connect.php');
 		
@@ -14,3 +14,4 @@
     include('include/helper_functions.php');
     include('include/comments.php');
     include('javascript.php');
+    include('SignIn.php');

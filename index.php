@@ -1,6 +1,5 @@
 <?php
     include("init.php");
-    include("signIn.php");
     echoHeader();
     
 ?>
@@ -14,6 +13,7 @@
            <!-- <a href="#aboutMe"><button>Wanna Learn More?</button></a> -->
            <a href="blogPosts.php"><button>Read my Blog!</button></a>
            <a onclick = 'showSignIn()'><button style = 'margin-left:20px;'>Sign In</button></a>
+           <a href="sign_out.php" class="link"><button>Sign Out</button></a>
         </div>
             <div class="header2"><img id="turtle"alt="turtleimage"src="turtle.gif"></div>
         </div>

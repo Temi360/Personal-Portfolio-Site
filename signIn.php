@@ -1,5 +1,6 @@
 <?php
     // <!-- User sign in -->
+    
     function checkDatabase($email, $password){
         $isUser = dbQuery ("
         SELECT * 
@@ -90,8 +91,22 @@
         //     }
         // }
     }
+    // TO DO: HASH PASSWORDS
+    function insertDatabase ($firstName,$lastName,$email,$password)
+    {
+        $user = dbQuery("
+        INSERT 
+        INTO users (firstName, lastName, email, password) 
+        VALUES (:firstName , :lastName, :email, :password),
+        ",
+        [
+            "firstName" => $firstName,
+            "lastName" => $lastName,
+            "email" => $email,
+            "password" => $password,
 
-    // function insertDatabase ($_REQUEST['firstName'],$_REQUEST['email'],$_REQUEST['password'])
-
+        ]
+        );
+    }
 
     echoFooter();

@@ -2,6 +2,7 @@
     // $user = $_REQUEST['email'];
     // $password = $_REQUEST['password'];
     function echoHeader($pageTitle = ""){
+        session_start();
     //username
     // global $user;
         echo ("

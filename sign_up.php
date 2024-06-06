@@ -1,13 +1,12 @@
 <?php
   include("init.php");
-  include("signIn.php");
   echoHeader();
   
 ?>
 <html>
     <div class="header-container"><h1>Sign Up!</h1></div>
     <div class="signForm">
-            <form action="index.php" method="POST">
+            <form onsubmit = "insertDatabase($_REQUEST['firstName'],$_REQUEST['lastName']$_REQUEST['email'],$_REQUEST['password'])" action="index.php" method="POST">
                 <div class="form-group">
                      <label for="firstName"><h4>First Name</h4></label>
                      <input type="text"  id="firstName" name="firstName" required>
