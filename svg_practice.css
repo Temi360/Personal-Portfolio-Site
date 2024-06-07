@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+/* sliding hands */
+:root {
+    --purple-color: #9CAFFE;
+    --orange-color: #F14D08;
+}
+svg {
+    cursor: pointer;
+
+}
+#purpleGroup{
+    fill: var(--purple-color);
+}
+#orangeGroup{
+    fill: var(--orange-color);
+}
+#purple1,
+#purple2,
+#orange1 {
+transition: all 1s ease;
+}
+#purple2 {
+transform: translateX(-100%);
+}
+svg:hover #orange1 {
+transform: translateX(20%);
+}
+svg:hover #purple1 {
+transform: translateX(40%);
+opacity: 0;
+}
+svg:hover #purple2 {
+transform: translateX(0%);
+}
+
+/* moving eyes */
+/* .visible {
+    display:block;
+}
+
+.hidden {
+    display:none;
+} */
+#pupils,
+#eyes {
+    /* display:none; */
+}
+#blink {
+    /* display:none; */
+}
+/* #pupils {
+    animation: moving-eyes .5s ease-in-out infinite alternate ;
+    /* adding linear and removing ease makes the animation continue forever */
+    /* alternate makes it so that the animation doesn't suddenly stop and start from the beginning 
+    transform-origin: center;
+    transform-box: fill-box;
+} */
+/* #rightBrow {
+    animation: moving-brows .5s  ease-in-out infinite alternate;
+    /* adding linear and removing ease makes the animation continue forever 
+    transform-origin: center;
+    transform-box: fill-box;
+} */
+
+#pupils,
+#eyes {
+    animation: blinking 1s infinite;
+}
+#blink {
+    animation: closed 1s infinite
+} 
+@keyframes moving-eyes {
+    from {
+        transform: translateX(0);
+
+    }
+    to {
+        transform: translateX(3%);
+    }
+}
+
+@keyframes moving-brows {
+    from {
+        transform: translateY(0);
+
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+ @keyframes blinking {
+    from {
+        /* display: block; */
+        opacity: 1;
+    }
+    to {
+       /* display: none; */
+       opacity: 0;
+    }
+     
+} 
+
+@keyframes closed {
+    from {
+        /* display: none; */
+        opacity: 0;
+    }
+    to {
+        /* display: block; */
+        opacity: 1;
+    }
+     
+} 
