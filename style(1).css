@@ -57,7 +57,6 @@ h3{
     flex-direction: row;
     justify-content: space-around;
     z-index: 1;
-    background-color: #020001;
     color: #F5F5F5;
     margin: 0;
 
@@ -86,6 +85,12 @@ h3{
 #homeIconNavbarDiv{
     margin-top: -15px;
 }
+#homeIconNavbarDiv:hover{
+
+    transform: rotate(-50deg);
+    transition: transform, 0.3s ease;
+
+}
 #designerArtistStoryteller{
     /* margin-left: 300px;
     margin-right: 300px; */
@@ -96,17 +101,17 @@ h3{
 }
 #welcomePageName{
     margin: auto;
-    margin-top:200px;
+    margin-top: 50px;
 
 }
 #welcomePageIconClick{
-    margin-top: 600px;
+    margin-top: 400px;
     margin-right: 200px;
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
     /* fill: #F14D08; */
-    transform: rotate(90deg);
+    transform: rotate(50deg);
     transition: transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
@@ -118,7 +123,7 @@ h3{
 #clickMe{
     float: right;
     margin-right: 12%;
-    margin-top: -17%;
+    margin-top: -20%;
 }
 /* loading page */
 #loadingIcon{
