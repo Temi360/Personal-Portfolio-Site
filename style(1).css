@@ -96,24 +96,30 @@ h3{
     margin-top: 90px;
 
 }
-#eyebrows:hover,
-#lashes:hover,
-#mouth:hover,
-#eyes:hover, 
-#mouth:hover, 
-#hair:hover{
-    stroke: var(--orange);
-}
 
+/* #hair{
+    fill: var(--grey);
+}
+#eyebrows{
+    fill: var(--grey);
+
+} */
 #welcomePageIconClick{
+    stroke: var(--grey);
     margin-top: 400px;
     margin-right: 200px;
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
+    stroke: var(--orange);
     transform: rotate(50deg);
-    transition: transform 0.3s ease;
+    transition: stroke, transform 0.3s ease;
 }
+ /* #hair:hover{
+    fill: var(--orange);
+    transition: stroke, fill, transform 0.3s ease;
+
+}  */
 .WelcomePageNameAndIcon{
     display: flex;
     flex-direction: row;
