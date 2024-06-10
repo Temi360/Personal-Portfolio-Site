@@ -22,9 +22,9 @@
                 </ul>
             </div>
             <div class = 'WelcomePageNameAndIcon'>
-                    <img id = 'welcomePageName' src = 'images/TEMI.svg'>
+                    <img alt = 'The name Temi' id = 'welcomePageName' src = 'images/TEMI.svg'>
                     <a href = 'loading_page.php'>
-                    <div id = 'welcomePageIconClick'>
+                    <div id = 'welcomePageIconClick' alt = 'clickable icon that navigates to the next page'>
                         <svg width="205" height="190" viewBox="0 0 205 190" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="welcome_page_iconClick" filter="url(#filter0_d_15_123)">
                             <g id="eyebrows">
