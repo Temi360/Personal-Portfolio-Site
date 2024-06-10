@@ -12,7 +12,7 @@ body{
 
 .jost {
   font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 } 
 
@@ -35,8 +35,7 @@ h2{
 }
 
 h3{
-    font-weight: 500;
-    font-size: 25px;
+    
 }
 
 
@@ -62,6 +61,8 @@ h3{
   
 /* Style rule set for individual li */
 .navbar ul li {
+    font-size: 25px;
+    color: var(--purple);
     padding-top: 20px;
     margin-right: 150px;
     text-decoration: none;
@@ -71,17 +72,16 @@ h3{
 /* Style rule set for individual li link */
 .navbar ul li a {
     text-decoration: none;
-    color: #F5F5F5;
+    color: var(--grey);
 }
   
 #homeIconNavbarDiv{
-    margin-top: -15px;
+    margin-top: -10px;
 }
 #homeIconNavbarDiv:hover{
 
     transform: rotate(-50deg);
     transition: transform, 0.3s ease;
-
 }
 #designerArtistStoryteller{
     /* margin-left: 300px;
@@ -102,9 +102,9 @@ h3{
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
-    /* fill: #F14D08; */
+    stroke: #F14D08;
     transform: rotate(50deg);
-    transition: transform 0.3s ease;
+    transition: fill, transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
     display: flex;

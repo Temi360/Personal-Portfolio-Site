@@ -17,11 +17,11 @@
         <body> 
         <!-- <body> -->
             <div class = 'navbar'>
-                <ul class = ''>
-                    <li id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(desk_page).svg'></a></li>
-                    <li class = 'jost'><h3 style = 'color: #020001'>designer, artist, storyteller...</h3></li>
-                    <li class = 'jost'><h3 style = 'color: #9CAFFE'>work.</h3></li>
-                    <li class = 'jost'><h3 style = 'color: #9CAFFE'>contact.</h3></li>
+                <ul>
+                    <li alt = 'home icon' id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(desk_page).svg'></a></li>
+                    <li class = 'jost' style = 'color: #020001'>designer, artist, storyteller<span style = 'color:#F14D08'>...</span></li>
+                    <li class = 'jost'>work<span style = 'color:#F14D08'>.</span></li>
+                    <li class = 'jost'>contact<span style = 'color:#F14D08'>.</span></li>
                 </ul>
             </div>
     </html>
