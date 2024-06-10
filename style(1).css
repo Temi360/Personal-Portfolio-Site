@@ -96,15 +96,23 @@ h3{
     margin-top: 90px;
 
 }
+#eyebrows:hover,
+#lashes:hover,
+#mouth:hover,
+#eyes:hover, 
+#mouth:hover, 
+#hair:hover{
+    stroke: var(--orange);
+}
+
 #welcomePageIconClick{
     margin-top: 400px;
     margin-right: 200px;
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
-    stroke: #F14D08;
     transform: rotate(50deg);
-    transition: fill, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
     display: flex;
