@@ -97,11 +97,11 @@ h3{
 
 }
 
-#hair{
+#hairWelcome{
     fill: var(--grey);
     stroke: var(--grey);
 }
- #eyebrows{
+ #eyebrowsWelcome{
     fill: var(--grey);
 
 } 
@@ -116,13 +116,13 @@ h3{
     transform: rotate(50deg);
     transition: stroke, transform 0.3s ease;
 }
-svg:hover #hair {
+svg:hover #hairWelcome {
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 
 } 
-svg:hover #eyebrows{
+svg:hover #eyebrowsWelcome{
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;

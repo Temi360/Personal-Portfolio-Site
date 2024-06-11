@@ -16,7 +16,7 @@
             <div class = 'navbar'>
                 <ul>
                     <li  alt = 'home icon' id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(welcome_page).svg'></a></li>
-                    <li class = 'jost'>designer, artist, storyteller<span style = 'color: var(--orange)'>...</span></li>
+                    <li class = 'jost' style = 'color: var(--grey);'>designer, artist, storyteller<span style = 'color: var(--orange)'>...</span></li>
                     <li class = 'jost'>work<span style = 'color: var(--orange)'>.</span></li>
                     <li class = 'jost'>contact<span style = 'color: var(--orange)'>.</span></li>
                 </ul>
@@ -27,7 +27,7 @@
                     <div id = 'welcomePageIconClick' alt = 'clickable icon that navigates to the next page'>
                         <svg width="205" height="190" viewBox="0 0 205 190" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="welcome_page_iconClick" filter="url(#filter0_d_15_123)">
-                            <g id="eyebrows">
+                            <g id="eyebrowsWelcome">
                             <path id="Vector 26" d="M130.388 102.673C127.846 101.301 127.081 98.5584 132.463 99.6445C137.54 100.627 135.925 100.016 141.418 101.368C146.912 102.719 144.685 105.747 142.259 105.451C139.361 105.097 132.93 104.046 130.388 102.673Z" stroke-width="2"/>
                             <path id="Vector 27" d="M70.8083 91.0055C68.4821 89.2412 70.0791 87.1275 71.6214 87.6552C72.8436 87.9945 76.5963 89.2245 81.8287 91.4299C87.0611 93.6353 84.7826 96.0516 82.6211 95.4308C79.8151 94.625 73.1344 92.7697 70.8083 91.0055Z" stroke-width="2"/>
                             </g>
@@ -44,7 +44,7 @@
                             <g id="mouth">
                             <path id="Vector_2" d="M99.5809 111.976L104.419 115.45L109.869 113.837M99.5999 109.339C99.9859 110.443 100.157 112.774 97.7526 113.266" stroke-width="2"/>
                             </g>
-                            <g id="hair">
+                            <g id="hairWelcome">
                             <g id="Vector 41">
                             <path d="M69.0422 68.7391C65.318 69.3722 61.8875 79.7289 60.7833 83.4022L64.3356 81.2836L68.0955 79.9233L75.4557 76.4313L78.792 74.5731L76.4175 70.0183C75.5453 68.0786 72.7664 68.106 69.0422 68.7391Z"/>
                             <path d="M80.6028 74.411L76.2424 65.8348C75.7242 61.4052 82.7152 64.2158 84.5617 65.6114C84.4019 64.8402 85.1104 63.3083 89.2234 63.3509C93.3363 63.3934 95.5539 65.1421 96.1485 66.0111L93.2709 70.8787L85.3481 72.4058L80.6028 74.411Z"/>
