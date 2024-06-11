@@ -118,3 +118,15 @@ transform: translateX(0%);
     }
      
 } 
+/* svg:hover #blades{
+    transform: rotate(30deg);
+    animation: transform, 1s ease-in-out infinite;
+}
+ fanBlowing {
+    from {
+       opacity: 0;
+    }
+    to {
+        opacity: 1;
+}
+} */
