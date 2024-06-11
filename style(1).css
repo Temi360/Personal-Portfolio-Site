@@ -5,34 +5,25 @@ body{
 
 
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); */
 
  /* <uniquifier>: Use a unique and descriptive class name */
  /* <weight>: Use a value from 100 to 900 */
 
 .jost {
   font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 } 
 
 /* colors */
-.grey{
-    color: #F5F5F5;
+:root {
+    --purple: #9CAFFE;
+    --orange: #F14D08;
+    --grey: #F5F5F5;
+    --black: #020001;
 
 }
-.black{
-    color: #020001;
-
-}
-.orange{
-    color: #F14D08;
-
-}
-.purple{
-    color: #9CAFFE;
-}
-
 /* text */
 /* headers */
 h1{
@@ -44,7 +35,7 @@ h2{
 }
 
 h3{
-    font-size: 25px;
+    
 }
 
 
@@ -70,7 +61,9 @@ h3{
   
 /* Style rule set for individual li */
 .navbar ul li {
-    padding-top: 25px;
+    font-size: 30px;
+    color: var(--purple);
+    padding-top: 20px;
     margin-right: 150px;
     text-decoration: none;
     float: left;
@@ -79,17 +72,16 @@ h3{
 /* Style rule set for individual li link */
 .navbar ul li a {
     text-decoration: none;
-    color: #F5F5F5;
+    color: var(--grey);
 }
   
 #homeIconNavbarDiv{
-    margin-top: -15px;
+    margin-top: -10px;
 }
 #homeIconNavbarDiv:hover{
 
     transform: rotate(-50deg);
     transition: transform, 0.3s ease;
-
 }
 #designerArtistStoryteller{
     /* margin-left: 300px;
@@ -101,18 +93,39 @@ h3{
 }
 #welcomePageName{
     margin: auto;
-    margin-top: 50px;
+    margin-top: 90px;
 
 }
+
+#hair{
+    fill: var(--grey);
+    stroke: var(--grey);
+}
+ #eyebrows{
+    fill: var(--grey);
+
+} 
 #welcomePageIconClick{
+    stroke: var(--grey);
     margin-top: 400px;
     margin-right: 200px;
     transform: rotate(0deg);
 }
 #welcomePageIconClick:hover{
-    /* fill: #F14D08; */
+    stroke: var(--orange);
     transform: rotate(50deg);
-    transition: transform 0.3s ease;
+    transition: stroke, transform 0.3s ease;
+}
+svg:hover #hair {
+    fill: var(--orange);
+    stroke: var(--orange);
+    transition: all transform 0.3s ease;
+
+} 
+svg:hover #eyebrows{
+    fill: var(--orange);
+    stroke: var(--orange);
+    transition: all transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
     display: flex;
@@ -123,7 +136,7 @@ h3{
 #clickMe{
     float: right;
     margin-right: 12%;
-    margin-top: -20%;
+    margin-top: -22%;
 }
 /* loading page */
 #loadingIcon{
