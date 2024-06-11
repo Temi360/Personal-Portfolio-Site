@@ -118,15 +118,19 @@ transform: translateX(0%);
     }
      
 } 
-/* svg:hover #blades{
-    transform: rotate(30deg);
-    animation: transform, 1s ease-in-out infinite;
+.blades-rotate{
+    transform-origin: center;
+    transform-box: fill-box; 
+    animation: fanBlowing .1s infinite;
 }
- fanBlowing {
+
+@keyframes fanBlowing {
     from {
-       opacity: 0;
+       transform: rotate(0deg);
     }
     to {
-        opacity: 1;
+        transform: rotate(360deg);
 }
-} */
+} 
+
+ 
