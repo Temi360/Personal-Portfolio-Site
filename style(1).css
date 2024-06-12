@@ -42,7 +42,6 @@ h3{
 
 /* welcome page */
 .navbar{
-    position: fixed;
     display: flex;
     width: 100%;
     flex-direction: row;

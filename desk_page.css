@@ -14,23 +14,26 @@ body {
   --black: #020001;
 }
   /* follow tutorial on positioning svgs: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Positions */
-#TemiCharacterSvg{
-  transform: translate(1000px,450px);
-    /* width: 32%;
-    height: 32%;
-    margin-left: 450px;
-    margin-top: 275px; */
+.deskBackground{
+  display: flex;
+  justify-content: center;
+}
+#computerScreen{
+  stroke: var(--purple);
+}
+#computerBase{
+  stroke: var(--grey);
 
 }
+#computer:hover #computerScreen{
+  stroke: var(--black);
+  stroke-width:2px;
+} 
+#computer:hover #computerBase{
+  stroke: var(--black);
+  stroke-width:2px;
+} 
 
-#computerSvg{
-    /* width: 21%;
-    height: 21%;
-    margin-top: -160px;
-    margin-left: 765px; */
-
-}
-svg:hover #computer{
-  fill: var(--orange);
-  transition: all 1s ease-in-out;
+#light{
+  display:none;
 }

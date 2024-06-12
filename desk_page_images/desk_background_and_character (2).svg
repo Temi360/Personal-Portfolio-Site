@@ -1,31 +1,4 @@
-<?php
-    include('include/init.php');
-?>
-    <html>
-        
-        <head>
-        <title>Welcome</title>
-        <link rel='stylesheet' href='style(1).css'>
-        <link rel='stylesheet' href='desk_page.css'>
-        <link rel='stylesheet' href='style(1).css'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-        </head>
-        <body> 
-        <!-- <body> -->
-            <div class = 'navbar'>
-                <ul>
-                    <li alt = 'home icon' id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(desk_page).svg'></a></li>
-                    <li class = 'jost' style = 'color: #020001'>designer, artist, storyteller<span style = 'color:#F14D08'>...</span></li>
-                    <li class = 'jost'>work<span style = 'color:#F14D08'>.</span></li>
-                    <li class = 'jost'>contact<span style = 'color:#F14D08'>.</span></li>
-                </ul>
-             </div>
-            <div class = 'deskBackground'>
-            <svg width="800" height="724.42" viewBox="0 0 561 508" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="561" height="508" viewBox="0 0 561 508" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="desk_background_and_character">
 <g id="deskBackgroundElements">
 <g id="clock" filter="url(#filter0_d_209_107)">
@@ -249,7 +222,7 @@
 <path id="Rectangle 8" d="M465.359 129.231L469.975 132.307L469.975 172.307L444.996 153.555L465.359 129.231Z" fill="#C7BEBE"/>
 <path id="Rectangle 9" d="M462.667 128.077L463.821 128.077L437.282 149.23L423.436 148.077L462.667 128.077Z" fill="#D9D9D9"/>
 </g>
-<g onClick = "lightOn()" id="lampButton">
+<g onClick = "lightOn()"id="lampButton">
 <path id="Vector 167" d="M468.638 113.469L460.584 127.794L473.475 135.681C475.11 131.33 481.748 122.611 481.557 120.968C481.367 119.326 476.71 111.848 468.638 113.469Z" fill="#9CAFFE"/>
 </g>
 </g>
@@ -367,30 +340,3 @@
 </filter>
 </defs>
 </svg>
-
-
-</div>
-        <!-- SVGS -->
-
-            <!-- <div>
-                <svg id = 'computerSvg' width="141" height="117" viewBox="0 0 141 117" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="computer">
-                    <g id="Vector 135">
-                    <path d="M31.8762 112.662L8.33183 108.767C4.42246 108.121 1.55519 104.74 1.55519 100.777C1.55519 96.3048 5.18099 92.679 9.65365 92.679L31.8762 92.679L106.196 90.98C111.603 90.8564 116.053 95.2058 116.053 100.614C116.053 105.815 111.926 110.078 106.728 110.246L31.8762 112.662Z" fill="#9CAFFE"/>
-                    <path d="M31.8762 112.662L8.33183 108.767C4.42246 108.121 1.55519 104.74 1.55519 100.777V100.777C1.55519 96.3048 5.18099 92.679 9.65365 92.679L31.8762 92.679M31.8762 112.662L31.8762 92.679M31.8762 112.662L106.728 110.246C111.926 110.078 116.053 105.815 116.053 100.614V100.614C116.053 95.2058 111.603 90.8564 106.196 90.98L31.8762 92.679" stroke="#F5F5F5" stroke-width="3"/>
-                    </g>
-                    <g id="Vector 134">
-                    <path d="M25.7165 11.9312L25.6681 74.241C25.6638 79.8495 30.2719 84.365 35.8792 84.2466L104.274 82.8026C109.689 82.6883 114.029 78.2839 114.063 72.868L114.447 11.9465C114.482 6.39597 109.99 1.87894 104.439 1.88343L35.7084 1.93901C35.3703 1.93928 35.0362 1.95633 34.7068 1.98936C29.6605 2.49537 25.7205 6.75263 25.7165 11.9312Z" fill="#9CAFFE"/>
-                    <path d="M35.124 84.2625L25.5731 83.8842C20.2054 83.6715 15.9648 79.2561 15.9689 73.8842L15.9898 47.0039L16.0164 12.5848C16.0205 7.37789 20.0115 2.95976 25.1974 2.49264C29.1568 2.136 33.1533 1.84307 34.7082 1.98949M114.063 72.868L114.447 11.9465C114.482 6.39597 109.99 1.87894 104.439 1.88343L35.7084 1.93901C30.1917 1.94347 25.7207 6.41457 25.7165 11.9312L25.6681 74.241C25.6638 79.8495 30.2719 84.3649 35.8792 84.2466L104.274 82.8026C109.689 82.6883 114.029 78.2839 114.063 72.868Z" stroke="#9CAFFE" stroke-width="3"/>
-                    </g>
-                    <path id="Vector 132" d="M102.063 28.9419L85.5497 28.9787C80.0268 28.9911 75.5597 33.4782 75.572 39.001L75.6018 52.3696C75.6141 57.8924 80.1013 62.3596 85.6241 62.3472L102.138 62.3104C107.661 62.2981 112.128 57.811 112.116 52.2881L112.086 38.9196C112.073 33.3967 107.586 28.9296 102.063 28.9419Z" fill="#F14D08" stroke="#F5F5F5" stroke-width="3"/>
-                    <path id="Vector 133" d="M102.415 26.3041V26.3041C102.393 23.3837 100.008 21.0341 97.0877 21.0561L53.5269 21.3842C48.0042 21.4258 43.5609 25.9365 43.6025 31.4592L43.8501 64.3379C43.8917 69.8606 48.4025 74.3039 53.9252 74.2624L94.4014 73.9575C99.0253 73.9227 102.746 70.146 102.711 65.5221V65.5221" stroke="#F5F5F5" stroke-width="3"/>
-                    <path id="Line 7" d="M49 22.5046L81 29.5046" stroke="#F5F5F5" stroke-width="2"/>
-                    <line id="Line 8" x1="47.6286" y1="71.0761" x2="77.6286" y2="59.0761" stroke="#F5F5F5" stroke-width="2"/>
-                    <path id="chord" d="M78 100.774C91.3091 97.2619 139 97.266 139 117" stroke="#020001" stroke-width="3"/>
-                    <g id="computerLogo">
-                    </g>
-                    </g>
-                    </svg>
-            </div> -->
-    </html>
