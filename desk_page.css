@@ -40,3 +40,65 @@ body {
 .displayBlock{
   display:block;
 }
+#fanCenter{
+  display:none;
+}
+.blades-rotate{
+  transform-origin: center;
+  transform-box: fill-box; 
+  animation: fanBlowing .2s linear infinite;
+}
+.hair-blows{
+  transform-origin: center;
+  transform-box: fill-box; 
+  animation: hairBlowing .5s ease-in-out infinite alternate;
+} 
+.postIt-blows{
+  transform-origin: center;
+  transform-box: fill-box; 
+  animation: postItBlowing 1s ease-in-out infinite alternate;
+}
+@keyframes fanBlowing {
+  from {
+     transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+}
+}
+@keyframes hairBlowing {
+  from {
+    transform: rotate(0deg);
+ }
+ to {
+     transform: rotate(-5deg);
+}
+}
+@keyframes postItBlowing{
+  from {
+    transform: rotate(0deg);
+ }
+ to {
+     transform: rotate(-20deg);
+}
+}
+/* #tail{
+  transform-origin: center;
+  transform-box: fill-box; 
+  animation: waggingTail 2s ease-in-out infinite alternate;
+
+} */
+
+@keyframes waggingTail {
+  0% {
+     transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(12deg);
+}
+
+  100% {
+    transform: rotate(-15deg);
+
+  }
+}
