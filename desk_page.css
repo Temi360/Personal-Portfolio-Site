@@ -34,7 +34,7 @@ body {
   stroke-width:2px;
 } 
 
-#light{
+.light{
   display:none;
 }
 .displayBlock{
