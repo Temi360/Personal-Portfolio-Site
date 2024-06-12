@@ -37,3 +37,6 @@ body {
 #light{
   display:none;
 }
+.displayBlock{
+  display:block;
+}
