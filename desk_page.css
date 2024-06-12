@@ -15,18 +15,19 @@ body {
 }
   /* follow tutorial on positioning svgs: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Positions */
 #TemiCharacterSvg{
-    width: 32%;
+  transform: translate(1000px,450px);
+    /* width: 32%;
     height: 32%;
     margin-left: 450px;
-    margin-top: 275px;
+    margin-top: 275px; */
 
 }
 
 #computerSvg{
-    width: 21%;
+    /* width: 21%;
     height: 21%;
     margin-top: -160px;
-    margin-left: 765px;
+    margin-left: 765px; */
 
 }
 svg:hover #computer{
