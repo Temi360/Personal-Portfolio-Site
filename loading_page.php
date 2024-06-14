@@ -5,12 +5,14 @@
         
         <head>
         <title>Welcome</title>
-        <link rel='stylesheet' href='style(1).css'>
+        <link rel='stylesheet' href='general.css'>
 
         </head>
         <body style = 'background-color:#020001'> 
-            <img id='loadingIcon' src = 'images/loadingIcon.svg'>
-            <a href = 'desk_page.php'><button style = 'margin:auto'>(temp)Click me to go to the next page</button></a>
+            <div class = "custom-cursor">
+                <img id='loadingIcon' src = 'images/loadingIcon.svg'>
+                <a href = 'desk_page.php'><button style = 'margin:auto'>(temp)Click me to go to the next page</button></a>
+            </div>
         </body>
     </html>
     

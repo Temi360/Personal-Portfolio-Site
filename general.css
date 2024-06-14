@@ -1,15 +1,10 @@
 body{
 
 }
-
-
-
-/* fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); */
-
- /* <uniquifier>: Use a unique and descriptive class name */
- /* <weight>: Use a value from 100 to 900 */
-
+.custom-cursor{
+    cursor: url('images/cursor.svg'), auto;
+    
+}
 .jost {
   font-family: "Jost", sans-serif;
   font-weight: 500;
@@ -38,10 +33,9 @@ h3{
     
 }
 
-
-
 /* welcome page */
 .navbar{
+    position: sticky;
     display: flex;
     width: 100%;
     flex-direction: row;

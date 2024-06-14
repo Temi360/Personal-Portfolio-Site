@@ -5,13 +5,14 @@
         
         <head>
         <title>Welcome</title>
-        <link rel='stylesheet' href='style(1).css'>
+        <link rel='stylesheet' href='general.css'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         </head>
         <body style = 'background-color: var(--black)'> 
+            <div class = "custom-cursor">
         <!-- <body> -->
             <div class = 'navbar'>
                 <ul>
@@ -76,4 +77,6 @@
                     </div></a>             
             </div>
             <img id = 'clickMe' src = 'images/click_me.svg'>
+            </div>
+        </body>
     </html>
