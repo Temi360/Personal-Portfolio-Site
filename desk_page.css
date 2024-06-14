@@ -52,6 +52,7 @@ body {
 }
 .displayBlock{
   display:block;
+  /* transition: display .5s ease-in-out; */
 }
 #fanCenter{
   /* height: 110%;
@@ -72,6 +73,10 @@ body {
   transform-origin: center;
   transform-box: fill-box; 
   animation: postItBlowing .5s ease-in-out infinite alternate;
+}
+.handDragged{
+  transform: translate(5px, 10px);
+  transition: transform 1s ease-in-out;
 }
 @keyframes fanBlowing {
   from {
@@ -138,3 +143,4 @@ body {
 
  }
 }
+

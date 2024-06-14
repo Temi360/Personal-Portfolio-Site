@@ -55,3 +55,8 @@ function makeDraggable(evt){
       }
 
 }
+// temp drag function
+function onDrag(){
+  var handOnMouse =  document.getElementById("handOnMouse");
+  handOnMouse.classList.toggle("handDragged");
+}
