@@ -1,32 +1,32 @@
 <?php
-    include('include/init.php');
+    include("include/init.php");
 ?>
     <html>
         
         <head>
         <title>Welcome</title>
-        <link rel='stylesheet' href='general.css'>
+        <link rel="stylesheet" href="general.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         </head>
-        <body style = 'background-color: var(--black)'> 
+        <body style = "background-color: var(--black)"> 
             <div class = "custom-cursor">
         <!-- <body> -->
-            <div class = 'navbar'>
+            <div class = "navbar">
                 <ul>
-                    <li  alt = 'home icon' id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(welcome_page).svg'></a></li>
-                    <li class = 'jost' style = 'color: var(--grey);'>designer, artist, storyteller<span style = 'color: var(--orange)'>...</span></li>
-                    <li class = 'jost'>work<span style = 'color: var(--orange)'>.</span></li>
-                    <li class = 'jost'>contact<span style = 'color: var(--orange)'>.</span></li>
+                    <li  alt = "home icon" id = "homeIconNavbarDiv"><a href = "welcome_page.php"><img src = "images/home_icon(welcome_page).svg"></a></li>
+                    <li class = "jost" style = "color: var(--grey);">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
+                    <a href = "computer_page.php"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></a>
+                    <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
                 </ul>
             </div>
-            <div class = 'WelcomePageNameAndIcon'>
-                <img alt = 'The name Temi' id = 'welcomePageName' src = 'images/TEMI.svg'>
-                <a href = 'loading_page.php'>
-                    <div id = 'welcomePageIconClick' alt = 'clickable icon that navigates to the next page'>
-                        <svg width="205" height="190" viewBox="0 0 205 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class = "WelcomePageNameAndIcon">
+                <img alt = "The name Temi" id = "welcomePageName" src = "images/TEMI.svg">
+            </div>
+                    <div id = "welcomePageIconClick" alt = "clickable icon that navigates to the next page">
+                    <a href = "loading_page.php"><svg width="205" height="190" viewBox="0 0 205 190" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="welcome_page_iconClick" filter="url(#filter0_d_15_123)">
                             <g id="eyebrowsWelcome">
                             <path id="Vector 26" d="M130.388 102.673C127.846 101.301 127.081 98.5584 132.463 99.6445C137.54 100.627 135.925 100.016 141.418 101.368C146.912 102.719 144.685 105.747 142.259 105.451C139.361 105.097 132.93 104.046 130.388 102.673Z" stroke-width="2"/>
@@ -73,10 +73,9 @@
                             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_15_123" result="shape"/>
                             </filter>
                             </defs>
-                        </svg>
+                        </svg><a href = "loading_page.php">
                     </div></a>             
-            </div>
-            <img id = 'clickMe' src = 'images/click_me.svg'>
+            <img id = "clickMe" src = "images/click_me.svg">
             </div>
         </body>
     </html>

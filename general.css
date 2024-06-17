@@ -86,7 +86,7 @@ h3{
 }
 #welcomePageName{
     margin: auto;
-    margin-top: 90px;
+    margin-top: 0px;
 
 }
 
@@ -100,37 +100,41 @@ h3{
 } 
 #welcomePageIconClick{
     stroke: var(--grey);
-    margin-top: 400px;
-    margin-right: 200px;
-    transform: rotate(0deg);
+    /* margin-left:1120px;
+    margin-top:-650px; */
+    /* margin-top: 400px; */
+    /* margin-left: -200px; */
 }
 #welcomePageIconClick:hover{
     stroke: var(--orange);
-    transform: rotate(50deg);
+    transform: rotate(10deg);
+    transform-origin: center;
+    transform-box: fill-box; 
     transition: stroke, transform 0.3s ease;
 }
-svg:hover #hairWelcome {
+#welcomePageIconClick:hover #hairWelcome {
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 
 } 
-svg:hover #eyebrowsWelcome{
+#welcomePageIconClick:hover #eyebrowsWelcome{
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
+    margin-top:40px;
     display: flex;
-    flex-direction: row;
-    justify-content:center;
+    flex-direction: row; 
+    /* justify-content:center; */
 }
 
-#clickMe{
+/* #clickMe{
     float: right;
     margin-right: 12%;
     margin-top: -22%;
-}
+} */
 /* loading page */
 #loadingIcon{
     margin-top: 60px;

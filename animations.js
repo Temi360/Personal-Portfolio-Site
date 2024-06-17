@@ -22,21 +22,21 @@ function fanOn(){
 //     var pupils = document.getElementById("pupils");
 //     pupils.classList.toggle("pupils-right");
 // });
-// // computer.addEventListener('mouseout', function (){
+// // computer.addEventListener("mouseout", function (){
 // //     var pupils = document.getElementById("pupils");
 // //     pupils.classList.toggle("")
 function makeDraggable(evt){
     var svg = evt.target;
-    svg.addEventListener('mousedown', startDrag);
-    svg.addEventListener('mousemove', drag);
-    svg.addEventListener('mouseup', endDrag);
-    svg.addEventListener('mouseleave', endDrag);
+    svg.addEventListener("mousedown", startDrag);
+    svg.addEventListener("mousemove", drag);
+    svg.addEventListener("mouseup", endDrag);
+    svg.addEventListener("mouseleave", endDrag);
 
 
     var selectedElement = false;
 
     function startDrag(evt){
-        if (evt.target.classList.contains('draggable')) {
+        if (evt.target.classList.contains("draggable")) {
             selectedElement = evt.target;
 
         }

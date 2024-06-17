@@ -1,12 +1,12 @@
 <?php
-    include('include/init.php');
+    include("include/init.php");
 ?>
     <html>
         
         <head>
         <title>Welcome</title>
-        <link rel='stylesheet' href='general.css'>
-        <link rel='stylesheet' href='desk_page.css'>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="desk_page.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
         <body> 
         <!-- cursor -->
             <div class = "custom-cursor">
-            <div class = 'navbar'>
+            <div class = "navbar">
                 <ul>
-                    <li alt = 'home icon' id = 'homeIconNavbarDiv'><a href = 'welcome_page.php'><img src = 'images/home_icon(desk_page).svg'></a></li>
-                    <li class = 'jost' style = 'color: var(--black)'>designer, artist, storyteller<span style = 'color: var(--orange)'>...</span></li>
-                    <li class = 'jost'>work<span style = 'color: var(--orange)'>.</span></li>
-                    <li class = 'jost'>contact<span style = 'color: var(--orange)'>.</span></li>
+                    <li alt = "home icon" id = "homeIconNavbarDiv"><a href = "welcome_page.php"><img src = "images/home_icon(desk_page).svg"></a></li>
+                    <li class = "jost" style = "color: var(--black)">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
+                    <a href = "computer_page.php"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></a>
+                    <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
                 </ul>
              </div>
              <!-- test -->
              <!-- <button onclick = "lightOn()">Test</button> -->
              <!-- <div id = "test">test</div> -->
-            <div class = 'deskBackground'>
+            <div class = "deskBackground">
             <svg width="800" height="724.42" viewBox="0 0 561 508" onload="makeDraggable(evt)" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="desk_background_and_character">
 <g id="deskBackgroundElements">
@@ -198,7 +198,7 @@
 </g>
 </g>
 </g>
-<a href = 'computer_page.php'><g id="computer">
+<a href = "computer_page.php"><g id="computer">
 <g id="computerBase">
 <path d="M402.876 327.662L379.332 323.767C375.422 323.121 372.555 319.74 372.555 315.777C372.555 311.305 376.181 307.679 380.654 307.679L402.876 307.679L477.196 305.98C482.603 305.856 487.053 310.206 487.053 315.614C487.053 320.815 482.926 325.078 477.728 325.246L402.876 327.662Z" fill="#9CAFFE"/>
 <path d="M402.876 327.662L379.332 323.767C375.422 323.121 372.555 319.74 372.555 315.777V315.777C372.555 311.305 376.181 307.679 380.654 307.679L402.876 307.679M402.876 327.662L402.876 307.679M402.876 327.662L477.728 325.246C482.926 325.078 487.053 320.815 487.053 315.614V315.614C487.053 310.206 482.603 305.856 477.196 305.98L402.876 307.679" stroke="" stroke-width="3"/>
@@ -373,7 +373,7 @@
         <!-- SVGS -->
 
             <!-- <div>
-                <svg id = 'computerSvg' width="141" height="117" viewBox="0 0 141 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id = "computerSvg" width="141" height="117" viewBox="0 0 141 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="computer">
                     <g id="Vector 135">
                     <path d="M31.8762 112.662L8.33183 108.767C4.42246 108.121 1.55519 104.74 1.55519 100.777C1.55519 96.3048 5.18099 92.679 9.65365 92.679L31.8762 92.679L106.196 90.98C111.603 90.8564 116.053 95.2058 116.053 100.614C116.053 105.815 111.926 110.078 106.728 110.246L31.8762 112.662Z" fill="#9CAFFE"/>
