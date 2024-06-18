@@ -40,3 +40,19 @@ body {
     display: none;
 } */
 
+.buttonClicked{
+  transform: translateY(7px);
+  transition: transform 0.1s ease;
+
+}
+#resumeBorder{
+  display: none;
+  stroke: var(--grey);
+}
+#portfolioBorder{
+  stroke: var(--orange);
+}
+.borderColorChange{
+  display: block;
+  stroke: var(--orange);
+}

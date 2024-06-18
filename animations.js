@@ -73,3 +73,29 @@ function onDrag(){
   var handOnMouse =  document.getElementById("handOnMouse");
   handOnMouse.classList.toggle("handDragged");
 }
+//computerpage
+
+//TO DO: Make this code less stinky!!! PU
+function clickedRight(){
+    var rightButton = document.getElementById("rightArrowButtonAndText");
+    rightButton.classList.add("buttonClicked");
+    var resume = document.getElementById("resumeBorder");
+    resume.classList.add("borderColorChange");
+    setTimeout(function() {
+        rightButton.classList.remove('buttonClicked');
+    }, 100); 
+}
+function clickedLeft(){
+    var leftButton = document.getElementById("leftArrowButtonAndText");
+    leftButton.classList.add("buttonClicked");
+    setTimeout(function() {
+        leftButton.classList.remove('buttonClicked');
+    }, 100); 
+}
+function clickedEnter(){
+    var enterButton = document.getElementById("enterButtonAndText");
+    enterButton.classList.add("buttonClicked");
+    setTimeout(function() {
+       enterButton.classList.remove('buttonClicked');
+    }, 100); 
+}
