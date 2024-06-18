@@ -1,5 +1,4 @@
 body{
-
 }
 .custom-cursor{
     cursor: url('images/cursor.svg'), auto;
@@ -92,27 +91,33 @@ h3{
 
 #hairWelcome{
     fill: var(--grey);
-    stroke: var(--grey);
+    /* stroke: var(--grey); */
 }
  #eyebrowsWelcome{
     fill: var(--grey);
 
 } 
 #welcomePageIconClick{
-    stroke: var(--grey);
     /* margin-left:1120px;
     margin-top:-650px; */
-    /* margin-top: 400px; */
-    /* margin-left: -200px; */
+    margin-top: 300px; 
+    margin-right: 90px;
 }
-#welcomePageIconClick:hover{
+#iconClick{
+    stroke: var(--grey);
+}
+#clickMeGroup{
+    stroke: var(--grey);
+    fill: var(--grey);
+}
+#welcomePageIconClick:hover #iconClick{
     stroke: var(--orange);
-    transform: rotate(10deg);
+    transform: rotate(40deg);
     transform-origin: center;
     transform-box: fill-box; 
     transition: stroke, transform 0.3s ease;
 }
-#welcomePageIconClick:hover #hairWelcome {
+#welcomePageIconClick:hover #hairWelcome{
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
@@ -123,18 +128,26 @@ h3{
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 }
+#welcomePageIconClick:hover #clickMeGroup{
+    fill: var(--orange);
+    stroke: var(--orange);
+    transition: all transform 0.3s ease;
+}
 .WelcomePageNameAndIcon{
     margin-top:40px;
     display: flex;
     flex-direction: row; 
     /* justify-content:center; */
 }
-
-/* #clickMe{
+#clickMe{
+    stroke: var(--grey);
+    fill: var(--grey);
+}
+#clickMe{
     float: right;
-    margin-right: 12%;
-    margin-top: -22%;
-} */
+    margin-right: 100px;
+    margin-top: -350px;
+}
 /* loading page */
 #loadingIcon{
     margin-top: 60px;

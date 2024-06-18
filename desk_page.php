@@ -17,9 +17,9 @@
             <div class = "custom-cursor">
             <div class = "navbar">
                 <ul>
-                    <li alt = "home icon" id = "homeIconNavbarDiv"><a href = "welcome_page.php"><img src = "images/home_icon(desk_page).svg"></a></li>
+                    <li alt = "home icon" id = "homeIconNavbarDiv"> <span onclick="transitionToPage('welcome_page.php')"><img src = "images/home_icon(desk_page).svg"></span></li>
                     <li class = "jost" style = "color: var(--black)">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
-                    <a href = "computer_page.php"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></a>
+                    <span onclick="transitionToPage('computer_page.php')"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></span>
                     <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
                 </ul>
              </div>
@@ -198,7 +198,7 @@
 </g>
 </g>
 </g>
-<a href = "computer_page.php"><g id="computer">
+<a onclick = "transitionToPage('computer_page.php')" href = "computer_page.php"><g id="computer">
 <g id="computerBase">
 <path d="M402.876 327.662L379.332 323.767C375.422 323.121 372.555 319.74 372.555 315.777C372.555 311.305 376.181 307.679 380.654 307.679L402.876 307.679L477.196 305.98C482.603 305.856 487.053 310.206 487.053 315.614C487.053 320.815 482.926 325.078 477.728 325.246L402.876 327.662Z" fill="#9CAFFE"/>
 <path d="M402.876 327.662L379.332 323.767C375.422 323.121 372.555 319.74 372.555 315.777V315.777C372.555 311.305 376.181 307.679 380.654 307.679L402.876 307.679M402.876 327.662L402.876 307.679M402.876 327.662L477.728 325.246C482.926 325.078 487.053 320.815 487.053 315.614V315.614C487.053 310.206 482.603 305.856 477.196 305.98L402.876 307.679" stroke="" stroke-width="3"/>

@@ -17,7 +17,7 @@
             <div class = "custom-cursor">
             <div class = "navbar">
                 <ul>
-                    <li alt = "home icon" id = "homeIconNavbarDiv"><a href = "welcome_page.php"><img src = "images/home_icon(desk_page).svg"></a></li>
+                    <li class = "jost" alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><img src = "images/home_icon(desk_page).svg"></span></li>
                     <li class = "jost" style = "color: var(--black)">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
                     <li style = "color: var(--orange);" class = "jost">work.</span></li>
                     <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
