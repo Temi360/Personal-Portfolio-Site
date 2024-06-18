@@ -1,15 +1,9 @@
 body{
-
 }
-
-
-
-/* fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); */
-
- /* <uniquifier>: Use a unique and descriptive class name */
- /* <weight>: Use a value from 100 to 900 */
-
+.custom-cursor{
+    cursor: url('images/cursor.svg'), auto;
+    
+}
 .jost {
   font-family: "Jost", sans-serif;
   font-weight: 500;
@@ -38,11 +32,9 @@ h3{
     
 }
 
-
-
 /* welcome page */
 .navbar{
-    position: fixed;
+    position: sticky;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -93,50 +85,68 @@ h3{
 }
 #welcomePageName{
     margin: auto;
-    margin-top: 90px;
+    margin-top: 0px;
 
 }
 
-#hair{
+#hairWelcome{
     fill: var(--grey);
-    stroke: var(--grey);
+    /* stroke: var(--grey); */
 }
- #eyebrows{
+ #eyebrowsWelcome{
     fill: var(--grey);
 
 } 
 #welcomePageIconClick{
-    stroke: var(--grey);
-    margin-top: 400px;
-    margin-right: 200px;
-    transform: rotate(0deg);
+    /* margin-left:1120px;
+    margin-top:-650px; */
+    margin-top: 300px; 
+    margin-right: 90px;
 }
-#welcomePageIconClick:hover{
+#iconClick{
+    stroke: var(--grey);
+}
+#clickMeGroup{
+    stroke: var(--grey);
+    fill: var(--grey);
+}
+#welcomePageIconClick:hover #iconClick{
     stroke: var(--orange);
-    transform: rotate(50deg);
+    transform: rotate(40deg);
+    transform-origin: center;
+    transform-box: fill-box; 
     transition: stroke, transform 0.3s ease;
 }
-svg:hover #hair {
+#welcomePageIconClick:hover #hairWelcome{
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 
 } 
-svg:hover #eyebrows{
+#welcomePageIconClick:hover #eyebrowsWelcome{
+    fill: var(--orange);
+    stroke: var(--orange);
+    transition: all transform 0.3s ease;
+}
+#welcomePageIconClick:hover #clickMeGroup{
     fill: var(--orange);
     stroke: var(--orange);
     transition: all transform 0.3s ease;
 }
 .WelcomePageNameAndIcon{
+    margin-top:40px;
     display: flex;
-    flex-direction: row;
-    justify-content:center;
+    flex-direction: row; 
+    /* justify-content:center; */
 }
-
+#clickMe{
+    stroke: var(--grey);
+    fill: var(--grey);
+}
 #clickMe{
     float: right;
-    margin-right: 12%;
-    margin-top: -22%;
+    margin-right: 100px;
+    margin-top: -350px;
 }
 /* loading page */
 #loadingIcon{
