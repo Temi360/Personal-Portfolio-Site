@@ -1,5 +1,10 @@
 body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars during transition */
+    height: 100%;
 }
+
 /* .custom-cursor{
     cursor: url('images/cursor.svg'), auto;
     
@@ -156,3 +161,18 @@ h3{
     display: block;
 
 }
+
+/* @media (min-width: 1245px) {
+    svg {
+        width: 50%;
+        height: 50%;
+    }
+} */
+
+/* Large screens (desktops, 1024px and up) */
+ /* @media (min-width: 1500px) {
+    svg {
+        width: 120%;
+        height: 120%;
+    }
+}  */

@@ -1,31 +1,4 @@
-<?php
-    include("include/init.php");
-?>
-    <html>
-        
-        <head>
-        <title>Welcome</title>
-        <link rel="stylesheet" href="general.css">
-        <link rel="stylesheet" href="desk_page.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="animations.js"></script>
-        </head>
-        <body> 
-            <div class = "custom-cursor">
-            <div class = "navbar">
-                <ul>
-                    <li alt = "home icon" id = "homeIconNavbarDiv"> <span onclick="transitionToPage('welcome_page.php')"><img src = "images/home_icon(desk_page).svg"></span></li>
-                    <li class = "jost" style = "color: var(--black)">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
-                    <span onclick="transitionToPage('computer_page.php')"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></span>
-                    <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
-                </ul>
-             </div>
-
-            <div class = "deskBackground">
-            <!-- <object class="svg-object" type="image/svg+xml" data="desk_page_elements.svg"></object> -->
-            <svg width="800" height="724.42" viewBox="0 0 561 508" onload="makeDraggable(evt)" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <svg width="800" height="724.42" viewBox="0 0 561 508" onload="makeDraggable(evt)" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="desk_background_and_character">
 <g id="deskBackgroundElements">
 <g id="clock" filter="url(#filter0_d_209_107)">
@@ -367,8 +340,3 @@
 </filter>
 </defs>
 </svg>
-            </div>
-            </div>
-        </body>
-    </html>
-    

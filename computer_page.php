@@ -3,15 +3,17 @@
 ?>
     <html>
         
-        <head>
-        <title>Welcome</title>
-        <link rel="stylesheet" href="general.css">
-        <link rel="stylesheet" href="computer_page.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="animations.js"></script>
-        </head>
+       <head>
+           
+           <title>Welcome</title>
+           <link rel="stylesheet" href="general.css">
+           <link rel="stylesheet" href="computer_page.css">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+           <script src="animations.js"></script>
+           
+       </head>
         <body> 
         <!-- cursor -->
             <div class = "custom-cursor">
@@ -23,9 +25,6 @@
                     <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
                 </ul>
              </div>
-             <!-- test -->
-             <!-- <button onclick = "lightOn()">Test</button> -->
-             <!-- <div id = "test">test</div> -->
             <div class = "computerBackground">
             <svg width="1600" height="800" viewBox="0 0 1245 642" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="computer click" clip-path="url(#clip0_239_257)">
