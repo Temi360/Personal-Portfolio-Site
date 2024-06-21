@@ -4,18 +4,6 @@ window.transitionToPage = function (href) {
     window.location.href = href;
   }, 500);
 };
-window.slideUpTransition = function (href) {
-    document.getElementById("content");
-    content.classList.add('slide-up');
-    window.location.href = href;
-    content.addEventListener('transitionend', function() {
-        // Redirect to the new page
-        window.location.href = 'desk_page.php';
-    }, { once: true });
-     // Use { once: true } to ensure the event listener is removed after it is triggered
-}
-
-  
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("body").style.opacity = 1;
 });
@@ -36,35 +24,6 @@ function fanOn() {
   var postIt = document.getElementById("postIt");
   postIt.classList.toggle("postIt-blows");
 }
-// function makeDraggable(evt){
-//     var svg = evt.target;
-//     svg.addEventListener("mousedown", startDrag);
-//     svg.addEventListener("mousemove", drag);
-//     svg.addEventListener("mouseup", endDrag);
-//     svg.addEventListener("mouseleave", endDrag);
-
-//     var selectedElement = false;
-
-//     function startDrag(evt){
-//         if (evt.target.classList.contains("draggable")) {
-//             selectedElement = evt.target;
-
-//         }
-//     }
-
-//     function drag(evt){
-//         if (selectedElement){
-//             evt.preventDefault();
-//             var x = parseFloat(selectedElement.getAttributeNS(null, "x"));
-//             selectedElement.setAttributeNS(null, "x", x + 0.1);
-//         }
-//     }
-//     function endDrag(evt) {
-//         evt.preventDefault();
-//         selectedElement = null;
-//       }
-
-// }
 
 //TO DO: Make this code less stinky!!! PU (Think if else statements? )
 function clickedRight() {
@@ -79,6 +38,7 @@ function clickedRight() {
     rightButton.classList.remove("buttonClicked");
   }, 100);
 }
+
 function clickedLeft() {
   var leftButton = document.getElementById("leftArrowButtonAndText");
   leftButton.classList.add("buttonClicked");
@@ -91,6 +51,7 @@ function clickedLeft() {
     leftButton.classList.remove("buttonClicked");
   }, 100);
 }
+
 function clickedEnter() {
   var enterButton = document.getElementById("enterButtonAndText");
   enterButton.classList.add("buttonClicked");
@@ -99,6 +60,41 @@ function clickedEnter() {
   }, 100);
   document.querySelector("body").style.opacity = 0;
   setTimeout(function () {
-    ; window.location.replace("portfolio_page.php");
-}, 500);
+    window.location.replace("portfolio_page.php");
+  }, 500);
 }
+document.addEventListener('DOMContentLoaded', () => {
+document.getElementById("computerBackgroundAndKeyboard").addEventListener("click", function (event) {
+  if (event.target.classList.contains("clickable")) {
+    alert("rightButtonClicked");
+    if (event.target.id === "rightArrowButtonAndText") {
+      alert("rightButtonClicked");
+      // rightButton.classList.add("buttonClicked");
+      // setTimeout(function () {
+      //     rightButton.classList.remove("buttonClicked");
+      //   }, 100);
+    } else if (event.target.id === "leftArrowButtonAndText") {
+      alert("leftButtonClicked");
+    } else if (event.target.id === "enterButtonAndText") {
+      alert("enterButtonClicked");
+    }
+  }
+});
+});
+
+function Click(event){
+    //makes sure event.targeting is selecting the right element in the DOM
+    while (target && target !== document && target.tagName !== 'g') {
+        event.target = target.parentNode;
+    }
+    if (target && target.tagName === 'g') {
+    var clickedElement = event.target;
+    var clickedButton = document.getElementById(clickedElement.id)
+    console.log(clickedElement.Id);
+    clickedButton.classList.add("buttonClicked");
+    setTimeout(function () {
+        clickedButton.classList.remove("buttonClicked");
+        }, 100);
+}
+}
+

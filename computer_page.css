@@ -27,18 +27,7 @@ body {
   justify-content: center;
   /* margin-bottom:-100px; */
 }
-/* #resumeBorder{
-    display: none;
-}
-#resumeButtonandText:hover #resumeBorder{
-    display: block;
-}
-#portfolioBorder{
-    display: block;
-} */
-/* #resumeButtonandText:hover #portfolioBorder{
-    display: none;
-} */
+
 
 .buttonClicked {
   transform: translateY(7px);

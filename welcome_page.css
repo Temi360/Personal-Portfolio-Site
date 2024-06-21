@@ -1,4 +1,4 @@
-body {
+  body {
   background-image: url("images/blackBackground.svg");
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; /* Prevent repeating */
@@ -9,13 +9,3 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 
-#content{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out; /* Smooth transition */
-}
-
-.slide-up {
-  transform: translateY(-100%); /* Slide content up */
-}

@@ -12,22 +12,24 @@
         <link href ="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="animations.js"></script>
         </head>
+
         <body style = "background-color: var(--black)"> 
-        <div id = "content">
+    
             <div class = "custom-cursor">
-        <!-- <body> -->
-            <div class = "navbar">
-                <ul>
-                    <li  alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><li class = "jost"><img src = "images/home_icon(welcome_page).svg"></span></li>
-                    <li class = "jost" style = "color: var(--grey);">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
-                    <span onclick="transitionToPage('computer_page.php')"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></span>
-                    <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
-                </ul>
-            </div>
-            <div class = "WelcomePageNameAndIcon">
-                <img alt = "The name Temi" id = "welcomePageName" src = "images/TEMI.svg">
+
+                <div class = "navbar">
+                    <ul>
+                        <li  alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><li class = "jost"><img src = "images/home_icon(welcome_page).svg"></span></li>
+                        <li class = "jost" style = "color: var(--grey);">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
+                        <span onclick="transitionToPage('computer_page.php')"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></span>
+                        <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
+                    </ul>
+                </div>
+                
+                <div class = "WelcomePageNameAndIcon">
+                    <img alt = "The name Temi" id = "welcomePageName" src = "images/TEMI.svg">
                     <div id = "welcomePageIconClick" alt = "clickable icon that navigates to the next page">
-                    <span onclick="slideUpTransition('desk_page.php')"><svg width="218" height="233" viewBox="0 0 218 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <span onclick="slideUpTransition('desk_page.php')"><svg width="218" height="233" viewBox="0 0 218 233" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="clickMeTextAndButton">
                             <g id="IconClick" filter="url(#filter0_d_263_2)">
                             <g id="eyebrowsWelcome">
@@ -101,8 +103,11 @@
                             </defs>
                         </svg></span>
                     </div>
-                    </div>             
+               
+                </div>             
+           
             </div>
-</div>
+        
         </body>
+   
     </html>
