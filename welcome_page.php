@@ -25,11 +25,11 @@
                         <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>
                     </ul>
                 </div>
-                
+
                 <div class = "WelcomePageNameAndIcon">
                     <img alt = "The name Temi" id = "welcomePageName" src = "images/TEMI.svg">
                     <div id = "welcomePageIconClick" alt = "clickable icon that navigates to the next page">
-                        <span onclick="slideUpTransition('desk_page.php')"><svg width="218" height="233" viewBox="0 0 218 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <span onclick="transitionToPage('desk_page.php')"><svg width="218" height="233" viewBox="0 0 218 233" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="clickMeTextAndButton">
                             <g id="IconClick" filter="url(#filter0_d_263_2)">
                             <g id="eyebrowsWelcome">
