@@ -1,9 +1,14 @@
 body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars during transition */
+    height: 100%;
 }
-.custom-cursor{
+
+/* .custom-cursor{
     cursor: url('images/cursor.svg'), auto;
     
-}
+} */
 .jost {
   font-family: "Jost", sans-serif;
   font-weight: 500;
@@ -18,21 +23,7 @@ body{
     --black: #020001;
 
 }
-/* text */
-/* headers */
-h1{
 
-}
-
-h2{
-
-}
-
-h3{
-    
-}
-
-/* welcome page */
 .navbar{
     position: sticky;
     display: flex;
@@ -75,11 +66,7 @@ h3{
     transform: rotate(-50deg);
     transition: transform, 0.3s ease;
 }
-#designerArtistStoryteller{
-    /* margin-left: 300px;
-    margin-right: 300px; */
 
-}
 #contactPosition{
     margin-top:7px;
 }
@@ -156,3 +143,18 @@ h3{
     display: block;
 
 }
+
+/* @media (min-width: 1245px) {
+    svg {
+        width: 50%;
+        height: 50%;
+    }
+} */
+
+/* Large screens (desktops, 1024px and up) */
+ /* @media (min-width: 1500px) {
+    svg {
+        width: 120%;
+        height: 120%;
+    }
+}  */
