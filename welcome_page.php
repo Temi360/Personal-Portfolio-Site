@@ -5,12 +5,12 @@
         
         <head>
         <title>Welcome</title>
-        <link rel = "stylesheet" href = "general.css">
-        <link rel = "stylesheet" href = "welcome_page.css">
+        <link rel = "stylesheet" href = "CSS/general.css">
+        <link rel = "stylesheet" href = "CSS/welcome_page.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href ="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="animations.js"></script>
+        <script src="JS/animations.js"></script>
         </head>
 
         <body style = "background-color: var(--black)"> 
@@ -19,7 +19,7 @@
 
                 <div class = "navbar">
                     <ul>
-                        <li  alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><li class = "jost"><img src = "images/home_icon(welcome_page).svg"></span></li>
+                        <li  alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><li class = "jost"><img src = "images/home_icon.svg"></span></li>
                         <li class = "jost" style = "color: var(--grey);">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
                         <span onclick="transitionToPage('computer_page.php')"><li class = "jost">work<span style = "color: var(--orange)">.</span></li></span>
                         <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>

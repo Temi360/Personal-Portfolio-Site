@@ -63,38 +63,3 @@ function clickedEnter() {
     window.location.replace("portfolio_page.php");
   }, 500);
 }
-document.addEventListener('DOMContentLoaded', () => {
-document.getElementById("computerBackgroundAndKeyboard").addEventListener("click", function (event) {
-  if (event.target.classList.contains("clickable")) {
-    alert("rightButtonClicked");
-    if (event.target.id === "rightArrowButtonAndText") {
-      alert("rightButtonClicked");
-      // rightButton.classList.add("buttonClicked");
-      // setTimeout(function () {
-      //     rightButton.classList.remove("buttonClicked");
-      //   }, 100);
-    } else if (event.target.id === "leftArrowButtonAndText") {
-      alert("leftButtonClicked");
-    } else if (event.target.id === "enterButtonAndText") {
-      alert("enterButtonClicked");
-    }
-  }
-});
-});
-
-function Click(event){
-    //makes sure event.targeting is selecting the right element in the DOM
-    while (target && target !== document && target.tagName !== 'g') {
-        event.target = target.parentNode;
-    }
-    if (target && target.tagName === 'g') {
-    var clickedElement = event.target;
-    var clickedButton = document.getElementById(clickedElement.id)
-    console.log(clickedElement.Id);
-    clickedButton.classList.add("buttonClicked");
-    setTimeout(function () {
-        clickedButton.classList.remove("buttonClicked");
-        }, 100);
-}
-}
-

@@ -1,5 +1,5 @@
 body {
-  background-image: url("desk_page_images/static_background(desk_page).svg");
+  background-image: url("images/whiteBackground.svg");
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; /* Prevent repeating */
   background-position: center center; /* Center the image */
@@ -27,7 +27,18 @@ body {
   justify-content: center;
   /* margin-bottom:-100px; */
 }
-
+/* #resumeBorder{
+    display: none;
+}
+#resumeButtonandText:hover #resumeBorder{
+    display: block;
+}
+#portfolioBorder{
+    display: block;
+} */
+/* #resumeButtonandText:hover #portfolioBorder{
+    display: none;
+} */
 
 .buttonClicked {
   transform: translateY(7px);

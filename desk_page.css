@@ -1,5 +1,5 @@
 body {
-  background-image: url("desk_page_images/static_background(desk_page).svg");
+  background-image: url("images/whiteBackground.svg");
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; /* Prevent repeating */
   background-position: center center; /* Center the image */
@@ -66,10 +66,7 @@ body {
   transform-box: fill-box;
   animation: postItBlowing 0.5s ease-in-out infinite alternate;
 }
-.handDragged {
-  transform: translate(5px, 10px);
-  transition: transform 1s ease-in-out;
-}
+
 @keyframes fanBlowing {
   from {
     transform: rotate(0deg);
@@ -78,14 +75,14 @@ body {
     transform: rotate(360deg);
   }
 }
-@keyframes hairBlowing {
+/* @keyframes hairBlowing {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(6deg);
   }
-}
+} */
 @keyframes postItBlowing {
   from {
     transform: rotate(0deg);
@@ -112,4 +109,32 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.eyes-closed{
+  display: block;
+  animation: eyesDisappearing 1s infinite steps(1, end);
+
+}
+.eyelids-closed{
+  display: block;
+  animation: eyesClosing 1s infinite steps(1, end);
+}
+
+@keyframes eyesDisappearing {
+  0%, 100% {
+      visibility: visible;
+  }
+  50% {
+      visibility: hidden;
+  }
+}
+
+@keyframes eyesClosing{
+  0%, 100% {
+    visibility: hidden;
+}
+50% {
+    visibility: visible;
+}
 }

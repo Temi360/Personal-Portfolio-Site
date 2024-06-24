@@ -23,21 +23,7 @@ body{
     --black: #020001;
 
 }
-/* text */
-/* headers */
-h1{
 
-}
-
-h2{
-
-}
-
-h3{
-    
-}
-
-/* welcome page */
 .navbar{
     position: sticky;
     display: flex;
@@ -80,11 +66,7 @@ h3{
     transform: rotate(-50deg);
     transition: transform, 0.3s ease;
 }
-#designerArtistStoryteller{
-    /* margin-left: 300px;
-    margin-right: 300px; */
 
-}
 #contactPosition{
     margin-top:7px;
 }

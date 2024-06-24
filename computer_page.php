@@ -6,12 +6,12 @@
        <head>
            
            <title>Welcome</title>
-           <link rel="stylesheet" href="general.css">
-           <link rel="stylesheet" href="computer_page.css">
+           <link rel="stylesheet" href = "general.css">
+           <link rel="stylesheet" href = "computer_page.css">
            <link rel="preconnect" href="https://fonts.googleapis.com">
            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
            <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-           <script src="animations.js"></script>
+           <script src="JS/animations.js"></script>
            
        </head>
         <body> 
