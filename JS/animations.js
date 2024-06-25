@@ -8,23 +8,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("body").style.opacity = 1;
 });
 
-function lightOn(evt) {
-  evt.preventDefault();
-  var light = document.getElementById("light");
-  var button = document.getElementById("lampButton");
-  light.classList.toggle("displayBlock");
-}
-
-function fanOn() {
-  //  alert("function call");
-  var blades = document.getElementById("blades");
-  blades.classList.toggle("blades-rotate");
-  var hair = document.getElementById("hair-bottom");
-  hair.classList.toggle("hair-blows");
-  var postIt = document.getElementById("postIt");
-  postIt.classList.toggle("postIt-blows");
-}
-
 //TO DO: Make this code less stinky!!! PU (Think if else statements? )
 function clickedRight() {
   var rightButton = document.getElementById("rightArrowButtonAndText");

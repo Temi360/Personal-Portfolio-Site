@@ -1,8 +1,7 @@
 <?php
-    include("include/init.php");
+    include('include/init.php');
 ?>
-    <html>
-        
+    <html>  
         <head>
         <title>Welcome</title>
         <link rel="stylesheet" href = "general.css">
@@ -11,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="JS/animations.js"></script>
+        <script src="JS/desk_page.js"></script>
         </head>
 
         <body> 
@@ -147,21 +147,27 @@
                     <path id="Vector 56" d="M277.468 214.258C278.118 215.088 278.908 217.001 276.877 218.019" stroke="#AF371C" stroke-width="2"/>
                     </g>
                     <path id="neck" d="M272.68 250.976L272.5 236L283.704 235.882L283.338 251.23L272.68 250.976Z" fill="#C28F73" stroke="#9A6053" stroke-width="3"/>
-                    <g id="Eyes" class = "eyelids-closed">
+                    <g id="eyes">
                     <g id="right-eye">
                     <path id="Vector 153" d="M315.162 210.761C312.464 215.792 304.175 220.75 295.584 213.134C294.333 205.984 318.395 204.731 315.162 210.761Z" fill="#F5F5F5" stroke="#020001" stroke-width="2"/>
-                    <ellipse id="Ellipse 18" cx="306.97" cy="213.71" rx="4.69094" ry="2.55869" transform="rotate(-16.3888 306.97 213.71)" fill="#020001"/>
-                    <ellipse id="Ellipse 20" cx="304.292" cy="213.19" rx="2.55869" ry="0.852898" transform="rotate(1.36343 304.292 213.19)" fill="#F5F5F5"/>
                     <line id="Line 9" x1="309.843" y1="218.462" x2="311.216" y2="219.786" stroke="#020001"/>
                     <line id="Line 10" x1="310.902" y1="217.335" x2="313.614" y2="219.573" stroke="#020001"/>
                     </g>
                     <g id="left-eye">
                     <path id="Vector 152" d="M244.281 214.899C247.654 219.505 256.554 223.259 263.999 214.519C264.241 207.265 240.239 209.379 244.281 214.899Z" fill="#F5F5F5" stroke="#020001" stroke-width="2"/>
+                    </g>
+                    <g id = "pupils">
+                    <g id = "right-pupil">
+                    <ellipse id="Ellipse 18" cx="306.97" cy="213.71" rx="4.69094" ry="2.55869" transform="rotate(-16.3888 306.97 213.71)" fill="#020001"/>
+                    <ellipse id="Ellipse 20" cx="304.292" cy="213.19" rx="2.55869" ry="0.852898" transform="rotate(1.36343 304.292 213.19)" fill="#F5F5F5"/>
+                    </g>
+                    <g id = "left-pupil">
                     <ellipse id="Ellipse 17" cx="256.562" cy="216.776" rx="4.69094" ry="2.55869" transform="rotate(-16.3888 256.562 216.776)" fill="#020001"/>
                     <ellipse id="Ellipse 19" cx="253.884" cy="216.256" rx="2.55869" ry="0.852898" transform="rotate(1.36343 253.884 216.256)" fill="#F5F5F5"/>
                     </g>
                     </g>
-                    <g id="closed-eyes" class = "eyes-closed">
+                    </g>
+                    <g id="closed-eyes">
                     <path id="Vector 253" d="M246 213.523C250.291 216.061 260.4 218.091 266.503 212" stroke="#020001" stroke-width="2"/>
                     <path id="Vector 254" d="M294.463 212C298.657 213.667 308.535 215 314.5 211" stroke="#020001" stroke-width="2"/>
                     </g>
@@ -253,7 +259,7 @@
                     <path id="Rectangle 8" d="M465.359 129.231L469.975 132.307L469.975 172.307L444.996 153.555L465.359 129.231Z" fill="#C7BEBE"/>
                     <path id="Rectangle 9" d="M462.667 128.077L463.821 128.077L437.282 149.23L423.436 148.077L462.667 128.077Z" fill="#D9D9D9"/>
                     </g>
-                    <g onclick = "lightOn(evt)" id="lampButton">
+                    <g id="lampButton">
                     <path id="Vector 167" d="M468.638 113.469L460.584 127.794L473.475 135.681C475.11 131.33 481.748 122.611 481.557 120.968C481.366 119.326 476.71 111.848 468.638 113.469Z" fill="#9CAFFE"/>
                     </g>
                     </g>
@@ -289,7 +295,7 @@
                     <path id="Vector 169" d="M43.8864 217.056C54.9369 212.282 60.2575 224.867 61.4854 231.377C58.4073 232.918 52.6247 238.2 54.1183 247L45.5235 246.132C43.4771 245.698 34.8823 243.962 32.8359 240.056C32.0173 228.773 31.6081 225.735 43.8864 217.056Z" fill="#9CAFFE" stroke="#9CAFFE" stroke-width="2"/>
                     <path id="Vector 171" d="M87.4789 218.927C84.0853 217.149 80.6766 224.607 79.3964 228.558C84.2919 230.872 93.373 238.301 90.5341 249.501C91.8899 249.659 95.7607 249.508 100.397 247.633C114.249 230.368 91.721 221.15 87.4789 218.927Z" fill="#9CAFFE" stroke="#9CAFFE" stroke-width="2"/>
                     </g>
-                    <g onclick = "fanOn()" id="fanButtons">
+                    <g id="fanButtons">
                     <path id="Vector 172" d="M62.4854 318.485V322.5H55.4854V320.27V318.485C57.8854 316.701 61.152 317.742 62.4854 318.485Z" fill="#020001" stroke="#020001" stroke-width="2"/>
                     <path id="Vector 211" d="M55.4853 318.5C55.9854 318 57.4968 316.676 59.1593 318.075" stroke="#F5F5F5"/>
                     <g id="Vector 173_2">

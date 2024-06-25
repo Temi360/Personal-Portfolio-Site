@@ -110,15 +110,23 @@ body {
     transform: rotate(360deg);
   }
 }
+.eyesToLamp{
+  transform: translate(2.5px, -4px);
+}
 
+.eyesToFan{
+  transform: translate(-4px, 0px);
+}
+#closed-eyes{
+  visibility: hidden;
+}
 .eyes-closed{
-  display: block;
-  animation: eyesDisappearing 1s infinite steps(1, end);
+  animation: eyesDisappearing .5s steps(1, end);
 
 }
 .eyelids-closed{
-  display: block;
-  animation: eyesClosing 1s infinite steps(1, end);
+  display:block;
+  animation: eyesClosing .5s steps(1, end);
 }
 
 @keyframes eyesDisappearing {
@@ -138,3 +146,4 @@ body {
     visibility: visible;
 }
 }
+ 
