@@ -21,7 +21,7 @@ body {
 }
 .deskBackground {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   justify-content: center;
   /* margin-bottom:-100px; */
 }
@@ -116,6 +116,9 @@ body {
 
 .eyesToFan{
   transform: translate(-4px, 0px);
+}
+.eyesToHeadphones{
+  transform: translate(0px, -4px);
 }
 #closed-eyes{
   visibility: hidden;

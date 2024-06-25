@@ -1,35 +1,44 @@
+gsap.registerPlugin(MotionPathPlugin);
+
 document.addEventListener("DOMContentLoaded", (event) => {
-  // eye movement
-  var lamp = document.getElementById("lamp");
+  var pupils = document.getElementById("pupils");
+  var lamp = document.getElementById("lampHead");
   var lampButton = document.getElementById("lampButton");
+
   lamp.addEventListener("mouseover", lookLamp);
   lamp.addEventListener("mouseout", resetLamp);
   lampButton.addEventListener("click", lightOn);
+
   function lookLamp(event) {
-    var pupils = document.getElementById("pupils");
     pupils.classList.add("eyesToLamp");
   }
+
   function resetLamp(event) {
     pupils.classList.remove("eyesToLamp");
   }
+
   function lightOn(evt) {
     evt.preventDefault();
     var light = document.getElementById("light");
     var button = document.getElementById("lampButton");
     light.classList.toggle("displayBlock");
   }
-  var fan = document.getElementById("fan");
+
+  var fan = document.getElementById("fanBottom");
   var fanButtons = document.getElementById("fanButtons");
+
   fan.addEventListener("mouseover", lookFan);
   fan.addEventListener("mouseout", resetFan);
   fanButtons.addEventListener("click", fanOn);
+
   function lookFan(event) {
-    var pupils = document.getElementById("pupils");
     pupils.classList.add("eyesToFan");
   }
+
   function resetFan(event) {
     pupils.classList.remove("eyesToFan");
   }
+
   function fanOn() {
     //  alert("function call");
     var blades = document.getElementById("blades");
@@ -39,12 +48,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
     var postIt = document.getElementById("postIt");
     postIt.classList.toggle("postIt-blows");
   }
+
+  var headphones = document.getElementById("headphones");
+  headphones.addEventListener("mouseover", lookHeadphones);
+  headphones.addEventListener("mouseout", resetHeadphones);
+
+  function lookHeadphones(event) {
+    pupils.classList.add("eyesToHeadphones");
+  }
+
+  function resetHeadphones(event) {
+    pupils.classList.remove("eyesToHeadphones");
+  }
+
   var head = document.getElementById("head");
   var eyes = document.getElementById("eyes");
   var closedEyes = document.getElementById("closed-eyes");
-
-  //   head.addEventListener("mouseover", blink);
-  //   head.addEventListener("mouseout", stopBlink);
 
   function blink(event) {
     eyes.classList.add("eyes-closed");
@@ -57,6 +76,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     eyes.classList.remove("eyes-closed");
     closedEyes.classList.remove("eyelids-closed");
   }
+
   setInterval(blink, 3000);
   setInterval(stopBlink, 6000);
 });
