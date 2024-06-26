@@ -1,6 +1,5 @@
-gsap.registerPlugin(MotionPathPlugin);
-
 document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(MotionPathPlugin, Draggable);
   var pupils = document.getElementById("pupils");
   var lamp = document.getElementById("lampHead");
   var lampButton = document.getElementById("lampButton");
@@ -79,4 +78,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   setInterval(blink, 3000);
   setInterval(stopBlink, 6000);
+
+  var mouse = document.getElementById("handOnMouse");
+  mouse.addEventListener("mouseover", lookMouse);
+  mouse.addEventListener("mouseout", resetMouse);
+  function lookMouse(event) {
+    pupils.classList.add("eyesToMouse");
+  }
+  function resetMouse(event) {
+    pupils.classList.remove("eyesToMouse");
+  }
+
+  Draggable.create("#handOnMouse", {
+    bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
+  });
 });

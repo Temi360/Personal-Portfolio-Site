@@ -1,28 +1,34 @@
+<?php
+?>
 <html>
   <head>
-    <title>Welcome</title>
-    <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="desk_page.css" />
+    <title>Motion Path Tests</title>
+    <link rel="stylesheet" href="motion_path_tests.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <!-- MotionPathPlugin -->
+    <script src="JS/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="JS/motion_path_test.js"></script>
   </head>
   <body>
-    <div>
+    <div id = "container">
       <svg
-        width="107"
-        height="52"
-        viewBox="0 0 107 52"
+      
+        width="200"
+        height="200"
+        viewBox="0 0 150 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="handOnMouseAndPath">
           <path
             id="path"
             d="M59.6715 41.4185C69 46.5 93.5 46.5 106 41.4185"
             stroke="black"
           />
-          <g id="keyboardAndHand">
-            <g id="handOnMouse">
+            <g class = "handOnMouse" id="handOnMouse">
               <g id="mouse">
                 <g id="Vector 215">
                   <path
@@ -63,8 +69,6 @@
                 />
               </g>
             </g>
-          </g>
-        </g>
       </svg>
     </div>
   </body>

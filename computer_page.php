@@ -11,7 +11,13 @@
            <link rel="preconnect" href="https://fonts.googleapis.com">
            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
            <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+           <script src="JS/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
            <script src="JS/animations.js"></script>
+           <script src="JS/computer_page.js"></script>
+
            
        </head>
         <body> 
@@ -20,7 +26,7 @@
                 
                 <div class = "navbar">
                     <ul>
-                        <li class = "jost" alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><img src = "images/home_icon(desk_page).svg"></span></li>
+                        <li class = "jost" alt = "home icon" id = "homeIconNavbarDiv"><span onclick="transitionToPage('welcome_page.php')"><img src = "images/home_icon.svg"></span></li>
                         <li class = "jost" style = "color: var(--black)">designer, coder, storyteller<span style = "color: var(--orange)">...</span></li>
                         <li style = "color: var(--orange);" class = "jost">work.</span></li>
                         <li class = "jost">contact<span style = "color: var(--orange)">.</span></li>

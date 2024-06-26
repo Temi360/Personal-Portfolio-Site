@@ -64,7 +64,7 @@ body{
 #homeIconNavbarDiv:hover{
 
     transform: rotate(-50deg);
-    transition: transform, 0.3s ease;
+    transition: transform, 0.3s ease-in-out;
 }
 
 #contactPosition{
