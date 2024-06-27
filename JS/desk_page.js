@@ -1,95 +1,102 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(MotionPathPlugin, Draggable);
-  var pupils = document.getElementById("pupils");
-  var lamp = document.getElementById("lampHead");
-  var lampButton = document.getElementById("lampButton");
+  document.getElementById("deskElements").addEventListener("load", function () {
+    gsap.registerPlugin(MotionPathPlugin, Draggable);
 
-  lamp.addEventListener("mouseover", lookLamp);
-  lamp.addEventListener("mouseout", resetLamp);
-  lampButton.addEventListener("click", lightOn);
+    var svgDoc = this.contentDocument;
 
-  function lookLamp(event) {
-    pupils.classList.add("eyesToLamp");
-  }
+    var pupils = svgDoc.getElementById("pupils");
+    var lamp = svgDoc.getElementById("lampHead");
+    var lampButton = svgDoc.getElementById("lampButton");
 
-  function resetLamp(event) {
-    pupils.classList.remove("eyesToLamp");
-  }
+    lamp.addEventListener("mouseover", lookLamp);
+    lamp.addEventListener("mouseout", resetLamp);
+    lampButton.addEventListener("click", lightOn);
 
-  function lightOn(evt) {
-    evt.preventDefault();
-    var light = document.getElementById("light");
-    var button = document.getElementById("lampButton");
-    light.classList.toggle("displayBlock");
-  }
+    function lookLamp(event) {
+      pupils.classList.add("eyesToLamp");
+    }
 
-  var fan = document.getElementById("fanBottom");
-  var fanButtons = document.getElementById("fanButtons");
+    function resetLamp(event) {
+      pupils.classList.remove("eyesToLamp");
+    }
 
-  fan.addEventListener("mouseover", lookFan);
-  fan.addEventListener("mouseout", resetFan);
-  fanButtons.addEventListener("click", fanOn);
+    function lightOn(evt) {
+      evt.preventDefault();
+      var light = svgDoc.getElementById("light");
+      var button = svgDoc.getElementById("lampButton");
+      light.classList.toggle("displayBlock");
+    }
 
-  function lookFan(event) {
-    pupils.classList.add("eyesToFan");
-  }
+    var fan = svgDoc.getElementById("fanBottom");
+    var fanButtons = svgDoc.getElementById("fanButtons");
 
-  function resetFan(event) {
-    pupils.classList.remove("eyesToFan");
-  }
+    fan.addEventListener("mouseover", lookFan);
+    fan.addEventListener("mouseout", resetFan);
+    fanButtons.addEventListener("click", fanOn);
 
-  function fanOn() {
-    //  alert("function call");
-    var blades = document.getElementById("blades");
-    blades.classList.toggle("blades-rotate");
-    var hair = document.getElementById("hair-bottom");
-    hair.classList.toggle("hair-blows");
-    var postIt = document.getElementById("postIt");
-    postIt.classList.toggle("postIt-blows");
-  }
+    function lookFan(event) {
+      pupils.classList.add("eyesToFan");
+    }
 
-  var headphones = document.getElementById("headphones");
-  headphones.addEventListener("mouseover", lookHeadphones);
-  headphones.addEventListener("mouseout", resetHeadphones);
+    function resetFan(event) {
+      pupils.classList.remove("eyesToFan");
+    }
 
-  function lookHeadphones(event) {
-    pupils.classList.add("eyesToHeadphones");
-  }
+    function fanOn() {
+      //  alert("function call");
+      var blades = svgDoc.getElementById("blades");
+      blades.classList.toggle("blades-rotate");
+      var hair = svgDoc.getElementById("hair-bottom");
+      hair.classList.toggle("hair-blows");
+      var postIt = svgDoc.getElementById("postIt");
+      postIt.classList.toggle("postIt-blows");
+    }
 
-  function resetHeadphones(event) {
-    pupils.classList.remove("eyesToHeadphones");
-  }
+    var headphones = svgDoc.getElementById("headphones");
+    headphones.addEventListener("mouseover", lookHeadphones);
+    headphones.addEventListener("mouseout", resetHeadphones);
 
-  var head = document.getElementById("head");
-  var eyes = document.getElementById("eyes");
-  var closedEyes = document.getElementById("closed-eyes");
+    function lookHeadphones(event) {
+      pupils.classList.add("eyesToHeadphones");
+    }
 
-  function blink(event) {
-    eyes.classList.add("eyes-closed");
-    closedEyes.classList.add("eyelids-closed");
-  }
+    function resetHeadphones(event) {
+      pupils.classList.remove("eyesToHeadphones");
+    }
 
-  function stopBlink(event) {
-    var eyes = document.getElementById("eyes");
-    var closedEyes = document.getElementById("closed-eyes");
-    eyes.classList.remove("eyes-closed");
-    closedEyes.classList.remove("eyelids-closed");
-  }
+    var head = svgDoc.getElementById("head");
+    var eyes = svgDoc.getElementById("eyes");
+    var closedEyes = svgDoc.getElementById("closed-eyes");
 
-  setInterval(blink, 3000);
-  setInterval(stopBlink, 6000);
+    function blink(event) {
+      eyes.classList.add("eyes-closed");
+      closedEyes.classList.add("eyelids-closed");
+    }
 
-  var mouse = document.getElementById("handOnMouse");
-  mouse.addEventListener("mouseover", lookMouse);
-  mouse.addEventListener("mouseout", resetMouse);
-  function lookMouse(event) {
-    pupils.classList.add("eyesToMouse");
-  }
-  function resetMouse(event) {
-    pupils.classList.remove("eyesToMouse");
-  }
+    function stopBlink(event) {
+      var eyes = svgDoc.getElementById("eyes");
+      var closedEyes = svgDoc.getElementById("closed-eyes");
+      eyes.classList.remove("eyes-closed");
+      closedEyes.classList.remove("eyelids-closed");
+    }
 
-  Draggable.create("#handOnMouse", {
-    bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
+    setInterval(blink, 3000);
+    setInterval(stopBlink, 6000);
+
+    var mouse = svgDoc.getElementById("handOnMouse");
+    mouse.addEventListener("mouseover", lookMouse);
+    mouse.addEventListener("mouseout", resetMouse);
+    function lookMouse(event) {
+      pupils.classList.add("eyesToMouse");
+    }
+    function resetMouse(event) {
+      pupils.classList.remove("eyesToMouse");
+    }
+
+    var handOnMouse = svgDoc.getElementById("handOnMouse");
+    console.log(handOnMouse.id);
+    Draggable.create(handOnMouse, {
+      bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
+    });
   });
 });

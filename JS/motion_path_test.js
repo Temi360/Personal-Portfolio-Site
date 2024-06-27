@@ -24,14 +24,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //   });
 
   //dragganle
-  Draggable.create(".handOnMouse", {
-    type: "x",
-    bounds: document.getElementById("container"),
-    onClick: function () {
-      console.log("clicked");
-    },
-    onDragEnd: function () {
-      console.log("drag ended");
-    },
+  // Draggable.create(".handOnMouse", {
+  //   type: "x",
+  //   bounds: document.getElementById("container"),
+  //   onClick: function () {
+  //     console.log("clicked");
+  //   },
+  //   onDragEnd: function () {
+  //     console.log("drag ended");
+  //   },
+  // });
+
+  document.getElementById("svgRectangle").addEventListener("load", function () {
+    //   // Access the SVG DOM once it's loaded
+    var svgDoc = this.contentDocument;
+
+    //   // // Now you can access and manipulate the SVG elements
+    // var path = svgDoc.querySelector("Rectangle"); // Adjust the selector as needed
+    // console.log(path);
+
+    var rect = svgDoc.getElementById("Rectangle");
+    console.log(rect);
+
+    Draggable.create(rect);
   });
+
+  // Draggable.create("#Rectangle");
 });
