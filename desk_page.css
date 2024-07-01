@@ -21,6 +21,9 @@
   --fadedBlue:#D5E2EC; 
 
 }
+/* .hover-target:hover {
+  cursor: url('images/click.svg'), auto;
+} */
 .deskBackground {
   display: flex;
   margin-bottom: 100px;

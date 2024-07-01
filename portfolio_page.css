@@ -1,6 +1,4 @@
-body{
-    
-}
+
 
 :root {
     --purple: #9caffe;
@@ -29,4 +27,10 @@ body{
     justify-content: center; /* Center horizontally */
     align-items: center;    /* Center vertically */
     height: 100%
+  }
+
+  .foldersAndText{
+    display: flex;
+    flex-direction: row;
+
   }

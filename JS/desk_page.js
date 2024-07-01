@@ -50,13 +50,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
   var headphones = document.getElementById("headphones");
   headphones.addEventListener("mouseover", lookHeadphones);
   headphones.addEventListener("mouseout", resetHeadphones);
-
+  headphones.addEventListener("click", playMusic);
   function lookHeadphones(event) {
     pupils.classList.add("eyesToHeadphones");
   }
 
   function resetHeadphones(event) {
     pupils.classList.remove("eyesToHeadphones");
+  }
+
+  function playMusic(event) {
+    var audio = document.getElementById("click-sound");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
   }
 
   var head = document.getElementById("head");
@@ -69,8 +78,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function stopBlink(event) {
-    var eyes = document.getElementById("eyes");
-    var closedEyes = document.getElementById("closed-eyes");
     eyes.classList.remove("eyes-closed");
     closedEyes.classList.remove("eyelids-closed");
   }
