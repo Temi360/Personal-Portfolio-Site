@@ -60,11 +60,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function playMusic(event) {
+    var head = document.getElementById("head");
     var audio = document.getElementById("click-sound");
     if (audio.paused) {
       audio.play();
+      head.classList.add("moveHead");
     } else {
       audio.pause();
+      head.classList.remove("moveHead");
     }
   }
 
