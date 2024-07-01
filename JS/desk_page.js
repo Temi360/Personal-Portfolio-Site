@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function lightOn(evt) {
     evt.preventDefault();
     var light = document.getElementById("light");
-    var button = document.getElementById("lampButton");
     light.classList.toggle("displayBlock");
   }
 
