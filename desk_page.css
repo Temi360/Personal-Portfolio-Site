@@ -162,14 +162,14 @@ light {
 .moveHead{
   transform-origin: center;
   transform-box: fill-box;
-  animation: bouncingHead 1s ease-in-out alternate infinite;
+  animation: bouncingHead .7s ease-in-out alternate infinite;
 }
+
 
 @keyframes bouncingHead{
   0%{
-    transform: rotate(5deg);
+    transform: rotate(2deg);
   }
-  50%{transform: rotate(-5deg);
-  }
-  100%{transform: rotate(-10deg)};
+  
+  100%{transform: rotate(-4deg)};
 }
