@@ -1,0 +1,23 @@
+body{
+    
+}
+
+:root {
+    --purple: #9caffe;
+    --orange: #f14d08;
+    --darkOrange: #af371c;
+    --grey: #f5f5f5;
+    --black: #020001;
+    --brown: #c28f73;
+    --darkBrown: #9a6053;
+    --darkDarkBrown: #2f120b;
+    --darkDarkGrey: #908c8c;
+    --yellow: #FFF96E;
+  }
+
+  .folderBackgroundDiv{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100%
+  }

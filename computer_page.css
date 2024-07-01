@@ -1,13 +1,3 @@
-body {
-  background-image: url("images/whiteBackground.svg");
-  background-size: cover; /* Cover the entire page */
-  background-repeat: no-repeat; /* Prevent repeating */
-  background-position: center center; /* Center the image */
-  /* height: 100vh; Ensure the body takes the full height of the viewport */
-  margin: 0; /* Remove default margin */
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
 
 :root {
   --purple: #9caffe;
@@ -19,6 +9,7 @@ body {
   --darkBrown: #9a6053;
   --darkDarkBrown: #2f120b;
   --darkDarkGrey: #908c8c;
+  --yellow: #FFF96E;
 }
 
 .computerBackground {

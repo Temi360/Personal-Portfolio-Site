@@ -1,9 +1,12 @@
-body{
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrollbars during transition */
-    height: 100%;
-}
+body {
+    background-image: url("images/whiteBackground.svg");
+    background-size: cover; /* Cover the entire page */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center center; /* Center the image */
+    margin: 0; /* Remove default margin */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
 
 /* .custom-cursor{
     cursor: url('images/cursor.svg'), auto;

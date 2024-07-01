@@ -48,17 +48,16 @@
         <svg width="770058" height="633.87" viewBox="0 0 758 480" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="desk_background_and_character">
           <g id="window">
-          <g id="Group 283">
-          <path id="Vector 4367" d="M597 106.59V98H756V106.59H601.913H597Z" fill="#D9D9D9" stroke="#908C8C" stroke-width="3"/>
+          <g fill = "#DADFF5"id="Group 283">
+          <path id="Vector 4367" d="M597 106.59V98H756V106.59H601.913H597Z" fill="#D9D9D9" stroke="" stroke-width="3"/>
           <g id="Vector 4368">
-          <path d="M607.049 224.428V109.453H745.281V224.428H607.049Z" fill="#F5F5F5"/>
-          <path d="M602.136 106.15V227.291H599.68V235H752.204V227.291H749.747V106.15M607.049 109.453V224.428H745.281V109.453H607.049Z" stroke="#908C8C" stroke-width="3"/>
+          <path d="M607.049 224.428V109.453H745.281V224.428H607.049Z" fill=""/>
           </g>
           </g>
           <g id="sun">
           <circle id="Ellipse 92" cx="636.5" cy="140.5" r="21" fill="#FFF96E" stroke="#E3D382" stroke-width="3"/>
           </g>
-          <path id="blindPull" d="M752.204 183.68V106.81H752.874V183.68H753.543L754.437 190.068H750.64L751.087 183.68H752.204Z" stroke="#020001" stroke-width="3"/>
+          <path id="blindPull" d="M752.204 183.68V106.81H752.874V183.68H753.543L754.437 190.068H750.64L751.087 183.68H752.204Z" stroke="#E3D382" stroke-width="3"/>
           </g>
           <g id="plant">
           <g id="pot">
