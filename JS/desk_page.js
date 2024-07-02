@@ -62,15 +62,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function playMusic(event) {
     var head = document.getElementById("head");
     var headphones = document.getElementById("headphones");
+    var hair = document.getElementById("hair");
     var audio = document.getElementById("click-sound");
     if (audio.paused) {
       audio.play();
       head.classList.add("moveHead");
       headphones.classList.add("moveHead");
+      hair.classList.add("moveHead");
     } else {
       audio.pause();
       head.classList.remove("moveHead");
       headphones.classList.remove("moveHead");
+      hair.classList.remove("moveHead");
     }
   }
 
