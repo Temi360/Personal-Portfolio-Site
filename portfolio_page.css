@@ -1,4 +1,13 @@
 
+body{
+    cursor: url('images/customCursor.png') 16 16, auto;
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 550;
+    font-style: normal;
+    font-size:30px;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --purple: #9caffe;
@@ -21,16 +30,97 @@
     --fadedBlue:#D5E2EC; 
  
   }
-
-  .folderBackgroundDiv{
+ img{
+    margin:20px;
+ }
+h2{
+    margin:0;
+    font-weight: 550;
+    padding-left: 20px;
+}
+p{
+    font-size:25px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: var(--darkDarkGrey);
+}
+.portfolioPreviewText{
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically */
-    height: 100%
-  }
+    flex-direction: column;
+    padding: 0;
+    margin-left:20px;
+    margin-top: 40px;
+    width:500px;
+    overflow-wrap: break-word;
 
-  .foldersAndText{
+}
+.portfolioContentPreview{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(5%, 45%);
+}
+.folderPageTitle{
+    color: var(--grey);
+    position: absolute;
+    transform: translate(75%,10%);
+}
+.menuAndBackButton{
+    /* display:none; */
     display: flex;
     flex-direction: row;
 
+    font-size: 30px;
+    position: absolute;
+}
+#folderMenu{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    background-color: var(--grey);
+    border-radius:5px;
+    height: 43px;
+    width: 814px;
+    transform: translate(18%, 130%);
+    font-size: 30px;
+
+}
+
+  .folderBackgroundDiv{
+    width: 1133px;
+    height: 550px;
+    margin: auto;
+
+    margin-left: 12%;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+
   }
+
+  .folders{
+    z-index:1;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    padding-left:10px;
+    transform: translate(35%, 80%);
+
+
+
+}
+  /* svg{
+  position: absolute;
+  } */
+  
+#wearHats{
+    font-weight: 550;
+    font-size: 35px;
+    transform: translate(70%, 200%);
+    z-index:1;
+    position: absolute;
+}
+

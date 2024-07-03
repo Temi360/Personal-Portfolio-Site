@@ -8,10 +8,6 @@ body {
     transition: opacity 0.5s ease-in-out;
   }
 
-/* .custom-cursor{
-    cursor: url('images/cursor.svg'), auto;
-    
-} */
 .jost {
   font-family: "Jost", sans-serif;
   font-weight: 500;
