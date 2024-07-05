@@ -15,6 +15,7 @@ body{
     --fadedPurple: #DADFF5;
     --orange: #f14d08;
     --darkOrange: #af371c;
+    --fadedOrange: #EFAD92;
     --grey: #f5f5f5;
     --darkDarkGrey: #908c8c;
     --fadedGrey:#E9E8E8;
@@ -113,7 +114,9 @@ p{
   /* svg{
   position: absolute;
   } */
-  
+.contentDescriptionText{
+  margin-top:0;
+}
 #wearHats{
     font-weight: 550;
     font-size: 35px;
@@ -122,3 +125,42 @@ p{
     position: absolute;
 }
 
+#viewProject{
+  margin-left: 300px;
+}
+
+.portfolioProjectTitleAndImage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.biggerPortfolioImage{
+  margin-right: 20px;
+  width: 40%;
+  height: 40%;
+}
+
+.typeRoleDuration{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.typeRoleDurationItems{
+  margin-right: 45;
+  color: var(--darkDarkGrey);
+  font-weight: 400;
+}
+.theProblem{
+  margin-top:80px;
+  margin-left: 20px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--darkOrange);
+  font-size: 35px;
+  font-weight: 550;
+  background-color: var(--fadedOrange);
+}
