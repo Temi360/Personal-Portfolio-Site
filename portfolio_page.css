@@ -1,6 +1,6 @@
 
 body{
-    cursor: url('images/customCursor.png') 16 16, auto;
+    cursor: url('images/customCursor.svg') 16 16, auto;
     font-family: "Just Me Again Down Here", cursive;
     font-weight: 550;
     font-style: normal;
@@ -30,9 +30,9 @@ body{
     --fadedBlue:#D5E2EC; 
  
   }
- img{
-    margin:20px;
- }
+  #windyScenePreviewImg{
+    margin:40px;
+  }
 h2{
     margin:0;
     font-weight: 550;
@@ -92,12 +92,10 @@ p{
     width: 1133px;
     height: 550px;
     margin: auto;
-
-    margin-left: 12%;
     position: relative;
     justify-content: center;
     height: 100%;
-
+    
   }
 
   .folders{

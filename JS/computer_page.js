@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // pen movement
   gsap.registerPlugin(MotionPathPlugin, Draggable);
 
-  var resume = document.getElementById("resumeBorder");
-  var portfolio = document.getElementById("portfolioBorder");
+  const resume = document.getElementById("resumeBorder");
+  const portfolio = document.getElementById("portfolioBorder");
 
-  var rightButton = document.getElementById("rightArrowButtonAndText");
+  const rightButton = document.getElementById("rightArrowButtonAndText");
   rightButton.addEventListener("click", clickedRight);
 
   function clickedRight() {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 100);
   }
 
-  var leftButton = document.getElementById("leftArrowButtonAndText");
+  const leftButton = document.getElementById("leftArrowButtonAndText");
   leftButton.addEventListener("click", clickedLeft);
 
   function clickedLeft() {
@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 100);
   }
 
-  var enterButton = document.getElementById("enterButtonAndText");
+  const enterButton = document.getElementById("enterButtonAndText");
   enterButton.addEventListener("click", clickedEnter);
 
   function clickedEnter() {
-    var enterButton = document.getElementById("enterButtonAndText");
+    const enterButton = document.getElementById("enterButtonAndText");
     enterButton.classList.add("buttonClicked");
     setTimeout(function () {
       enterButton.classList.remove("buttonClicked");

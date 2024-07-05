@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(MotionPathPlugin, Draggable);
-  var pupils = document.getElementById("pupils");
-  var lamp = document.getElementById("lampHead");
-  var lampButton = document.getElementById("lampButton");
+  const pupils = document.getElementById("pupils");
+  const lamp = document.getElementById("lampHead");
+  const lampButton = document.getElementById("lampButton");
 
   lamp.addEventListener("mouseover", lookLamp);
   lamp.addEventListener("mouseout", resetLamp);
@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   function lightOn(evt) {
     evt.preventDefault();
-    var light = document.getElementById("light");
+    const light = document.getElementById("light");
     light.classList.toggle("displayBlock");
   }
 
-  var fan = document.getElementById("fanBottom");
-  var fanButtons = document.getElementById("fanButtons");
+  const fan = document.getElementById("fanBottom");
+  const fanButtons = document.getElementById("fanButtons");
 
   fan.addEventListener("mouseover", lookFan);
   fan.addEventListener("mouseout", resetFan);
@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   function fanOn() {
     //  alert("function call");
-    var blades = document.getElementById("blades");
+    const blades = document.getElementById("blades");
     blades.classList.toggle("blades-rotate");
-    var hair = document.getElementById("hair-bottom");
+    const hair = document.getElementById("hair-bottom");
     hair.classList.toggle("hair-blows");
-    var postIt = document.getElementById("postIt");
+    const postIt = document.getElementById("postIt");
     postIt.classList.toggle("postIt-blows");
   }
 
-  var headphones = document.getElementById("headphones");
+  const headphones = document.getElementById("headphones");
   headphones.addEventListener("mouseover", lookHeadphones);
   headphones.addEventListener("mouseout", resetHeadphones);
   headphones.addEventListener("click", playMusic);
@@ -60,26 +60,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function playMusic(event) {
-    var head = document.getElementById("head");
-    var headphones = document.getElementById("headphones");
-    var hair = document.getElementById("hair");
-    var audio = document.getElementById("click-sound");
+    const head = document.getElementById("head");
+    const hair = document.getElementById("hair");
+    const audio = document.getElementById("click-sound");
     if (audio.paused) {
       audio.play();
       head.classList.add("moveHead");
-      headphones.classList.add("moveHead");
       hair.classList.add("moveHead");
     } else {
       audio.pause();
       head.classList.remove("moveHead");
-      headphones.classList.remove("moveHead");
       hair.classList.remove("moveHead");
     }
   }
 
-  var head = document.getElementById("head");
-  var eyes = document.getElementById("eyes");
-  var closedEyes = document.getElementById("closed-eyes");
+  const head = document.getElementById("head");
+  const eyes = document.getElementById("eyes");
+  const closedEyes = document.getElementById("closed-eyes");
 
   function blink(event) {
     eyes.classList.add("eyes-closed");
@@ -94,7 +91,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   setInterval(blink, 3000);
   setInterval(stopBlink, 6000);
 
-  var mouse = document.getElementById("handOnMouse");
+  const mouse = document.getElementById("handOnMouse");
   mouse.addEventListener("mouseover", lookMouse);
   mouse.addEventListener("mouseout", resetMouse);
   function lookMouse(event) {

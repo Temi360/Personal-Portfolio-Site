@@ -37,7 +37,7 @@
 
             <div class = "portfolioContentPreview">
             <img src = "images/leftChevron.svg">
-            <img src = "images/theWindyScenePreview.svg">
+            <img id = "windyScenePreviewImg"  src = "images/theWindyScenePreview.svg">
             <div class = "portfolioPreviewText jost ">
             <h2> The Windy Scene</h2>
             <p> A tour application that utilizes an easy userflow to make exploring Chicago's jazz scene simple and fun!</p>
@@ -47,9 +47,9 @@
             </div>
              <svg width="1133" height="550" viewBox="0 0 1133 550" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="folderBackground">
-<path id="Rectangle 17" d="M2.49996 63C2.49996 53.335 10.335 45.5 20 45.5H1113C1122.66 45.5 1130.5 53.335 1130.5 63V530C1130.5 539.665 1122.66 547.5 1113 547.5H20C10.335 547.5 2.5 539.665 2.5 530L2.49996 63Z" stroke="#9CAFFE" stroke-width="5"/>
+<path id="Rectangle 17" d="M2.49996 63C2.49996 53.335 10.335 45.5 20 45.5H1113C1122.66 45.5 1130.5 53.335 1130.5 63V530C1130.5 539.665 1122.66 547.5 1113 547.5H20C10.335 547.5 2.5 539.665 2.5 530L2.49996 63Z" fill = "var(--grey)"stroke="#9CAFFE" stroke-width="5"/>
 <path id="Vector 270" d="M37.7732 1.54008L12.9844 46.0401C11.8705 48.0397 13.3162 50.5 15.6052 50.5H215.082C217.327 50.5 218.777 48.1236 217.749 46.127L194.843 1.627C194.329 0.627929 193.3 0 192.176 0H40.394C39.3058 0 38.3028 0.589357 37.7732 1.54008Z" fill="#9CAFFE"/>
-<path id="exitButton" d="M175 15L191 31M191 15L175 31" stroke="#F5F5F5" stroke-width="3"/>
+<a href = "computer_page.php"><path id="exitButton" d="M175 15L191 31M191 15L175 31" stroke="#F5F5F5" stroke-width="3"/></a>
 <path id="Vector 272" d="M1123 109H10.077C8.42018 109 7.07704 107.657 7.07703 106L7.07693 62.1157C6.33534 56.8743 11.1297 51.6619 13.9513 49.8659C14.3463 49.6145 14.7896 49.5121 15.2579 49.5114C377.314 49.007 1102.64 48 1113.02 48C1123 49.2099 1125.83 56.2342 1126 59.595V106C1126 107.657 1124.66 109 1123 109Z" fill="#9CAFFE" stroke="#F5F5F5" stroke-width="3"/>
 <a href = "portfolio_page.php"><g id="backButton">
 <path id="backArrow" d="M27.2929 78.2929C26.9024 78.6834 26.9024 79.3166 27.2929 79.7071L33.6569 86.0711C34.0474 86.4616 34.6805 86.4616 35.0711 86.0711C35.4616 85.6805 35.4616 85.0474 35.0711 84.6569L29.4142 79L35.0711 73.3431C35.4616 72.9526 35.4616 72.3195 35.0711 71.9289C34.6805 71.5384 34.0474 71.5384 33.6569 71.9289L27.2929 78.2929ZM54 78H28V80H54V78Z" fill="#F5F5F5"/>

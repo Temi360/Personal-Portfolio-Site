@@ -70,22 +70,18 @@ body {
     margin-top:7px;
 }
 #welcomePageName{
-    margin: auto;
     margin-top: 0px;
 
 }
 
 #hairWelcome{
     fill: var(--grey);
-    /* stroke: var(--grey); */
 }
  #eyebrowsWelcome{
     fill: var(--grey);
 
 } 
 #welcomePageIconClick{
-    /* margin-left:1120px;
-    margin-top:-650px; */
     margin-top: 300px; 
     margin-right: 90px;
 }
@@ -123,13 +119,13 @@ body {
     margin-top:40px;
     display: flex;
     flex-direction: row; 
-    /* justify-content:center; */
+    justify-content:center;
+    gap: 30px;
 }
+
 #clickMe{
     stroke: var(--grey);
     fill: var(--grey);
-}
-#clickMe{
     float: right;
     margin-right: 100px;
     margin-top: -350px;
