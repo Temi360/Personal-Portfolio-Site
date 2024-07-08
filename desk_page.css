@@ -1,32 +1,37 @@
-body {
-  background-image: url("images/whiteBackground.svg");
-  background-size: cover; /* Cover the entire page */
-  background-repeat: no-repeat; /* Prevent repeating */
-  background-position: center center; /* Center the image */
-  margin: 0; /* Remove default margin */
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
+
 /* colors */
 :root {
   --purple: #9caffe;
+  --darkPurple: #8693CB;
+  --fadedPurple: #DADFF5;
   --orange: #f14d08;
   --darkOrange: #af371c;
   --grey: #f5f5f5;
+  --darkDarkGrey: #908c8c;
+  --fadedGrey:#E9E8E8;
   --black: #020001;
   --brown: #c28f73;
   --darkBrown: #9a6053;
   --darkDarkBrown: #2f120b;
-  --darkDarkGrey: #908c8c;
+  --yellow: #FFF96E;
+  --green: #A1B489;
+  --darkGreen: #63734E;
+  --fadedGreen: #E3EADB;
+  --darkBlue:#687493;
+  --fadedBlue:#D5E2EC; 
+
 }
+/* .hover-target:hover {
+  cursor: url('images/click.svg'), auto;
+} */
 .deskBackground {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   justify-content: center;
   /* margin-bottom:-100px; */
 }
-.draggable {
-  cursor: move;
+#handContainer{
+  width: 500px;
 }
 #computerScreen {
   stroke: var(--purple);
@@ -42,13 +47,13 @@ body {
   stroke: var(--black);
   stroke-width: 2px;
 }
-
-.light {
+/* 
+light {
   display: none;
-}
+} */
 .displayBlock {
-  display: block;
-  /* transition: display .5s ease-in-out; */
+  display: none;
+  transition: display .5s ease-in-out;
 }
 
 .blades-rotate {
@@ -110,15 +115,30 @@ body {
     transform: rotate(360deg);
   }
 }
+.eyesToLamp{
+  transform: translate(2.5px, -4px);
+}
 
+.eyesToFan{
+  transform: translate(-4px, 0px);
+}
+.eyesToHeadphones{
+  transform: translate(0px, -4px);
+}
+.eyesToMouse{
+  transform: translate(-2px, 0px);
+
+}
+#closed-eyes{
+  visibility: hidden;
+}
 .eyes-closed{
-  display: block;
-  animation: eyesDisappearing 1s infinite steps(1, end);
+  animation: eyesDisappearing .5s steps(1, end);
 
 }
 .eyelids-closed{
-  display: block;
-  animation: eyesClosing 1s infinite steps(1, end);
+  display:block;
+  animation: eyesClosing .5s steps(1, end);
 }
 
 @keyframes eyesDisappearing {
@@ -137,4 +157,19 @@ body {
 50% {
     visibility: visible;
 }
+}
+ 
+.moveHead{
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: bouncingHead .7s ease-in-out alternate infinite;
+}
+
+
+@keyframes bouncingHead{
+  0%{
+    transform: rotate(2deg);
+  }
+  
+  100%{transform: rotate(-4deg)};
 }

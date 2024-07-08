@@ -1,0 +1,166 @@
+
+body{
+    cursor: url('images/customCursor.svg') 16 16, auto;
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 550;
+    font-style: normal;
+    font-size:30px;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple: #9caffe;
+    --darkPurple: #8693CB;
+    --fadedPurple: #DADFF5;
+    --orange: #f14d08;
+    --darkOrange: #af371c;
+    --fadedOrange: #EFAD92;
+    --grey: #f5f5f5;
+    --darkDarkGrey: #908c8c;
+    --fadedGrey:#E9E8E8;
+    --black: #020001;
+    --brown: #c28f73;
+    --darkBrown: #9a6053;
+    --darkDarkBrown: #2f120b;
+    --yellow: #FFF96E;
+    --green: #A1B489;
+    --darkGreen: #63734E;
+    --fadedGreen: #E3EADB;
+    --darkBlue:#687493;
+    --fadedBlue:#D5E2EC; 
+ 
+  }
+  #windyScenePreviewImg{
+    margin:40px;
+  }
+h2{
+    margin:0;
+    font-weight: 550;
+    padding-left: 20px;
+}
+p{
+    font-size:25px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: var(--darkDarkGrey);
+}
+.portfolioPreviewText{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left:20px;
+    margin-top: 40px;
+    width:500px;
+    overflow-wrap: break-word;
+
+}
+.portfolioContentPreview{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(5%, 45%);
+}
+.folderPageTitle{
+    color: var(--grey);
+    position: absolute;
+    transform: translate(75%,10%);
+}
+.menuAndBackButton{
+    /* display:none; */
+    display: flex;
+    flex-direction: row;
+
+    font-size: 30px;
+    position: absolute;
+}
+#folderMenu{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    background-color: var(--grey);
+    border-radius:5px;
+    height: 43px;
+    width: 814px;
+    transform: translate(18%, 130%);
+    font-size: 30px;
+
+}
+
+  .folderBackgroundDiv{
+    width: 1133px;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    
+  }
+
+  .folders{
+    z-index:1;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    padding-left:10px;
+    transform: translate(35%, 80%);
+
+
+
+}
+  /* svg{
+  position: absolute;
+  } */
+.contentDescriptionText{
+  margin-top:0;
+}
+#wearHats{
+    font-weight: 550;
+    font-size: 35px;
+    transform: translate(70%, 200%);
+    z-index:1;
+    position: absolute;
+}
+
+#viewProject{
+  margin-left: 300px;
+}
+
+.portfolioProjectTitleAndImage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.biggerPortfolioImage{
+  margin-right: 20px;
+  width: 40%;
+  height: 40%;
+}
+
+.typeRoleDuration{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.typeRoleDurationItems{
+  margin-right: 45;
+  color: var(--darkDarkGrey);
+  font-weight: 400;
+}
+.theProblem{
+  margin-top:80px;
+  margin-left: 20px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--darkOrange);
+  font-size: 35px;
+  font-weight: 550;
+  background-color: var(--fadedOrange);
+}
