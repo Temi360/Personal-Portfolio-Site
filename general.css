@@ -42,6 +42,7 @@ body {
   
 /* Style rule set for individual li */
 .navbar ul li {
+    font-weight: 500;
     font-size: 30px;
     color: var(--purple);
     padding-top: 20px;

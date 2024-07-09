@@ -9,4 +9,12 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+svg{
+  position: absolute;
+}
 
+
+.slideUpTransition{
+  transform: translate(1000);
+  transition: transform 1s ease;
+}

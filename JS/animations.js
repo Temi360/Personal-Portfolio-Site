@@ -7,5 +7,20 @@ window.transitionToPage = function (href) {
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("body").style.opacity = 1;
 });
+// Name Animation
+// const name = document.getElementById("TEMI");
 
-//TO DO: Make this code less stinky!!! PU (Think if else statements? )
+const welcomePageIcon = document.getElementById("clickMeGroup");
+console.log(welcomePageIcon);
+welcomePageIcon.addEventListener(
+  "click",
+  transitionToDeskPage(event, "desk_page.html")
+);
+
+function transitionToDeskPage(event) {
+  document.getClassName("slideUpDiv");
+  welcomePageIcon.classList.add("slideUpTransition");
+  setTimeout(function () {
+    window.location.href = "desk_page.html";
+  }, 500);
+}
