@@ -32,6 +32,7 @@ body{
  
   }
   #windyScenePreviewImg{
+    width: 30%;
     margin:40px;
   }
 h2{
@@ -60,7 +61,7 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    transform: translate(5%, 45%);
+    transform: translate(0%, 30%);
 }
 .folderPageTitle{
     color: var(--grey);
@@ -129,38 +130,132 @@ p{
   margin-left: 300px;
 }
 
+
 .portfolioProjectTitleAndImage{
+  margin-top: 40px;
+  margin: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.portfolioProjectTitle{
+  font-weight: 500;
+  font-size: 60px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+}
+.projectDescription{
+  display: flex;
+  flex-direction: column;
+}
+
 .biggerPortfolioImage{
   margin-right: 20px;
-  width: 40%;
-  height: 40%;
+  width: 600px;
+  height: 700px;
 }
 
 .typeRoleDuration{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .typeRoleDurationItems{
-  margin-right: 45;
   color: var(--darkDarkGrey);
   font-weight: 400;
 }
-.theProblem{
-  margin-top:80px;
+.projectAttributes{
+  margin-top: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.projectAttributeItems{
+  margin: 0;
+  padding-left: 40;
+  padding-right: 40;
+
+}
+
+.stackContainer{
+  margin-left: 30;
+  display: flex;
+  flex-direction: row;
+}
+
+.stackItems{
+  padding-left: 20;
+}
+
+.stackLabel{
+  color: var(--darkDarkGrey);
+  font-weight: 500;
+}
+
+.theProblemBox{
   margin-left: 20px;
-  width: 220px;
+  padding: 0;
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: var(--fadedOrange);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  margin-top: 50px;
+  overflow-wrap: break-word;
   color: var(--darkOrange);
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 550;
-  background-color: var(--fadedOrange);
+}
+
+.theProblemContainer{
+  margin-top: -30px;
+  width: 600px;
+}
+.stickySidebar{
+  float: right;
+  position: fixed;
+}
+
+.firstDottedLine{
+  margin-left: 60%;
+  position: relative;
+}
+.secondDottedLine{
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+.leftAlignedTextContainer{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 150;
+  margin-left: 40;
+  width: 600px;
+  overflow-wrap: break-word;
+}
+
+.infoArchitectureImage{
+  display: flex;
+  justify-content: center;
+}
+.LoFiWireframesBox{
+  margin-left: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.LoFiWireframeLabelAndPen{
+  display: flex;
+  justify-content: center;
+  
 }

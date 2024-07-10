@@ -104,4 +104,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   Draggable.create("#handOnMouse", {
     bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
   });
+
+  const computer = document.getElementById("computer");
+  computer.addEventListener("click", computerPageTransition);
+  function computerPageTransition(event) {
+    const deskBackground = document.getElementById("deskBackground");
+    // deskBackground.classList.toggle(".opacity");
+  }
 });
