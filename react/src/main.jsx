@@ -9,5 +9,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <WelcomePage />
     <DeskPage />
+    <App />
   </React.StrictMode>,
 )
