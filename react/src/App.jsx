@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes, Link } from 'react-router-dom';
-import Home from './WelcomePage';
 import ComputerPage from './ComputerPage';
 import ContactPage from './ContactPage';
 import reactLogo from './assets/react.svg'
@@ -16,18 +15,28 @@ function App() {
         <ul>
         <li><Link to = "/">Home</Link></li>
         <li>designer, coder, storyteller...</li>
-        <li><Link to = "/">work</Link></li>
-        <li><Link to = "/">contact</Link></li>
+        <li><Link to = "/work">work</Link></li>
+        <li><Link to = "/contact">contact</Link></li>
 
         </ul>
       </nav>
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<WelcomePage />} />
         <Route path="/work" element={<ComputerPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       </div>
   );
 };
+
+
+
+const WelcomePage = () => (
+       <>
+          <div>
+              This will be where the welcome page is
+          </div>
+       </>
+  );
 
 export default App

@@ -5,7 +5,7 @@ function ComputerPage() {
     return (
          <>
             <div>
-                This will be where the contact module
+                This will be where the work module
             </div>
          </>
     )
