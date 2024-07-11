@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-function Temi() {
+function WelcomePage() {
     return (
          <>
             <div>
-                Hey I'm Temi
+                This will be where the welcome page is
             </div>
          </>
     )
 }
 
-export default Temi
+export default WelcomePage

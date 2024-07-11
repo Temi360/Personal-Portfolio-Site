@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-function Grady() {
+function DeskPage() {
     return (
          <>
             <div>
-                Hey I'm Grady
+This is where the desk page will be
             </div>
          </>
     )
 }
 
-export default Grady
+export default DeskPage
