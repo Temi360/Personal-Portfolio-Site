@@ -323,6 +323,8 @@ function App() {
         <Route path="/work" element={<ComputerPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/desk" element={<DeskPage />} />
+
+
       </Routes>
     </div>
   );

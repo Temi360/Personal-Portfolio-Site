@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from 'react';
+
+import { Route, Routes, Link } from "react-router-dom";
+
 import "./desk_page.css";
-import "./desk_page.js";
+import { initializeAnimations } from "./desk_page.js";
+
+
+
 function DeskPage() {
+  const svgRef = useRef(null);
+
+  useEffect(() => {
+    // Call the function to initialize animations
+    initializeAnimations();
+  }, []);
   return (
     <>
       <div>
         <svg
+         ref={svgRef}
           width="800"
           height="633.87"
           viewBox="0 0 758 480"
@@ -801,7 +814,7 @@ function DeskPage() {
                 />
               </g>
             </g>
-            <g id="computer">
+            <Link to="/work"><g id="computer">
               <g id="computerBase">
                 <path
                   d="M519.876 310.662L496.332 306.767C492.422 306.121 489.555 302.74 489.555 298.777C489.555 294.305 493.181 290.679 497.654 290.679L519.876 290.679L594.196 288.98C599.603 288.856 604.053 293.206 604.053 298.614C604.053 303.815 599.926 308.078 594.728 308.246L519.876 310.662Z"
@@ -855,7 +868,7 @@ function DeskPage() {
                 stroke="#020001"
                 strokeWidth="3"
               />
-            </g>
+            </g></Link>
             <g id="keyboardAndHand">
               <g id="keyboard">
                 <g id="Vector 136">

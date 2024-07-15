@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(MotionPathPlugin, Draggable);
+
+gsap.registerPlugin(MotionPathPlugin, Draggable);
+
+
+export const initializeAnimations = () => {
+
   const pupils = document.getElementById("pupils");
   const lamp = document.getElementById("lampHead");
   const lampButton = document.getElementById("lampButton");
@@ -111,4 +115,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const deskBackground = document.getElementById("deskBackground");
     // deskBackground.classList.toggle(".opacity");
   }
-});
+
+};

@@ -1,11 +1,4 @@
-import React from 'react'
-
-
-function ComputerPage() {
-    return (
-         <>
-            <div>
-            <svg width="1245" height="642" viewBox="0 0 1245 642" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1245" height="642" viewBox="0 0 1245 642" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M32 384L931.744 352.065L1082 343" stroke="#9CAFFE" stroke-width="3"/>
 <g filter="url(#filter0_d_456_131)">
 <path d="M359 458C248.956 432.559 73.1598 398.278 -18 445.606" stroke="black" stroke-width="10"/>
@@ -192,10 +185,3 @@ function ComputerPage() {
 </filter>
 </defs>
 </svg>
-
-            </div>
-         </>
-    )
-}
-
-export default ComputerPage
