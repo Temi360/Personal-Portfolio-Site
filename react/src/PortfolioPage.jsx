@@ -103,7 +103,7 @@ function PortfolioPage() {
                     </g>
                   </g>
                 </g>
-                <Link to="/ UIUX">
+                <Link to="/UIUX">
                   <g id="uiUXFolderAndLabel">
                     <g id="UI/UX_2">
                       <path

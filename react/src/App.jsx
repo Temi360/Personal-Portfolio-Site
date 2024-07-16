@@ -4,6 +4,8 @@ import ComputerPage from "./ComputerPage";
 import ContactPage from "./ContactPage";
 import DeskPage from "./DeskPage";
 import PortfolioPage from "./PortfolioPage";
+import UIUXPage from "./UIUXPage";
+import ProjectPage from "./ProjectPage";
 import "./welcome_page.css";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -326,6 +328,8 @@ function App() {
         <Route path="/desk" element={<DeskPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/UIUX" element={<UIUXPage />} />
+        <Route path="/project" element={<ProjectPage />} />
+
 
 
 

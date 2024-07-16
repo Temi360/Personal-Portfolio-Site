@@ -28,6 +28,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.backgroundDiv{
+   background-image: url('./FixedBackgroundLines.svg');
+   width: 100vw; /* Full viewport width */
+   height: 100vh; /* Full viewport height */
+   background-size: cover; /* Optional: Ensures the image covers the whole div */
+   background-position: center; /* Optional: Centers the image */
+   background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+
+}
 /* 
 a {
   font-weight: 500;
