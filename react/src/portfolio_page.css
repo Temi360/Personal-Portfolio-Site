@@ -1,5 +1,5 @@
 
-body{
+/* body{
     cursor: url('images/customCursor.svg') 16 16, auto;
     font-family: "Just Me Again Down Here", cursive;
     font-weight: 550;
@@ -7,29 +7,16 @@ body{
     font-size:30px;
     margin: 0;
     padding: 0;
-}
+} */
 
-:root {
-    --purple: #9caffe;
-    --darkPurple: #8693CB;
-    --fadedPurple: #DADFF5;
-    --orange: #f14d08;
-    --darkOrange: #af371c;
-    --fadedOrange: #EFAD92;
-    --grey: #f5f5f5;
-    --darkDarkGrey: #908c8c;
-    --fadedGrey:#E9E8E8;
-    --black: #020001;
-    --brown: #c28f73;
-    --darkBrown: #9a6053;
-    --darkDarkBrown: #2f120b;
-    --yellow: #FFF96E;
-    --green: #A1B489;
-    --darkGreen: #63734E;
-    --fadedGreen: #E3EADB;
-    --darkBlue:#687493;
-    --fadedBlue:#D5E2EC; 
- 
+
+
+  .justMeFont{
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 550;
+    font-style: normal;
+    font-size:30px;
+    color: var(--darkDarkGrey);
   }
   #windyScenePreviewImg{
     width: 30%;

@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  // pen movement
-  gsap.registerPlugin(MotionPathPlugin, Draggable);
+gsap.registerPlugin(MotionPathPlugin, Draggable);
+
+// TO DO: fix bug that makes animations stop working when reloading the page
+export const initializeComputerAnimations= () => {
 
   const resume = document.getElementById("resumeBorder");
   const portfolio = document.getElementById("portfolioBorder");
@@ -38,11 +39,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     setTimeout(function () {
       enterButton.classList.remove("buttonClicked");
     }, 100);
-    document.querySelector("body").style.opacity = 0;
-    setTimeout(function () {
-      window.location.replace("portfolio_page.php");
-    }, 500);
   }
-
+  Draggable.create("#mouse", {
+    bounds: { minX: 10, minY: 0, maxX: -100, maxY: 15 },
+  });
   Draggable.create("#singularPen");
-});
+};
