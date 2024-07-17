@@ -8,6 +8,7 @@ import plant from "./plant.svg";
 import infoArchitecture from "./TWSInfoArchitecture.svg";
 import loFiWireframeLabelAndPen from "./LoFiWireframeLabelAndPen.svg";
 import loFiWireframes from "./loFiWireframes.svg"
+import uxTestingLabel from "./uxLabel.svg"
 function ProjectPage() {
   return (
     <>
@@ -310,6 +311,21 @@ function ProjectPage() {
     <div class = "LoFiWireframesBox">
     <img src = {loFiWireframes}/>
     </div>
+    <div class = "jost userTestingText">
+    <div class = "UserTestingItem"><img alt= "User Testing Label" src = {uxTestingLabel}/></div>
+    <p> After testing my Hi-Fi prototype with different users, I received some important feedback about my prototype: 
+        <p><strong>What was Working:</strong></p>
+        <ol>
+            <li>Having different user flows to access specific jazz clubs</li>
+            <li>Being able to navigate easily between Homepage, Map, and Historical and Contemporary Clubs</li>
+        </ol>
+        <p><strong>What Wasn't:</strong></p>
+        <ol>
+            <li>Filtering systems weren't clear on all pages</li>
+            <li>Not enough information about coubs on Historical and Contemporary Club Pages</li>
+        </ol>
+    </p>
+</div>
     </>
   );
 }
