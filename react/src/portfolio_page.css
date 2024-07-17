@@ -1,12 +1,4 @@
-/* body{
-    cursor: url('images/customCursor.svg') 16 16, auto;
-    font-family: "Just Me Again Down Here", cursive;
-    font-weight: 550;
-    font-style: normal;
-    font-size:30px;
-    margin: 0;
-    padding: 0;
-} */
+
 
 .justMeFont {
   font-family: "Just Me Again Down Here", cursive;
@@ -129,6 +121,7 @@ p {
 .projectDescription {
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .biggerPortfolioImage {
@@ -146,6 +139,8 @@ p {
 .typeRoleDurationItems {
   color: var(--darkDarkGrey);
   font-weight: 400;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .projectAttributes {
   margin-top: 10;
@@ -160,6 +155,7 @@ p {
 }
 
 .stackContainer {
+  margin-top: 10px;
   margin-left: 30;
   display: flex;
   flex-direction: row;
@@ -167,6 +163,7 @@ p {
 
 .stackItems {
   padding-left: 20;
+  padding-right: 20px;
 }
 
 .stackLabel {
@@ -175,10 +172,9 @@ p {
 }
 
 .theProblemBox {
-  margin-left: 20px;
   padding: 0;
-  width: 250px;
-  height: 60px;
+  width: 200px;;
+  height: 50px;
   border-radius: 10px;
   background-color: var(--fadedOrange);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -187,17 +183,21 @@ p {
   margin-top: 50px;
   overflow-wrap: break-word;
   color: var(--darkOrange);
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 550;
+  
 }
 
 .theProblemContainer {
   margin-top: -30px;
   width: 600px;
+  text-align: left;
+
 }
 .stickySidebar {
   float: right;
-  position: fixed;
+  position: sticky;
+  top: 40px; 
 }
 
 .firstDottedLine {
@@ -213,6 +213,7 @@ p {
 .leftAlignedTextContainer {
   display: flex;
   flex-direction: row;
+  text-align: left;
   position: absolute;
   margin-top: 150;
   margin-left: 40;
