@@ -1,4 +1,3 @@
-
 /* body{
     cursor: url('images/customCursor.svg') 16 16, auto;
     font-family: "Just Me Again Down Here", cursive;
@@ -9,116 +8,112 @@
     padding: 0;
 } */
 
-
-
-  .justMeFont{
-    font-family: "Just Me Again Down Here", cursive;
-    font-weight: 550;
-    font-style: normal;
-    font-size:30px;
-    color: var(--darkDarkGrey);
-  }
-  #windyScenePreviewImg{
-    width: 30%;
-    margin:40px;
-  }
-h2{
-    margin:0;
-    font-weight: 550;
-    padding-left: 20px;
+.justMeFont {
+  font-family: "Just Me Again Down Here", cursive;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 30px;
+  color: var(--darkDarkGrey);
 }
-p{
-    font-size:25px;
-    padding-left: 20px;
-    font-weight: 400;
-    color: var(--darkDarkGrey);
+#windyScenePreviewImg {
+  width: 30%;
+  margin: 40px;
 }
-.portfolioPreviewText{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin-left:20px;
-    margin-top: 40px;
-    width:500px;
-    overflow-wrap: break-word;
-
+h2 {
+  color: var(--black);
+  font-size: 40px;
+  margin: 0;
+  font-weight: 550;
 }
-.portfolioContentPreview{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transform: translate(0%, 30%);
+p {
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--darkDarkGrey);
 }
-.folderPageTitle{
-    color: var(--grey);
-    position: absolute;
-    transform: translate(75%,10%);
+.portfolioPreviewText {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 100px;
+  width: 500px;
+  overflow-wrap: break-word;
+  text-align: left;
 }
-.menuAndBackButton{
-    /* display:none; */
-    display: flex;
-    flex-direction: row;
-
-    font-size: 30px;
-    position: absolute;
+.portfolioContentPreview {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transform: translate(0%, 20%);
 }
-#folderMenu{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 20px;
-    background-color: var(--grey);
-    border-radius:5px;
-    height: 43px;
-    width: 814px;
-    transform: translate(18%, 130%);
-    font-size: 30px;
+.PreviewContactIcons{
+  display: flex;
+  justify-content: right;
+}
+.folderPageTitle {
+  color: var(--grey);
+  position: absolute;
+  transform: translate(75%, 10%);
+}
+.menuAndBackButton {
+  /* display:none; */
+  display: flex;
+  flex-direction: row;
 
+  font-size: 30px;
+  position: absolute;
+}
+#folderMenu {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 20px;
+  background-color: var(--grey);
+  border-radius: 5px;
+  height: 43px;
+  width: 814px;
+  transform: translate(18%, 130%);
+  font-size: 30px;
 }
 
-  .folderBackgroundDiv{
-    width: 1133px;
-    height: 550px;
-    margin: auto;
-    position: relative;
-    justify-content: center;
-    height: 100%;
-    
-  }
-
-  .folders{
-    z-index:1;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: space-between;
-    padding-left:10px;
-    transform: translate(35%, 80%);
-
-
-
+.folderBackgroundDiv {
+  width: 1133px;
+  height: 550px;
+  margin: auto;
+  position: relative;
+  justify-content: center;
+  height: 100%;
 }
-  /* svg{
+
+.folders {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+  padding-left: 10px;
+  transform: translate(35%, 80%);
+}
+/* svg{
   position: absolute;
   } */
-.contentDescriptionText{
-  margin-top:0;
+.contentDescriptionText {
+  margin-top: 0;
 }
-#wearHats{
-    font-weight: 550;
-    font-size: 35px;
-    transform: translate(70%, 200%);
-    z-index:1;
-    position: absolute;
+#wearHats {
+  font-weight: 550;
+  font-size: 35px;
+  transform: translate(70%, 200%);
+  z-index: 1;
+  position: absolute;
 }
 
-#viewProject{
+#viewProject {
   margin-left: 300px;
 }
 
-
-.portfolioProjectTitleAndImage{
+.portfolioProjectTitleAndImage {
   margin-top: 40px;
   margin: 50px;
   display: flex;
@@ -126,63 +121,60 @@ p{
   justify-content: center;
 }
 
-.portfolioProjectTitle{
+.portfolioProjectTitle {
   font-weight: 500;
   font-size: 60px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-
 }
-.projectDescription{
+.projectDescription {
   display: flex;
   flex-direction: column;
 }
 
-.biggerPortfolioImage{
+.biggerPortfolioImage {
   margin-right: 20px;
   width: 600px;
   height: 700px;
 }
 
-.typeRoleDuration{
+.typeRoleDuration {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.typeRoleDurationItems{
+.typeRoleDurationItems {
   color: var(--darkDarkGrey);
   font-weight: 400;
 }
-.projectAttributes{
+.projectAttributes {
   margin-top: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
-.projectAttributeItems{
+.projectAttributeItems {
   margin: 0;
   padding-left: 40;
   padding-right: 40;
-
 }
 
-.stackContainer{
+.stackContainer {
   margin-left: 30;
   display: flex;
   flex-direction: row;
 }
 
-.stackItems{
+.stackItems {
   padding-left: 20;
 }
 
-.stackLabel{
+.stackLabel {
   color: var(--darkDarkGrey);
   font-weight: 500;
 }
 
-.theProblemBox{
+.theProblemBox {
   margin-left: 20px;
   padding: 0;
   width: 250px;
@@ -199,27 +191,26 @@ p{
   font-weight: 550;
 }
 
-.theProblemContainer{
+.theProblemContainer {
   margin-top: -30px;
   width: 600px;
 }
-.stickySidebar{
+.stickySidebar {
   float: right;
   position: fixed;
 }
 
-.firstDottedLine{
+.firstDottedLine {
   margin-left: 60%;
   position: relative;
 }
-.secondDottedLine{
+.secondDottedLine {
   margin: 40px;
   display: flex;
   justify-content: center;
   position: relative;
-
 }
-.leftAlignedTextContainer{
+.leftAlignedTextContainer {
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -229,20 +220,18 @@ p{
   overflow-wrap: break-word;
 }
 
-.infoArchitectureImage{
+.infoArchitectureImage {
   display: flex;
   justify-content: center;
 }
-.LoFiWireframesBox{
+.LoFiWireframesBox {
   margin-left: 20;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
-.LoFiWireframeLabelAndPen{
+.LoFiWireframeLabelAndPen {
   display: flex;
   justify-content: center;
-  
 }
