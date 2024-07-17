@@ -14,7 +14,7 @@ function DeskPage() {
   }, []);
   return (
     <>
-      <div>
+      <div className = "deskBackground">
         <svg
           ref={svgRef}
           width="800"

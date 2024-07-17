@@ -7,8 +7,7 @@ import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
 import ProjectPage from "./ProjectPage";
 import "./welcome_page.css";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import homeIcon from "./home_icon.svg";
 
 import "./App.css";
 
@@ -307,10 +306,10 @@ const WelcomePage = () => (
 function App() {
   return (
     <div>
-      <nav>
+      <div className = "navbar">
         <ul>
-          <li>
-            <Link to="/">Home</Link>
+          <li  id="homeIconNavbarDiv">
+            <Link to="/"><img src = {homeIcon}/></Link>
           </li>
           <li>designer, coder, storyteller...</li>
           <li>
@@ -320,7 +319,7 @@ function App() {
             <Link to="/contact">contact</Link>
           </li>
         </ul>
-      </nav>
+      </div>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/work" element={<ComputerPage />} />

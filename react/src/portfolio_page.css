@@ -175,9 +175,6 @@ p {
   padding: 0;
   width: 200px;;
   height: 50px;
-  border-radius: 10px;
-  background-color: var(--fadedOrange);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -195,9 +192,12 @@ p {
 
 }
 .stickySidebar {
-  float: right;
+  position: relative;
+  margin-top: -300px;
+  margin-bottom: 300px;
+  margin-left: 1400px;
   position: sticky;
-  top: 300px; 
+  top: 400px; 
 }
 
 .firstDottedLine {
@@ -238,11 +238,29 @@ p {
 }
 
 .userTestingText{
-  margin-top: 350px;
+  margin-top: 20px;
+  position: absolute;
   display: flex;
   flex-direction: column;
   text-align: left;
   height: auto; /* Maintain the aspect ratio */
     width: 700;
 
+}
+
+
+.thirdDottedLine{
+  margin-right: 100%;
+  position: relative;
+}
+
+.lightBulb{
+  transform: translate(320%, 200%)
+}
+
+.fourthDottedLine{
+  position: relative;
+  transform: scaleX(-1);
+  margin-left: 600px;
+  margin-top: 400px;
 }
