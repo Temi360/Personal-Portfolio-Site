@@ -12,6 +12,8 @@ function ComputerPage() {
     initializeComputerAnimations();
 
   }, []);
+
+
   return (
     <>
       <div className="computerBackgroundElements">

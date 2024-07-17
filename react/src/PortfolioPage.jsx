@@ -222,7 +222,7 @@ function PortfolioPage() {
               stroke="#F5F5F5"
               strokeWidth="3"
             />
-            <Link to="/computer">
+            <Link to="/work">
               <g id="backButton">
                 <path
                   id="backArrow"

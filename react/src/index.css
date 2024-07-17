@@ -38,6 +38,11 @@
    background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
 
 }
+
+.pageWrapper{
+  display: flex; 
+  flex-direction: column;
+}
 .navbar{
 }
 /* Style rule set for individual li */
@@ -55,7 +60,7 @@
 /* Style rule set for individual li link */
 .navbar ul li a {
   text-decoration: none;
-  color: var(--grey);
+  color: var(--black);
 }
 
 #homeIconNavbarDiv{

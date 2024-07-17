@@ -305,7 +305,7 @@ const WelcomePage = () => (
 
 function App() {
   return (
-    <div>
+    <div className="pageWrapper">
       <div className = "navbar">
         <ul>
           <li  id="homeIconNavbarDiv">
