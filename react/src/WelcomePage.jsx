@@ -5,8 +5,10 @@ import { Route, Routes, Link } from "react-router-dom";
 
 const WelcomePage = () => (
     <>
-      <div
-        className="WelcomePageNameAndIcon"
+      <m.div initial = {{opacity: 0}} 
+      animate={{ opacity: 1}} 
+      transition={{duration: 0.75, ease: "easeOut" }}
+    className= " bg-black WelcomePageNameAndIcon absolute top-0 left-0 w-full h-full"
         alt="Text that spells the name Temi"
       >
         <svg
@@ -291,7 +293,7 @@ const WelcomePage = () => (
             </svg>{" "}
           </Link>
         </div>
-      </div>
+      </m.div>
     </>
   );
   

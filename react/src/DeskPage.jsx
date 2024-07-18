@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import { Route, Routes, Link } from "react-router-dom";
+import {motion as m} from 'framer-motion';
 
 import "./desk_page.css";
 import { initializeAnimations } from "./desk_page.js";
@@ -12,6 +13,7 @@ function DeskPage() {
     // Call the function to initialize animations
     initializeAnimations();
   }, []);
+
   return (
     <>
       <div className = "deskBackground">

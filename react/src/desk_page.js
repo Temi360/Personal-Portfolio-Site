@@ -23,7 +23,11 @@ export const initializeAnimations = () => {
   function lightOn(evt) {
     evt.preventDefault();
     const light = document.getElementById("light");
-    light.classList.toggle("displayBlock");
+    if(!light.classList.contains("hideIt")){
+      light.classList.add("hideIt");
+    }else{
+      light.classList.remove("hideIt");
+    }
   }
 
   const fan = document.getElementById("fanBottom");

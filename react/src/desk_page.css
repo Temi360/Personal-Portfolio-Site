@@ -55,6 +55,10 @@ light {
   transition: display .5s ease-in-out;
 }
 
+.hideIt {
+  display:none; 
+}
+
 .blades-rotate {
   transform-origin: 40px 30px;
   transform-box: fill-box;
