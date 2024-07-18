@@ -1,10 +1,9 @@
 gsap.registerPlugin(MotionPathPlugin, Draggable);
 
 // TO DO: fix bug that makes animations stop working when reloading the page
-export const initializeComputerAnimations= () => {
-
+export const initializeComputerAnimations = () => {
   const resume = document.getElementById("resumeBorder");
-// console.log(resume);
+  // console.log(resume);
   const portfolio = document.getElementById("portfolioBorder");
 
   const rightButton = document.getElementById("rightArrowButtonAndText");

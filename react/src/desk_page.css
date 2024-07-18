@@ -1,25 +1,23 @@
-
 /* colors */
 :root {
   --purple: #9caffe;
-  --darkPurple: #8693CB;
-  --fadedPurple: #DADFF5;
+  --darkPurple: #8693cb;
+  --fadedPurple: #dadff5;
   --orange: #f14d08;
   --darkOrange: #af371c;
   --grey: #f5f5f5;
   --darkDarkGrey: #908c8c;
-  --fadedGrey:#E9E8E8;
+  --fadedGrey: #e9e8e8;
   --black: #020001;
   --brown: #c28f73;
   --darkBrown: #9a6053;
   --darkDarkBrown: #2f120b;
-  --yellow: #FFF96E;
-  --green: #A1B489;
-  --darkGreen: #63734E;
-  --fadedGreen: #E3EADB;
-  --darkBlue:#687493;
-  --fadedBlue:#D5E2EC; 
-
+  --yellow: #fff96e;
+  --green: #a1b489;
+  --darkGreen: #63734e;
+  --fadedGreen: #e3eadb;
+  --darkBlue: #687493;
+  --fadedBlue: #d5e2ec;
 }
 /* .hover-target:hover {
   cursor: url('images/click.svg'), auto;
@@ -31,15 +29,15 @@
   /* margin-bottom:-100px; */
 }
 
-.deskPageWrapper{
+.deskPageWrapper {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: var(--grey);
-  position: absolute; 
+  position: absolute;
 }
-#handContainer{
+#handContainer {
   width: 500px;
 }
 #computerScreen {
@@ -62,9 +60,8 @@ light {
 } */
 .displayBlock {
   fill: var(--yellow);
-  transition: display .5s ease-in-out;
+  transition: display 0.5s ease-in-out;
 }
-
 
 .blades-rotate {
   transform-origin: 40px 30px;
@@ -125,61 +122,62 @@ light {
     transform: rotate(360deg);
   }
 }
-.eyesToLamp{
+.eyesToLamp {
   transform: translate(2.5px, -4px);
 }
 
-.eyesToFan{
+.eyesToFan {
   transform: translate(-4px, 0px);
 }
-.eyesToHeadphones{
+.eyesToHeadphones {
   transform: translate(0px, -4px);
 }
-.eyesToMouse{
+.eyesToMouse {
   transform: translate(-2px, 0px);
-
 }
-#closed-eyes{
+#closed-eyes {
   visibility: hidden;
 }
-.eyes-closed{
-  animation: eyesDisappearing .5s steps(1, end);
-
+.eyes-closed {
+  animation: eyesDisappearing 0.5s steps(1, end);
 }
-.eyelids-closed{
-  display:block;
-  animation: eyesClosing .5s steps(1, end);
+.eyelids-closed {
+  display: block;
+  animation: eyesClosing 0.5s steps(1, end);
 }
 
 @keyframes eyesDisappearing {
-  0%, 100% {
-      visibility: visible;
+  0%,
+  100% {
+    visibility: visible;
   }
   50% {
-      visibility: hidden;
+    visibility: hidden;
   }
 }
 
-@keyframes eyesClosing{
-  0%, 100% {
+@keyframes eyesClosing {
+  0%,
+  100% {
     visibility: hidden;
-}
-50% {
+  }
+  50% {
     visibility: visible;
+  }
 }
-}
- 
-.moveHead{
+
+.moveHead {
   transform-origin: center;
   transform-box: fill-box;
-  animation: bouncingHead .7s ease-in-out alternate infinite;
+  animation: bouncingHead 0.7s ease-in-out alternate infinite;
 }
 
-
-@keyframes bouncingHead{
-  0%{
+@keyframes bouncingHead {
+  0% {
     transform: rotate(2deg);
   }
-  
-  100%{transform: rotate(-4deg)};
+
+  100% {
+    transform: rotate(-4deg);
+  }
 }

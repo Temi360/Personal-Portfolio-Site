@@ -1,15 +1,11 @@
-
 gsap.registerPlugin(MotionPathPlugin, Draggable);
 
-
 export const initializeAnimations = () => {
-
   const pupils = document.getElementById("pupils");
   const lamp = document.getElementById("lampHead");
 
   lamp.addEventListener("mouseover", lookLamp);
   lamp.addEventListener("mouseout", resetLamp);
- 
 
   function lookLamp(event) {
     pupils.classList.add("eyesToLamp");
@@ -18,7 +14,6 @@ export const initializeAnimations = () => {
   function resetLamp(event) {
     pupils.classList.remove("eyesToLamp");
   }
-
 
   const fan = document.getElementById("fanBottom");
   const fanButtons = document.getElementById("fanButtons");
@@ -109,5 +104,4 @@ export const initializeAnimations = () => {
     const deskBackground = document.getElementById("deskBackground");
     // deskBackground.classList.toggle(".opacity");
   }
-
 };
