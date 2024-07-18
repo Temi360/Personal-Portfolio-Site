@@ -55,16 +55,22 @@
   stroke: var(--orange);
   transition: all transform 0.3s ease;
 } */
-.WelcomePageNameAndIcon{
-  background-color: black;
 
-  /* background-color: var(--black);
-  position: absolute; */
-  margin-top:40px;
+.WelcomePageNameAndIconWrapper{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+  position: absolute; 
+}
+.WelcomePageNameAndIcon{
+  margin-top: 150px;
   display: flex;
   flex-direction: row; 
   justify-content:center;
   gap: 30px;
+
 }
 
 #clickMe{

@@ -25,9 +25,19 @@
   cursor: url('images/click.svg'), auto;
 } */
 .deskBackground {
+  margin-top: 90px;
   justify-content: center;
   margin-bottom: 100px;
   /* margin-bottom:-100px; */
+}
+
+.deskPageWrapper{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grey);
+  position: absolute; 
 }
 #handContainer{
   width: 500px;

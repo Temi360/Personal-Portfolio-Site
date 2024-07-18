@@ -8,7 +8,6 @@ import { initializeAnimations } from "./desk_page.js";
 
 function DeskPage() {
   const svgRef = useRef(null);
-
   useEffect(() => {
     // Call the function to initialize animations
     initializeAnimations();
@@ -16,6 +15,9 @@ function DeskPage() {
 
   return (
     <>
+    <m.div className = "deskPageWrapper"
+    initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.75, ease: "easeOut" }}exit={{opacity: 0}}>
+
       <div className = "deskBackground">
         <svg
           ref={svgRef}
@@ -1535,6 +1537,7 @@ function DeskPage() {
           </defs>
         </svg>
       </div>
+      </m.div>
     </>
   );
 }

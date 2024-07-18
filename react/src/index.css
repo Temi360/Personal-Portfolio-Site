@@ -46,6 +46,13 @@
   flex-direction: column;
 }
 .navbar{
+  padding:0;
+  margin: 0;
+  z-index: 20;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 /* Style rule set for individual li */
 .navbar ul li {
@@ -53,7 +60,7 @@
   font-size: 30px;
   color: var(--purple);
   padding-top: 20px;
-  margin-right: 100px;
+  margin-right: 120px;
   list-style-type: none;
   text-decoration: none;
   float: left;
@@ -62,7 +69,7 @@
 /* Style rule set for individual li link */
 .navbar ul li a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--purple);
 }
 
 #homeIconNavbarDiv{
