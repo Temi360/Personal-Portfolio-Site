@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
+import './tailwind.css'; // Import Tailwind CSS
 import ComputerPage from "./ComputerPage";
 import ContactPage from "./ContactPage";
 import DeskPage from "./DeskPage";

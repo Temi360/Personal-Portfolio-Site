@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import {motion as m} from 'framer-motion'; 
 import "./welcome_page.css";
+
+
 import { Route, Routes, Link } from "react-router-dom";
 
 const WelcomePage = () => (
@@ -8,7 +10,7 @@ const WelcomePage = () => (
       <m.div initial = {{opacity: 0}} 
       animate={{ opacity: 1}} 
       transition={{duration: 0.75, ease: "easeOut" }}
-    className= "absolute top-0 left-0 w-full h-full bg-orange-100"
+       className= ".WelcomePageNameAndIcon"
         // alt="Text that spells the name Temi"
       >
         <svg
