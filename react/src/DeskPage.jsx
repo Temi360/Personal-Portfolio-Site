@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Route, Routes, Link } from "react-router-dom";
 import {motion as m} from 'framer-motion';
@@ -12,7 +12,9 @@ function DeskPage() {
     // Call the function to initialize animations
     initializeAnimations();
   }, []);
-
+  const [lightOn, setLightOn] = useState(false);
+  const lampClass = lightOn? "displayBlock" : "";
+  
   return (
     <>
     <m.div className = "deskPageWrapper"
@@ -1047,7 +1049,7 @@ function DeskPage() {
                     fill="#D9D9D9"
                   />
                 </g>
-                <g className="hover-target" id="lampButton">
+                <g onClick = {()=>setLightOn(!lightOn)} id="lampButton">
                   <path
                     id="Vector 167"
                     d="M585.638 96.4691L577.584 110.794L590.475 118.681C592.11 114.33 598.748 105.611 598.557 103.968C598.366 102.326 593.71 94.8475 585.638 96.4691Z"
@@ -1072,10 +1074,10 @@ function DeskPage() {
                 transform="rotate(32.3066 614.196 286.538)"
                 fill="#9CAFFE"
               />
-              <g id="light">
+              <g className = {lampClass} id="light">
                 <path
                   d="M382.5 299.5L535 130.5C563 137.5 579.5 149.333 591 165C590.333 176.667 591 163.5 586 311.5C533 324.5 457.5 327.5 382.5 299.5Z"
-                  fill="var(--yellow)"
+                  fill=""
                   fillOpacity="0.4"
                 />
               </g>

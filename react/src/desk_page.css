@@ -61,13 +61,10 @@ light {
   display: none;
 } */
 .displayBlock {
-  display: none;
+  fill: var(--yellow);
   transition: display .5s ease-in-out;
 }
 
-.hideIt {
-  display:none; 
-}
 
 .blades-rotate {
   transform-origin: 40px 30px;

@@ -4,7 +4,7 @@ gsap.registerPlugin(MotionPathPlugin, Draggable);
 export const initializeComputerAnimations= () => {
 
   const resume = document.getElementById("resumeBorder");
-console.log(resume);
+// console.log(resume);
   const portfolio = document.getElementById("portfolioBorder");
 
   const rightButton = document.getElementById("rightArrowButtonAndText");

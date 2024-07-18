@@ -6,11 +6,10 @@ export const initializeAnimations = () => {
 
   const pupils = document.getElementById("pupils");
   const lamp = document.getElementById("lampHead");
-  const lampButton = document.getElementById("lampButton");
 
   lamp.addEventListener("mouseover", lookLamp);
   lamp.addEventListener("mouseout", resetLamp);
-  lampButton.addEventListener("click", lightOn);
+ 
 
   function lookLamp(event) {
     pupils.classList.add("eyesToLamp");
@@ -20,15 +19,6 @@ export const initializeAnimations = () => {
     pupils.classList.remove("eyesToLamp");
   }
 
-  function lightOn(evt) {
-    evt.preventDefault();
-    const light = document.getElementById("light");
-    if(!light.classList.contains("hideIt")){
-      light.classList.add("hideIt");
-    }else{
-      light.classList.remove("hideIt");
-    }
-  }
 
   const fan = document.getElementById("fanBottom");
   const fanButtons = document.getElementById("fanButtons");
