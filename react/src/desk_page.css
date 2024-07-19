@@ -23,7 +23,7 @@
   cursor: url('images/click.svg'), auto;
 } */
 .deskBackground {
-  margin-top: 90px;
+  margin-top: 50px;
   justify-content: center;
   margin-bottom: 100px;
   /* margin-bottom:-100px; */
@@ -174,10 +174,10 @@ light {
 
 @keyframes bouncingHead {
   0% {
-    transform: rotate(2deg);
+    transform: rotate(2deg) translateY(1px);
   }
 
   100% {
-    transform: rotate(-4deg);
+    transform: rotate(-4deg) translateY(-1px);
   }
 }

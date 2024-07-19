@@ -1,34 +1,19 @@
 gsap.registerPlugin(MotionPathPlugin, Draggable);
 
 export const initializeAnimations = () => {
-  const pupils = document.getElementById("pupils");
-  const lamp = document.getElementById("lampHead");
-
-  lamp.addEventListener("mouseover", lookLamp);
-  lamp.addEventListener("mouseout", resetLamp);
-
-  function lookLamp(event) {
-    pupils.classList.add("eyesToLamp");
-  }
-
-  function resetLamp(event) {
-    pupils.classList.remove("eyesToLamp");
-  }
-
   const fan = document.getElementById("fanBottom");
-  const fanButtons = document.getElementById("fanButtons");
 
-  fan.addEventListener("mouseover", lookFan);
-  fan.addEventListener("mouseout", resetFan);
+  // fan.addEventListener("mouseover", lookFan);
+  // fan.addEventListener("mouseout", resetFan);
   fanButtons.addEventListener("click", fanOn);
 
-  function lookFan(event) {
-    pupils.classList.add("eyesToFan");
-  }
+  // function lookFan(event) {
+  //   pupils.classList.add("eyesToFan");
+  // }
 
-  function resetFan(event) {
-    pupils.classList.remove("eyesToFan");
-  }
+  // function resetFan(event) {
+  //   pupils.classList.remove("eyesToFan");
+  // }
 
   function fanOn() {
     //  alert("function call");
