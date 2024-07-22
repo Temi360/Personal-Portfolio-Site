@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-
 import { Route, Routes, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import "./desk_page.css";
 import "./computer_page.css";
-import { initializeAnimations } from "./desk_page.js";
 import audio from "./click-sound.mp3";
+
 function DeskPage() {
   const svgRef = useRef(null);
   const audioRef = useRef(null);
@@ -25,28 +26,55 @@ function DeskPage() {
   const [musicOn, setMusicOn] = useState(false);
   const headClass = musicOn ? "moveHead" : "";
 
+  const [hoveredElement, setHoveredElement] = useState(null);
   const [eyesMove, setEyesMove] = useState(false);
-  const eyesToLampClass = eyesMove ? "eyesToLamp" : "";
-  const eyesToFanClass = eyesMove ? "eyesToFan" : "";
 
-  // const combinedClasses = classNames(eyesToLampClass, eyesToFanClass);
-
-  const handleMouseEnter = () => {
+  const eyesToLampClass =
+    hoveredElement === "lamp" && eyesMove ? "eyesToLamp" : "";
+  const eyesToFanClass =
+    hoveredElement === "fan" && eyesMove ? "eyesToFan" : "";
+  const eyesToHeadphonesClass =
+    hoveredElement === "headphones" && eyesMove ? "eyesToHeadphones" : "";
+  const eyesToMouseClass =
+    hoveredElement === "mouse" && eyesMove ? "eyesToMouse" : "";
+  const handleMouseEnter = (element) => {
+    setHoveredElement(element);
     setEyesMove(true);
   };
 
   const handleMouseLeave = () => {
+    setHoveredElement(null);
     setEyesMove(false);
   };
 
+  const [eyesBlink, setEyesBlink] = useState(false);
+  const eyesClass = eyesBlink ? "eyes-closed" : " ";
+  const blinkClass = eyesBlink ? "eyelids-closed" : " ";
+
   useEffect(() => {
+    const blink = () => {
+      setEyesBlink(true);
+    };
+
+    const stopBlink = () => {
+      setEyesBlink(false);
+    };
+    const blinkInterval = setInterval(blink, 3000);
+    const stopBlinkInterval = setInterval(stopBlink, 6000);
+
     if (musicOn) {
       audioRef.current.play();
     } else {
       audioRef.current.pause();
     }
-    // Call the function to initialize animations
-    initializeAnimations();
+    const draggable = Draggable.create("#handOnMouse", {
+      bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
+    });
+
+    // Cleanup function to destroy draggable instance on component unmount
+    return () => {
+      draggable.forEach((draggableInstance) => draggableInstance.kill());
+    };
   }, []);
 
   return (
@@ -70,6 +98,13 @@ function DeskPage() {
           >
             <g id="desk_background_and_character">
               <g id="window">
+                <path
+                  id="blindPull"
+                  d="M752.204 183.68V106.81H752.874V183.68H753.543L754.437 190.068H750.64L751.087 183.68H752.204Z"
+                  stroke="var(--darkDarkGrey)"
+                  fill="var(--darkDarkGrey)"
+                  strokeWidth="3"
+                />
                 <g fill="#DADFF5" id="Group 283">
                   <path
                     id="Vector 4367"
@@ -96,12 +131,6 @@ function DeskPage() {
                     strokeWidth="3"
                   />
                 </g>
-                <path
-                  id="blindPull"
-                  d="M752.204 183.68V106.81H752.874V183.68H753.543L754.437 190.068H750.64L751.087 183.68H752.204Z"
-                  stroke="#E3D382"
-                  strokeWidth="3"
-                />
               </g>
               <g id="plant">
                 <g id="pot">
@@ -632,7 +661,7 @@ function DeskPage() {
                     />
                   </g>
 
-                  <g id="eyes">
+                  <g className={eyesClass} id="eyes">
                     <g id="right-eye">
                       <path
                         id="Vector 153"
@@ -667,7 +696,10 @@ function DeskPage() {
                         strokeWidth="2"
                       />
                     </g>
-                    <g className={eyesToLampClass} id="pupils">
+                    <g
+                      className={`${eyesToLampClass} ${eyesToFanClass} ${eyesToHeadphonesClass} ${eyesToMouseClass}`}
+                      id="pupils"
+                    >
                       <g id="right-pupil">
                         <ellipse
                           id="Ellipse 18"
@@ -711,7 +743,7 @@ function DeskPage() {
                     </g>
                   </g>
 
-                  <g id="closed-eyes">
+                  <g className={blinkClass} id="closed-eyes">
                     <path
                       id="Vector 253"
                       d="M363 195.523C367.291 198.061 377.4 200.091 383.503 194"
@@ -736,7 +768,12 @@ function DeskPage() {
                     fill="#9A6053"
                   />
 
-                  <g onClick={() => setMusicOn(!musicOn)} id="headphones">
+                  <g
+                    onClick={() => setMusicOn(!musicOn)}
+                    onMouseEnter={() => handleMouseEnter("headphones")}
+                    onMouseLeave={handleMouseLeave}
+                    id="headphones"
+                  >
                     <g id="Vector 49">
                       <path
                         d="M400.688 141.43C365.168 138.646 346.677 164.959 342.05 178.798C344.889 179.9 345.905 179.743 347.975 181.546C350.888 170.008 364.506 147.05 395.672 147.516C426.837 147.982 441.661 165.513 442.932 176.345C442.876 174.789 448.532 178.1 449.359 179.499C447.584 165.782 427.819 143.557 400.688 141.43Z"
@@ -968,7 +1005,7 @@ function DeskPage() {
                 </g>
               </g>
               <g
-                onMouseEnter={handleMouseEnter}
+                onMouseEnter={() => handleMouseEnter("lamp")}
                 onMouseLeave={handleMouseLeave}
                 id="lamp"
               >
@@ -1057,7 +1094,7 @@ function DeskPage() {
                 </g>
               </g>
               <g
-                onMouseEnter={handleMouseEnter}
+                onMouseEnter={() => handleMouseEnter("fan")}
                 onMouseLeave={handleMouseLeave}
                 id="fan"
               >
@@ -1302,7 +1339,11 @@ function DeskPage() {
                   strokeWidth="2"
                 />
               </g>
-              <g className="hover-target" id="handOnMouse">
+              <g
+                onMouseEnter={() => handleMouseEnter("mouse")}
+                onMouseLeave={handleMouseLeave}
+                id="handOnMouse"
+              >
                 <g id="mouse">
                   <g id="Vector 215">
                     <path
