@@ -10,7 +10,7 @@ import WelcomePage from "./WelcomePage";
 import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
 import ProjectPage from "./ProjectPage";
-
+import ResumeModal from "./ResumeModal";
 function Navbar() {
   return (
     <div>
@@ -31,11 +31,12 @@ function Navbar() {
         </ul>
       </div>
       <Routes>
-          <Route path="/welcome" element={<WelcomePage />} />
-          <Route path="/work" element={<ComputerPage />} />
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/work" element={<ComputerPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/desk" element={<DeskPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/resume" element={<ResumeModal />} />
         <Route path="/UIUX" element={<UIUXPage />} />
         <Route path="/project" element={<ProjectPage />} />
       </Routes>

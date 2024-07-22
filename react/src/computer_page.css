@@ -31,7 +31,6 @@
 } */
 
 .buttonClicked {
-  fill: var(--black);
   transform: translateY(7px);
   transition: transform 0.1s ease;
 }

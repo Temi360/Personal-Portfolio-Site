@@ -1,22 +1,60 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
-import { initializeComputerAnimations } from "./computer_page.js";
 import { Route, Routes, Link } from "react-router-dom";
+import { Draggable } from "gsap/Draggable";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 function ComputerPage() {
   const svgRef = useRef(null);
-  // const [buttonClicked, setButtonClicked] = useState(false);
+  const [clickedElement, setClickedElement] = useState(null);
+  const [buttonClicked, setButtonClicked] = useState(false);
 
+  const rightButtonClass =
+    clickedElement === "right" && buttonClicked ? "buttonClicked" : "";
+  const leftButtonClass =
+    clickedElement === "left" && buttonClicked ? "buttonClicked" : "";
+  // const enterButtonClass = clickedElement === "enter" ? "buttonClicked " : "";
+
+  const portfolioButtonClass =
+    clickedElement === "left" ? "borderColorChange" : "";
+
+  const resumeButtonClass =
+    clickedElement === "right" ? "borderColorChange" : "";
+
+  const targetPageRef = useRef(null);
+  const hasBorderClass = () => {
+    console.log(clickedElement);
+    return targetPageRef.current?.classList.contains("borderColorChange");
+  };
+
+  const getTargetRoute = () => {
+    if (clickedElement === "left") {
+      return "/portfolio";
+    } else if (clickedElement === "right") {
+      return "/resume";
+    }
+    return "/work";
+  };
+
+  const handleClick = (element) => {
+    setClickedElement(element);
+    setButtonClicked(true);
+
+    setTimeout(() => {
+      setButtonClicked(false);
+    }, 100);
+  };
   useEffect(() => {
-    // Call the function to initialize animations
-
-    initializeComputerAnimations();
+    Draggable.create("#mouse", {
+      bounds: { minX: 10, minY: 0, maxX: -80, maxY: 0 },
+    });
   }, []);
 
   return (
     <>
       <div className="computerBackgroundElements">
         <svg
+          ref={svgRef}
           width="1245"
           height="642"
           viewBox="0 0 1300 642"
@@ -82,8 +120,8 @@ function ComputerPage() {
                   fill="#F5F5F5"
                 />
                 <path
+                  className={resumeButtonClass}
                   id="resumeBorder"
-                  className="borderColorChange"
                   d="M413.615 330.113C413.535 323.338 418.884 317.742 425.655 317.517L513.751 314.584C520.604 314.355 526.397 319.62 526.823 326.464C527.268 333.618 521.697 339.718 514.531 339.921L470.714 341.162L426.422 342.416C419.465 342.613 413.697 337.071 413.615 330.113Z"
                   stroke="#"
                   strokeWidth="3"
@@ -96,6 +134,8 @@ function ComputerPage() {
                   fill="#F5F5F5"
                 />
                 <path
+                  ref={targetPageRef}
+                  className={portfolioButtonClass}
                   id="portfolioBorder"
                   d="M268.041 333.579C267.961 326.804 273.31 321.208 280.081 320.983L368.177 318.05C375.03 317.822 380.823 323.086 381.249 329.93C381.694 337.084 376.123 343.184 368.957 343.387L325.14 344.628L280.848 345.882C273.891 346.079 268.123 340.538 268.041 333.579Z"
                   stroke="#"
@@ -378,7 +418,11 @@ function ComputerPage() {
                   strokeWidth="3"
                 />
               </g>
-              <g id="rightArrowButtonAndText">
+              <g
+                onClick={() => handleClick("right")}
+                className={rightButtonClass}
+                id="rightArrowButtonAndText"
+              >
                 <g id="rightArrowButton">
                   <path
                     d="M867.3 491.982L911.555 487.726C912.085 487.675 912.62 487.731 913.129 487.889L945.719 498.047L949.902 506.692C951.061 509.088 949.601 511.927 946.977 512.376L906.726 519.277L866.786 505.832C864.682 505.123 863.557 502.836 864.281 500.737L867.3 491.982Z"
@@ -408,7 +452,11 @@ function ComputerPage() {
                   strokeWidth="3"
                 />
               </g>
-              <g id="leftArrowButtonAndText">
+              <g
+                onClick={() => handleClick("left")}
+                className={leftButtonClass}
+                id="leftArrowButtonAndText"
+              >
                 <g id="leftArrowButton">
                   <path
                     d="M757.253 503.719L797.54 499.864C798.115 499.809 798.695 499.879 799.24 500.069L831.34 511.281L835.998 521.312C837.129 523.749 835.586 526.585 832.925 526.958L791.913 532.708L756.468 520.244C754.474 519.543 753.37 517.412 753.946 515.379L757.253 503.719Z"
@@ -427,8 +475,12 @@ function ComputerPage() {
                   strokeWidth="4"
                 />
               </g>
-              <Link to="/portfolio">
-                <g id="enterButtonAndText">
+              <Link to={getTargetRoute()}>
+                <g
+                  // onClick={() => handleClick("enter")}
+                  // className={enterButtonClass}
+                  id="enterButtonAndText"
+                >
                   <g id="enterButton">
                     <path
                       d="M893.729 516.103L991.725 503.349C992.244 503.281 992.771 503.316 993.277 503.451L1034.54 514.511L1039.31 521.802C1040.92 524.255 1039.43 527.546 1036.53 527.955L932.101 542.673L893.849 529.6C891.838 528.913 890.715 526.773 891.293 524.728L893.729 516.103Z"
