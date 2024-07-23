@@ -34,8 +34,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--grey);
-  position: absolute;
+  margin-top: -80px;
+  /* background-color: var(--grey); */
+  /* position: abs8olute; */
 }
 #handContainer {
   width: 500px;

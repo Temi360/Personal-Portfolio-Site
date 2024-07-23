@@ -80,11 +80,19 @@ function DeskPage() {
   return (
     <>
       <m.div
+        key="desk"
         className="deskPageWrapper"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
-        exit={{ opacity: 0 }}
+        initial={{ y: "100%" }}
+        animate={{ y: "0%" }}
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 20,
+          bounce: 0.3,
+          duration: 2,
+          ease: "easeOut",
+        }}
+        exit={{ opacity: 1 }}
       >
         <audio ref={audioRef} id="click-sound" src={audio}></audio>
         <div className="deskBackground">

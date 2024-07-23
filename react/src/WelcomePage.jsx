@@ -1,20 +1,23 @@
 import React, { useEffect, useRef } from "react";
-import {motion as m} from 'framer-motion'; 
+import { motion as m } from "framer-motion";
 import "./welcome_page.css";
-
 
 import { Route, Routes, Link } from "react-router-dom";
 
 const WelcomePage = () => (
-    <>
-      <m.div initial = {{opacity: 0}} 
-      animate={{ opacity: 1}} 
-      transition={{duration: 0.75, ease: "easeOut" }}
-      exit={{opacity: 0}}
-      className = "WelcomePageNameAndIconWrapper"
+  <>
+    <m.div
+      key="welcome"
+      initial={{ y: "100%" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      exit={{ opacity: 1 }}
+      className="WelcomePageNameAndIconWrapper"
+    >
+      <div
+        className="WelcomePageNameAndIcon"
+        alt="Text that spells the name Temi"
       >
-        <div className= "WelcomePageNameAndIcon"
-        alt="Text that spells the name Temi">
         <svg
           width="1016"
           height="581"
@@ -297,9 +300,9 @@ const WelcomePage = () => (
             </svg>{" "}
           </Link>
         </div>
-        </div>
-      </m.div>
-    </>
-  );
-  
-  export default WelcomePage;
+      </div>
+    </m.div>
+  </>
+);
+
+export default WelcomePage;

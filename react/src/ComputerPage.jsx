@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
 import { Route, Routes, Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
+
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
@@ -52,7 +54,23 @@ function ComputerPage() {
 
   return (
     <>
-      <div className="computerBackgroundElements">
+      <m.div
+        className="computerBackgroundElements"
+        key="computer"
+        initial={{ x: "100%" }}
+        animate={{
+          x: "0%",
+        }}
+        transition={{
+          duration: 0.75,
+          ease: "easeOut",
+          type: "spring",
+          stiffness: 300, // Consistent with `in` for smooth transitions
+          damping: 25, // Consistent with `in` for smooth transitions
+          bounce: 0.5,
+        }}
+        exit={{ opacity: 1 }}
+      >
         <svg
           ref={svgRef}
           width="1245"
@@ -1001,7 +1019,7 @@ function ComputerPage() {
             </filter>
           </defs>
         </svg>
-      </div>
+      </m.div>
     </>
   );
 }

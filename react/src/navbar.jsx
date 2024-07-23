@@ -1,16 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
-import "./index.css";
+
 import homeIcon from "./home_icon.svg";
-import ComputerPage from "./ComputerPage";
-import ContactPage from "./ContactPage";
-import DeskPage from "./DeskPage";
-import WelcomePage from "./WelcomePage";
-import PortfolioPage from "./PortfolioPage";
-import UIUXPage from "./UIUXPage";
-import ProjectPage from "./ProjectPage";
-import ResumeModal from "./ResumeModal";
+import "./index.css";
 function Navbar() {
   return (
     <div>
@@ -30,16 +22,6 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <Routes>
-        <Route path="/welcome" element={<WelcomePage />} />
-        <Route path="/work" element={<ComputerPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/desk" element={<DeskPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/resume" element={<ResumeModal />} />
-        <Route path="/UIUX" element={<UIUXPage />} />
-        <Route path="/project" element={<ProjectPage />} />
-      </Routes>
     </div>
   );
 }
