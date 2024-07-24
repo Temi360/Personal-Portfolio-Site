@@ -1,0 +1,30 @@
+/* colors */
+:root {
+    --purple: #9CAFFE;
+    --orange: #F14D08;
+    --grey: #F5F5F5;
+    --black: #020001;
+
+}
+body, html{
+    margin: 0; padding: 5em;
+    background: var(--grey);
+    box-sizing: border-box;
+    width: 100%;
+    height: 1005
+}
+
+#morph{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+section{
+    position: absolute;
+
+}

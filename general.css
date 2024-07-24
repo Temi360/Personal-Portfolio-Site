@@ -4,13 +4,13 @@ body {
     background-repeat: no-repeat; /* Prevent repeating */
     background-position: center center; /* Center the image */
     margin: 0; /* Remove default margin */
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
   }
 
 .jost {
   font-family: "Jost", sans-serif;
   font-style: normal;
+  font-weight: 400;
 } 
 
 /* colors */
@@ -42,6 +42,7 @@ body {
   
 /* Style rule set for individual li */
 .navbar ul li {
+    font-weight: 500;
     font-size: 30px;
     color: var(--purple);
     padding-top: 20px;
@@ -68,74 +69,9 @@ body {
 #contactPosition{
     margin-top:7px;
 }
-#welcomePageName{
-    margin-top: 0px;
-
-}
-
-#hairWelcome{
-    fill: var(--grey);
-}
- #eyebrowsWelcome{
-    fill: var(--grey);
-
-} 
-#welcomePageIconClick{
-    margin-top: 300px; 
-    margin-right: 90px;
-}
-#iconClick{
-    stroke: var(--grey);
-}
-#clickMeGroup{
-    stroke: var(--grey);
-    fill: var(--grey);
-}
-#welcomePageIconClick:hover #iconClick{
-    stroke: var(--orange);
-    transform: rotate(40deg);
-    transform-origin: center;
-    transform-box: fill-box; 
-    transition: stroke, transform 0.3s ease;
-}
-#welcomePageIconClick:hover #hairWelcome{
-    fill: var(--orange);
-    stroke: var(--orange);
-    transition: all transform 0.3s ease;
-
-} 
-#welcomePageIconClick:hover #eyebrowsWelcome{
-    fill: var(--orange);
-    stroke: var(--orange);
-    transition: all transform 0.3s ease;
-}
-#welcomePageIconClick:hover #clickMeGroup{
-    fill: var(--orange);
-    stroke: var(--orange);
-    transition: all transform 0.3s ease;
-}
-.WelcomePageNameAndIcon{
-    margin-top:40px;
-    display: flex;
-    flex-direction: row; 
-    justify-content:center;
-    gap: 30px;
-}
-
-#clickMe{
-    stroke: var(--grey);
-    fill: var(--grey);
-    float: right;
-    margin-right: 100px;
-    margin-top: -350px;
-}
-/* loading page */
-#loadingIcon{
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
+.opacity{
+  opacity: 1;
+  transition: all 2s ease;
 }
 
 /* @media (min-width: 1245px) {

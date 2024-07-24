@@ -1,0 +1,48 @@
+:root {
+  --purple: #9caffe;
+  --darkPurple: #8693cb;
+  --fadedPurple: #dadff5;
+  --orange: #f14d08;
+  --darkOrange: #af371c;
+  --grey: #f5f5f5;
+  --darkDarkGrey: #908c8c;
+  --fadedGrey: #e9e8e8;
+  --black: #020001;
+  --brown: #c28f73;
+  --darkBrown: #9a6053;
+  --darkDarkBrown: #2f120b;
+  --yellow: #fff96e;
+  --green: #a1b489;
+  --darkGreen: #63734e;
+  --fadedGreen: #e3eadb;
+  --darkBlue: #687493;
+  --fadedBlue: #d5e2ec;
+}
+
+.computerBackgroundElements {
+  margin-top: -60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* #resumeButtonandText:hover #portfolioBorder{
+    display: none;
+} */
+
+.buttonClicked {
+  transform: translateY(7px);
+  transition: transform 0.1s ease;
+}
+
+.lampButtonClicked {
+  transform: translate(-1px, 2px);
+  transition: transform 0.1s ease;
+}
+.borderColorChange {
+  display: block;
+  stroke: var(--orange);
+}
+.borderRemoveColor {
+  display: none;
+}

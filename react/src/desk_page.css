@@ -1,0 +1,184 @@
+/* colors */
+:root {
+  --purple: #9caffe;
+  --darkPurple: #8693cb;
+  --fadedPurple: #dadff5;
+  --orange: #f14d08;
+  --darkOrange: #af371c;
+  --grey: #f5f5f5;
+  --darkDarkGrey: #908c8c;
+  --fadedGrey: #e9e8e8;
+  --black: #020001;
+  --brown: #c28f73;
+  --darkBrown: #9a6053;
+  --darkDarkBrown: #2f120b;
+  --yellow: #fff96e;
+  --green: #a1b489;
+  --darkGreen: #63734e;
+  --fadedGreen: #e3eadb;
+  --darkBlue: #687493;
+  --fadedBlue: #d5e2ec;
+}
+/* .hover-target:hover {
+  cursor: url('images/click.svg'), auto;
+} */
+.deskBackground {
+  margin-top: 50px;
+  justify-content: center;
+  margin-bottom: 100px;
+  /* margin-bottom:-100px; */
+}
+
+.deskPageWrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -80px;
+  /* background-color: var(--grey); */
+  /* position: abs8olute; */
+}
+#handContainer {
+  width: 500px;
+}
+#computerScreen {
+  stroke: var(--purple);
+}
+#computerBase {
+  stroke: var(--grey);
+}
+#computer:hover #computerScreen {
+  stroke: var(--black);
+  stroke-width: 2px;
+}
+#computer:hover #computerBase {
+  stroke: var(--black);
+  stroke-width: 2px;
+}
+/* 
+light {
+  display: none;
+} */
+.displayBlock {
+  fill: var(--yellow);
+  transition: display 0.5s ease-in-out;
+}
+
+.blades-rotate {
+  transform-origin: 40px 30px;
+  transform-box: fill-box;
+  animation: fanBlowing 0.1s linear infinite;
+}
+.hair-blows {
+  transform-origin: 130px 20px;
+  transform-box: fill-box;
+  animation: hairBlowing 1s ease-in-out infinite alternate;
+}
+.postIt-blows {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: postItBlowing 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes fanBlowing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* @keyframes hairBlowing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+} */
+@keyframes postItBlowing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+/* clock */
+#minuteHand {
+  transform-origin: 120px, 20px;
+  transform-box: fill-box;
+  animation: clockMoving 60s infinite;
+}
+
+@keyframes clockMoving {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.eyesToLamp {
+  transform: translate(2.5px, -4px);
+}
+
+.eyesToFan {
+  transform: translate(-4px, 0px);
+}
+.eyesToHeadphones {
+  transform: translate(0px, -4px);
+}
+.eyesToMouse {
+  transform: translate(-2px, 0px);
+}
+#closed-eyes {
+  visibility: hidden;
+}
+.eyes-closed {
+  animation: eyesDisappearing 0.5s steps(1, end);
+}
+.eyelids-closed {
+  display: block;
+  animation: eyesClosing 0.5s steps(1, end);
+}
+
+@keyframes eyesDisappearing {
+  0%,
+  100% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+}
+
+@keyframes eyesClosing {
+  0%,
+  100% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+}
+
+.moveHead {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: bouncingHead 0.7s ease-in-out alternate infinite;
+}
+
+@keyframes bouncingHead {
+  0% {
+    transform: rotate(2deg) translateY(1px);
+  }
+
+  100% {
+    transform: rotate(-4deg) translateY(-1px);
+  }
+}
