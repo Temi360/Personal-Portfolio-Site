@@ -2,22 +2,25 @@ import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
 import { Route, Routes, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import PopUp from "./PopUp";
-import "./popup.css";
+import About from "./AboutMePopUp";
+import "./aboutMe.css";
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import profile from "./profilePic.svg";
 
 function ComputerPage() {
   const svgRef = useRef(null);
 
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+  const [isPopupVisible, setPopupVisible] = useState(false);
 
   const openPopUp = () => {
-    // console.log("why isnt this opening");
     setIsPopUpOpen(true);
+    setPopupVisible(true);
   };
   const closePopUp = () => {
     setIsPopUpOpen(false);
+    setPopupVisible(false);
   };
 
   const [clickedElement, setClickedElement] = useState(null);
@@ -63,25 +66,38 @@ function ComputerPage() {
       bounds: { minX: 10, minY: 0, maxX: -80, maxY: 0 },
     });
   }, []);
+  const slideInTransition = {
+    initial: {
+      x: "-100%",
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
+    animate: {
+      x: "0%",
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 160,
+        damping: 20,
+        bounce: 0.3,
+        duration: 2,
+        ease: "easeOut",
+      },
+    },
+
+    exit: {
+      x: "-150%",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
 
   return (
     <>
       <m.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={slideInTransition}
         className="computerBackgroundElements"
-        key="computer"
-        initial={{ x: "100%" }}
-        animate={{
-          x: "0%",
-        }}
-        transition={{
-          duration: 0.75,
-          ease: "easeOut",
-          type: "spring",
-          stiffness: 300, // Consistent with `in` for smooth transitions
-          damping: 25, // Consistent with `in` for smooth transitions
-          bounce: 0.5,
-        }}
-        exit={{ opacity: 1 }}
       >
         <svg
           ref={svgRef}
@@ -514,11 +530,7 @@ function ComputerPage() {
                 />
               </g>
               <Link to={getTargetRoute()}>
-                <g
-                  // onClick={() => handleClick("enter")}
-                  // className={enterButtonClass}
-                  id="enterButtonAndText"
-                >
+                <g id="enterButtonAndText">
                   <g id="enterButton">
                     <path
                       d="M893.729 516.103L991.725 503.349C992.244 503.281 992.771 503.316 993.277 503.451L1034.54 514.511L1039.31 521.802C1040.92 524.255 1039.43 527.546 1036.53 527.955L932.101 542.673L893.849 529.6C891.838 528.913 890.715 526.773 891.293 524.728L893.729 516.103Z"
@@ -750,10 +762,6 @@ function ComputerPage() {
             </g>
 
             <g onClick={openPopUp} id="aboutMePostits">
-              <PopUp isOpen={isPopUpOpen} onClose={closePopUp}>
-                <h2 class="popupHeader">About Me!</h2>
-                <p>blah blah blah</p>
-              </PopUp>
               <g id="Vector 4390">
                 <path
                   d="M803.877 395.292L888.265 426.727L887.871 433.727L887.108 447.291L886.345 460.855L747.413 480.836L671.147 438.227L671.147 424.227L671.147 410.227L671.147 404.252L803.877 395.292Z"
@@ -1041,6 +1049,77 @@ function ComputerPage() {
           </defs>
         </svg>
       </m.div>
+
+      <About
+        isOpen={isPopUpOpen}
+        onClose={closePopUp}
+        isVisible={isPopupVisible}
+      >
+        <h2 className="aboutHeader">About Me!</h2>
+        <div className="aboutMeTextAndImage">
+          <img alt="Image of Temi" src={profile} />
+          <div className="aboutMeBlurb">
+            <p>
+              Hi my name is Temi Ijisesan! I am a Communication Design student
+              at Washington University in St.Louis with minors in Human-Computer
+              Interaction and Art History. I'm interested in the intersection of
+              Design, Computer Science, and Accessibility. In my free time I
+              enjoy knitting, watching love island, and reading mystery books.
+              I'm super exicted to work with you!
+            </p>
+          </div>
+        </div>
+        <div className="linkedinAndMailIcons">
+          <a href="mailto:your-temilolu360@gmail.com" className="link-button">
+            <svg
+              className="mail"
+              width="42"
+              height="41"
+              viewBox="0 0 42 41"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="mail">
+                <path
+                  id="Vector"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M40.8379 5.73654C41.2309 6.12892 41.4517 6.66148 41.4517 7.21684L41.4517 18.3982C41.4697 22.5913 41.5054 27.9421 41.5644 35.2518C41.5689 35.8106 41.3496 36.348 40.9554 36.7442C40.5611 37.1403 40.0248 37.3623 39.4659 37.3605L38.8347 37.3584C38.7294 37.3605 38.6323 37.3605 38.567 37.3605H38.5634L38.5215 37.3601L38.3477 37.3566C31.5736 37.2221 29.0673 37.2423 23.8208 37.2845C23.1036 37.2903 22.3352 37.2965 21.4977 37.3028C17.7275 37.3309 11.9108 37.3605 3.7391 37.3605C3.49971 37.3605 2.98441 37.3429 2.45757 37.0842C2.1639 36.94 1.81106 36.6932 1.53626 36.2856C1.26007 35.8759 1.14542 35.426 1.13919 35.0108L1.03663 30.6159C1.00519 29.3903 0.968811 28.0036 0.930487 26.5426C0.762746 20.1478 0.557651 12.329 0.564626 10.3561C0.564808 10.3047 0.564876 10.2518 0.564946 10.1976C0.565815 9.52393 0.566943 8.6493 0.789643 7.88439C1.10383 6.80525 1.78794 6.04132 2.75733 5.50307C3.06431 5.33263 3.40925 5.2422 3.76036 5.24011L17.405 5.15912L17.4141 5.15908L39.3566 5.125C39.912 5.12414 40.4449 5.34415 40.8379 5.73654ZM21.4779 33.1191C22.3083 33.1129 23.0715 33.1068 23.7849 33.101C28.7623 33.0609 31.3153 33.0404 37.3639 33.1532C37.3149 26.9132 37.2843 22.1938 37.2681 18.4117C37.2519 14.6402 37.2499 11.7999 37.2583 9.31194L17.4298 9.34272L17.4206 9.34275L5.11247 9.41583L21.9168 19.7212C22.6091 19.1731 23.5651 18.4294 24.6544 17.6187C26.8449 15.9887 29.696 13.9959 32.0401 12.8239C33.0735 12.3072 34.33 12.726 34.8466 13.7594C35.3633 14.7927 34.9445 16.0492 33.9111 16.5659C31.924 17.5594 29.3269 19.3566 27.1521 20.9751C26.0817 21.7716 25.143 22.5026 24.4721 23.0343C24.137 23.2999 23.8694 23.5151 23.6866 23.6632C23.5953 23.7372 23.5251 23.7944 23.4783 23.8327L23.426 23.8756L23.4134 23.8859L23.4107 23.8882V23.8882C22.7216 24.4564 21.7472 24.5248 20.9858 24.0579L4.83733 14.1548L5.21382 30.289C5.24083 31.3391 5.26449 32.2819 5.28305 33.0665C5.30904 33.0657 5.33515 33.0653 5.36137 33.0653L21.4779 33.1191Z"
+                  fill="#020001"
+                />
+              </g>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/temi-ijisesan-692829257/"
+            className="link-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              className="linkedin"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="linkedin" clip-path="url(#clip0_495_202)">
+                <path
+                  id="Vector"
+                  d="M27.7793 0H2.21484C0.990234 0 0 0.966797 0 2.16211V27.832C0 29.0273 0.990234 30 2.21484 30H27.7793C29.0039 30 30 29.0273 30 27.8379V2.16211C30 0.966797 29.0039 0 27.7793 0ZM8.90039 25.5645H4.44727V11.2441H8.90039V25.5645ZM6.67383 9.29297C5.24414 9.29297 4.08984 8.13867 4.08984 6.71484C4.08984 5.29102 5.24414 4.13672 6.67383 4.13672C8.09766 4.13672 9.25195 5.29102 9.25195 6.71484C9.25195 8.13281 8.09766 9.29297 6.67383 9.29297ZM25.5645 25.5645H21.1172V18.6035C21.1172 16.9453 21.0879 14.8066 18.8027 14.8066C16.4883 14.8066 16.1367 16.6172 16.1367 18.4863V25.5645H11.6953V11.2441H15.9609V13.2012H16.0195C16.6113 12.0762 18.0645 10.8867 20.2266 10.8867C24.7324 10.8867 25.5645 13.8516 25.5645 17.707V25.5645V25.5645Z"
+                  fill="#020001"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_495_202">
+                  <rect width="30" height="30" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </About>
     </>
   );
 }

@@ -46,3 +46,7 @@
 .borderRemoveColor {
   display: none;
 }
+
+#aboutMePostits:hover {
+  cursor: pointer;
+}

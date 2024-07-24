@@ -23,21 +23,12 @@
   cursor: url('images/click.svg'), auto;
 } */
 .deskBackground {
-  margin-top: 50px;
-  justify-content: center;
-  margin-bottom: 100px;
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-around;
   /* margin-bottom:-100px; */
 }
 
-.deskPageWrapper {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-top: -80px;
-  /* background-color: var(--grey); */
-  /* position: abs8olute; */
-}
 #handContainer {
   width: 500px;
 }

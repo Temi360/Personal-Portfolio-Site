@@ -76,23 +76,37 @@ function DeskPage() {
       draggable.forEach((draggableInstance) => draggableInstance.kill());
     };
   }, []);
+  const slideUpTransition = {
+    initial: {
+      y: "100%",
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
+    animate: {
+      y: "0%",
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 160,
+        damping: 20,
+        bounce: 0.3,
+        duration: 2,
+        ease: "easeOut",
+      },
+    },
+
+    exit: {
+      y: "-150%",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
 
   return (
     <>
       <m.div
-        key="desk"
-        className="deskPageWrapper"
-        initial={{ y: "100%" }}
-        animate={{ y: "0%" }}
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 20,
-          bounce: 0.3,
-          duration: 2,
-          ease: "easeOut",
-        }}
-        exit={{ opacity: 1 }}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={slideUpTransition}
       >
         <audio ref={audioRef} id="click-sound" src={audio}></audio>
         <div className="deskBackground">

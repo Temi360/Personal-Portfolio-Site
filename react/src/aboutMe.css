@@ -1,4 +1,4 @@
-.popup-overlay {
+.about-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,16 +8,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 30;
 }
 
-.popup-content {
-  background-color: var(--black);
+.about-wrapper {
+  position: relative; /* Ensure the positioning context */
+  display: inline-block;
   padding: 20px;
+  background-color: var(--fadedPurple);
   border-radius: 15px;
+}
+.about-content {
+  font-family: "Just Me Again Down Here", cursive;
+  background-color: var(--fadedPurple);
+  padding: 40px;
+  border: 3px dashed var(--purple);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.popup-close {
+.about-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -27,8 +38,42 @@
   cursor: pointer;
 }
 
-.popupHeader {
-  font-family: "Just Me Again Down Here", cursive;
-  font-size: 60px;
-  color: var(--grey);
+.aboutHeader {
+  padding: 20px;
+  font-size: 80px;
+  color: var(--darkPurple);
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutMeTextAndImage {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  padding-left: 30px;
+  font-size: 15px;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 00;
+  text-align: left;
+
+  color: var(--darkPurple);
+}
+.aboutMeBlurb {
+  width: 350px;
+}
+.linkedinAndMailIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.mail {
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+  margin-right: 30px;
 }

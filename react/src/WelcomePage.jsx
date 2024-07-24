@@ -4,17 +4,70 @@ import "./welcome_page.css";
 
 import { Route, Routes, Link } from "react-router-dom";
 
-const WelcomePage = () => (
+const backgroundColorChange = {
+  initial: {
+    opacity: 0,
+    backgroundColor: "var(--grey)", // Initial color
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+  animate: {
+    opacity: 1,
+    backgroundColor: "var(--black)", // Target color
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+  exit: {
+    opacity: 0,
+    backgroundColor: "var(--grey)", // Color when exiting
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+};
+
+const expandTransition = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeInOut" },
+    // rotate: [0, 5, -5, 5, -5, 0], // Tilting left and right
+    transition: {
+      type: "spring",
+      stiffness: 160,
+      damping: 25,
+      bounce: 0.6,
+      duration: 1,
+      ease: "easeInOut",
+      delay: 0.4, // Delay to start tilting after the scale animation
+    },
+  },
+
+  exit: {
+    scale: 0,
+    opacity: 0,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+};
+
+const WelcomePage = ({ children }) => (
   <>
     <m.div
-      key="welcome"
-      initial={{ y: "100%" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      exit={{ opacity: 1 }}
+      key="welcomeBackground"
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={backgroundColorChange}
       className="WelcomePageNameAndIconWrapper"
     >
-      <div
+      {children}
+      <m.div
+        key="welcome"
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={expandTransition}
         className="WelcomePageNameAndIcon"
         alt="Text that spells the name Temi"
       >
@@ -300,7 +353,7 @@ const WelcomePage = () => (
             </svg>{" "}
           </Link>
         </div>
-      </div>
+      </m.div>
     </m.div>
   </>
 );

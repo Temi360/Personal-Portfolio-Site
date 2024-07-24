@@ -56,7 +56,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--black);
   position: absolute;
 }
 .WelcomePageNameAndIcon {
@@ -73,6 +72,11 @@ body {
   float: right;
   margin-right: 100px;
   margin-top: -350px;
+}
+
+#clickMe:hover {
+  transform: rotate(-50deg);
+  transition: transform, 0.3s ease-in-out;
 }
 /* loading page */
 #loadingIcon {
