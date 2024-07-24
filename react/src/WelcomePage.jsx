@@ -10,7 +10,7 @@ const WelcomePage = () => (
       key="welcome"
       initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      transition={{ duration: 0.75, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       exit={{ opacity: 1 }}
       className="WelcomePageNameAndIconWrapper"
     >

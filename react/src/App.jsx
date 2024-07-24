@@ -6,7 +6,6 @@ import { Route, Routes, Link, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./index.css";
 import ComputerPage from "./ComputerPage";
-import ContactPage from "./ContactPage";
 import DeskPage from "./DeskPage";
 import WelcomePage from "./WelcomePage";
 import PortfolioPage from "./PortfolioPage";
@@ -22,7 +21,6 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/work" element={<ComputerPage />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route path="/desk" element={<DeskPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/resume" element={<ResumeModal />} />

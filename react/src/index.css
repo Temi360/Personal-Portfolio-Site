@@ -1,29 +1,27 @@
-
-
 :root {
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
 
   --purple: #9caffe;
-  --darkPurple: #8693CB;
-  --fadedPurple: #DADFF5;
+  --darkPurple: #8693cb;
+  --fadedPurple: #dadff5;
   --orange: #f14d08;
   --darkOrange: #af371c;
-  --fadedOrange: #EFAD92;
+  --fadedOrange: #efad92;
   --grey: #f5f5f5;
   --darkDarkGrey: #908c8c;
-  --fadedGrey:#E9E8E8;
+  --fadedGrey: #e9e8e8;
   --black: #020001;
   --brown: #c28f73;
   --darkBrown: #9a6053;
   --darkDarkBrown: #2f120b;
-  --yellow: #FFF96E;
-  --green: #A1B489;
-  --darkGreen: #63734E;
-  --fadedGreen: #E3EADB;
-  --darkBlue:#687493;
-  --fadedBlue:#D5E2EC; 
+  --yellow: #fff96e;
+  --green: #a1b489;
+  --darkGreen: #63734e;
+  --fadedGreen: #e3eadb;
+  --darkBlue: #687493;
+  --fadedBlue: #d5e2ec;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
@@ -31,28 +29,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.backgroundDiv{
-   background-image: url('./FixedBackgroundLines.svg');
-   width: 100vw; /* Full viewport width */
-   height: 100vh; /* Full viewport height */
-   background-size: cover; /* Optional: Ensures the image covers the whole div */
-   background-position: center; /* Optional: Centers the image */
-   background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
-
+.backgroundDiv {
+  background-color: var(--grey);
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Optional: Ensures the image covers the whole div */
+  background-position: center; /* Optional: Centers the image */
+  background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
 }
 
-.pageWrapper{
-  display: flex; 
+.pageWrapper {
+  display: flex;
   flex-direction: column;
 }
-.navbar{
-  padding:0;
+.navbar {
+  padding: 0;
   margin: 0;
   z-index: 20;
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  
 }
 /* Style rule set for individual li */
 .navbar ul li {
@@ -65,24 +61,25 @@
   text-decoration: none;
   float: left;
 }
-
+.contact:hover {
+  cursor: pointer;
+}
 /* Style rule set for individual li link */
 .navbar ul li a {
   text-decoration: none;
   color: var(--purple);
 }
 
-#homeIconNavbarDiv{
+#homeIconNavbarDiv {
   margin-top: -10px;
 }
-#homeIconNavbarDiv:hover{
-
+#homeIconNavbarDiv:hover {
   transform: rotate(-50deg);
   transition: transform, 0.3s ease-in-out;
 }
 
-#contactPosition{
-  margin-top:7px;
+#contactPosition {
+  margin-top: 7px;
 }
 /* 
 a {
@@ -91,13 +88,13 @@ a {
   text-decoration: inherit;
 }*/
 
-a{
+a {
   margin: 0;
   padding: 0;
 }
- a:hover {
+a:hover {
   color: var(--black);
-} 
+}
 /*
 body {
   margin: 0;
