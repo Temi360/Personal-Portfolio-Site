@@ -9,15 +9,14 @@
   width: 30%;
   margin: 40px;
 }
-h2 {
-  color: var(--black);
-  font-size: 40px;
-  margin: 0;
-  font-weight: 550;
-}
+
 p {
   /* font-size: 23px; */
   font-weight: 400;
+}
+.projectText {
+  font-size: 20px;
+  color: var(--darkDarkGrey);
 }
 .portfolioPreviewText {
   display: flex;
@@ -111,6 +110,8 @@ p {
 }
 
 .portfolioProjectTitle {
+  color: var(--black);
+  font-size: 40px;
   font-weight: 500;
   font-size: 60px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
@@ -119,6 +120,7 @@ p {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
+  align-items: flex-start;
 }
 
 .biggerPortfolioImage {
@@ -153,32 +155,24 @@ p {
 
 .stackContainer {
   margin-top: 10px;
-  margin-left: 30;
+  margin-left: 0;
   display: flex;
   flex-direction: row;
 }
 
 .stackItems {
-  padding-left: 20;
   padding-right: 20px;
 }
 
 .stackLabel {
   color: var(--darkDarkGrey);
   font-weight: 500;
+  padding: 20px;
 }
 
 .theProblemBox {
-  padding: 0;
-  width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
+  padding-left: 20px;
   margin-top: 50px;
-  overflow-wrap: break-word;
-  color: var(--darkOrange);
-  font-size: 40px;
-  font-weight: 550;
 }
 
 .theProblemContainer {
@@ -187,11 +181,10 @@ p {
   text-align: left;
 }
 .stickySidebar {
-  position: relative;
-  margin-top: -300px;
-  margin-bottom: 300px;
-  margin-left: 1400px;
+  position: absolute;
   position: sticky;
+  float: right;
+  margin-top: -1000px;
   top: 400px;
 }
 
@@ -208,10 +201,10 @@ p {
 .leftAlignedTextContainer {
   display: flex;
   flex-direction: row;
-  text-align: left;
+  float: left;
   position: absolute;
-  margin-top: 150;
-  margin-left: 40;
+  margin-top: 150px;
+  margin-left: 300px;
   width: 600px;
   overflow-wrap: break-word;
 }
@@ -221,39 +214,61 @@ p {
   justify-content: center;
 }
 .LoFiWireframesBox {
-  margin-left: 20;
+  display: grid;
+  place-items: center;
+  /* width: 700px;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch; */
 }
 
-.LoFiWireframeLabelAndPen {
+/* .LoFiWireframeLabelAndPen {
   display: flex;
   justify-content: center;
+  position: relative; */
+/* } */
+
+.userTestingContainer {
+  display: grid;
+  grid-template-columns: fr 1fr;
+  margin-left: 300px;
+  gap: 20px;
 }
 
 .userTestingText {
-  margin-top: 20px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+  line-height: 50px;
   text-align: left;
   height: auto; /* Maintain the aspect ratio */
   width: 700;
 }
 
 .thirdDottedLine {
-  margin-right: 100%;
+  margin-top: 20px;
   position: relative;
 }
 
 .lightBulb {
-  transform: translate(320%, 200%);
+  position: absolute;
+  transform: translate(700%, 400%);
 }
 
 .fourthDottedLine {
   position: relative;
   transform: scaleX(-1);
-  margin-left: 600px;
-  margin-top: 400px;
+  margin-right: 400px;
+  margin-top: 0px;
+}
+
+.finalPrototypeLabel {
+  display: grid;
+  place-items: center;
+}
+
+.prototypePreview {
+  display: grid;
+  place-items: center;
 }

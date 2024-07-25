@@ -38,6 +38,8 @@
 }
 
 .pageWrapper {
+  overflow: auto; /* or overflow-y: scroll; */
+
   background-image: url("FixedBackgroundLines.svg");
   background-size: cover; /* Optional: Ensures the image covers the whole div */
   background-position: center; /* Optional: Centers the image */
