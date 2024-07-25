@@ -20,7 +20,7 @@ function ProjectPage() {
       <div className="portfolioProjectTitleAndImage">
         <img
           src={windyScenePreview}
-          id="biggerPortfolioImage"
+          id="mainPortfolioImage"
           alt="The Windy Scene Project Preview Image"
         />
         <div className="projectDescription">
@@ -401,6 +401,29 @@ function ProjectPage() {
         `,
         }}
       />
+      <h3 className="justMeFont takeawaysHeader">Takeaways</h3>
+      <div className=" takeawaysText projectText">
+        Being my first, fully designed application system, this project was a
+        little daunting. <br></br>
+        <strong>Here's what I learned:</strong>
+        <ol>
+          <li>Clear, and simple Information Architecture is KEY</li>
+          <li>Having too many options for the user isn't always great</li>
+          <li>
+            Consistency across a design system is pertinent for a good user
+            journey
+          </li>
+        </ol>
+      </div>
+      <br></br>
+      <div className=" takeawaysText projectText">
+        If I were to do this project again, I would focus more on further
+        optimizing user flow and simplifying the interior features of my site.
+        While it has a unique, quirky design system, I could see how some of the
+        more stylized elements could be distracting for users. I would also want
+        to eventually build a feature that is able to generate a tour for the
+        user based on jazz clubs they would like to visit!
+      </div>
     </>
   );
 }

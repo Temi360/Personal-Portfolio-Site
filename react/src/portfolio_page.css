@@ -17,6 +17,7 @@ p {
 .projectText {
   font-size: 20px;
   color: var(--darkDarkGrey);
+  text-align: left;
 }
 .portfolioPreviewText {
   display: flex;
@@ -123,7 +124,7 @@ p {
   align-items: flex-start;
 }
 
-.biggerPortfolioImage {
+.mainPortfolioImage {
   margin-right: 20px;
   width: 600px;
   height: 700px;
@@ -266,9 +267,25 @@ p {
 .finalPrototypeLabel {
   display: grid;
   place-items: center;
+  margin-left: 70px;
 }
 
 .prototypePreview {
   display: grid;
   place-items: center;
+}
+
+.takeawaysHeader {
+  font-size: 60px;
+  color: var(--purple);
+}
+
+iframe {
+  border-radius: 20px;
+}
+
+.takeawaysText {
+  display: grid;
+  place-items: center;
+  gap: 20px;
 }
