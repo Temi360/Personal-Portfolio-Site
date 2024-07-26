@@ -10,7 +10,7 @@ import DeskPage from "./DeskPage";
 import WelcomePage from "./WelcomePage";
 import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
-import ProjectPage from "./ProjectPage";
+import ProjectPage from "./ProjectPage2";
 import ResumeModal from "./ResumeModal";
 function App() {
   const location = useLocation();

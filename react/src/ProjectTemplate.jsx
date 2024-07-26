@@ -63,19 +63,20 @@ function ProjectTemplate({
                 </p>
               </div>
             </div>
+            <div class="stackContainer">
+              <h3 class=" justMeFont stackLabel stackItems"> Stack: </h3>
+              <img class="stackItems" src={stackImages} />
+            </div>
+            <div class="theProblemContainer">
+              <div class="theProblemBox">
+                <img src={theProblem} />
+              </div>
+              <p className=" projectText ">{projectDescription}</p>
+            </div>
           </div>
-        </div>
-        <div class="stackContainer">
-          <h3 class=" justMeFont stackLabel stackItems"> Stack: </h3>
-          <img class="stackItems" src={stackImages} />
-        </div>
-        <div class="theProblemContainer">
-          <div class="theProblemBox">
-            <img src={theProblem} />
-          </div>
-          <p className=" projectText ">{projectDescription}</p>
         </div>
       </div>
+
       <div
         alt="sticky sidebar that navigates to contact and linkedIn"
         className="stickySidebar"
@@ -292,7 +293,7 @@ function ProjectTemplate({
           </defs>
         </svg>
       </div>
-      <div class="leftAlignedTextContainer">
+      {/* <div class="leftAlignedTextContainer">
         <p class=" projectText ">{ideation}</p>
         <img alt="image of plant" src={plant} />
       </div>
@@ -381,8 +382,7 @@ function ProjectTemplate({
       <div className=" takeawaysText projectText">
 
         {takeaways}
-      </div>
-        
+      </div> */}
     </>
   );
 }

@@ -125,9 +125,7 @@ p {
 }
 
 .mainPortfolioImage {
-  margin-right: 20px;
-  width: 600px;
-  height: 700px;
+  border-radius: 20px;
 }
 
 .typeRoleDuration {
