@@ -11,6 +11,8 @@ import WelcomePage from "./WelcomePage";
 import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
 import ProjectPage from "./ProjectPage2";
+import ProjectListings from "./ProjectListingsPage";
+import ProjectData from "./projectData";
 import ResumeModal from "./ResumeModal";
 function App() {
   const location = useLocation();
@@ -26,6 +28,7 @@ function App() {
           <Route path="/resume" element={<ResumeModal />} />
           <Route path="/UIUX" element={<UIUXPage />} />
           <Route path="/project" element={<ProjectPage />} />
+          <Route path="/ProjectList" element={<ProjectListings />} />
         </Routes>
       </AnimatePresence>
     </div>

@@ -86,7 +86,7 @@ function DeskPage() {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 160,
+        stiffness: 100,
         damping: 20,
         bounce: 0.3,
         duration: 2,
