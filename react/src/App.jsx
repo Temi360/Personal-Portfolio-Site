@@ -10,7 +10,7 @@ import DeskPage from "./DeskPage";
 import WelcomePage from "./WelcomePage";
 import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
-import ProjectPage from "./ProjectPage2";
+import ProjectDetailsPage from "./ProjectDetailsPage";
 import ProjectListings from "./ProjectListingsPage";
 import ProjectData from "./projectData";
 import ResumeModal from "./ResumeModal";
@@ -27,7 +27,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/resume" element={<ResumeModal />} />
           <Route path="/UIUX" element={<UIUXPage />} />
-          <Route path="/project" element={<ProjectPage />} />
+          <Route path="/project/:id" element={<ProjectDetailsPage />} />
           <Route path="/ProjectList" element={<ProjectListings />} />
         </Routes>
       </AnimatePresence>

@@ -1,10 +1,12 @@
 // ProjectsPage.js
 import React from "react";
+import { useParams } from "react-router-dom";
+
 import ProjectTemplate from "./ProjectTemplate";
 import projectData from "./projectData";
 import "./portfolio_page.css";
 
-const ProjectsPage2 = () => {
+const ProjectsDetailsPage = () => {
   return (
     <div className="projects-page">
       {projectData.map((project) => (
@@ -23,4 +25,4 @@ const ProjectsPage2 = () => {
   );
 };
 
-export default ProjectsPage2;
+export default ProjectsDetailsPage;

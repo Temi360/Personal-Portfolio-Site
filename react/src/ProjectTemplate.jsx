@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./portfolio_page.css";
 import greyLine from "./greyLine.svg";
+
 import windyScenePreview from "./theWindyScenePreview.svg";
 import theProblem from "./theProblem.svg";
 import figma from "./figmaIcon.svg";
@@ -27,17 +28,24 @@ function ProjectTemplate({
   finalProduct,
   takeaways,
 }) {
+  const { id } = useParams();
+  const project = projectData.find((project) => project.id === parseInt(id));
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <>
       <div className="projectTemplate">
         <div className="portfolioProjectTitleAndImage">
           <img
             id="mainPortfolioImage"
-            src={projectImage}
+            src={project.projectImage}
             alt="The project preview image"
           />
           <div className="projectDescription">
-            <h2 className=" portfolioProjectTitle ">{title}</h2>
+            <h2 className=" portfolioProjectTitle ">{project.title}</h2>
             <div className="typeRoleDuration">
               <div className="projectAttributes">
                 <h3 className="justMeFont projectAttributeItems typeRoleDurationItems">
@@ -51,7 +59,9 @@ function ProjectTemplate({
                 <h3 className=" justMeFont projectAttributeItems typeRoleDurationItems">
                   Role{" "}
                 </h3>
-                <p className="projectText  projectAttributeItems">{role}</p>
+                <p className="projectText  projectAttributeItems">
+                  {project.role}
+                </p>
               </div>
               <img className="typeRoleDurationItems" src={greyLine} />
               <div className="projectAttributes">
@@ -59,19 +69,19 @@ function ProjectTemplate({
                   Duration{" "}
                 </h3>
                 <p className=" projectText  projectAttributeItems">
-                  {duration}
+                  {project.duration}
                 </p>
               </div>
             </div>
             <div class="stackContainer">
               <h3 class=" justMeFont stackLabel stackItems"> Stack: </h3>
-              <img class="stackItems" src={stackImages} />
+              <img class="stackItems" src={project.stackImages} />
             </div>
             <div class="theProblemContainer">
               <div class="theProblemBox">
-                <img src={theProblem} />
+                <img src={project.theProblem} />
               </div>
-              <p className=" projectText ">{projectDescription}</p>
+              <p className=" projectText ">{project.projectDescription}</p>
             </div>
           </div>
         </div>
