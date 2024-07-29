@@ -53,6 +53,9 @@ p {
   font-size: 30px;
   position: absolute;
 }
+div {
+  color: var(--black);
+}
 #folderMenu {
   display: flex;
   justify-content: left;

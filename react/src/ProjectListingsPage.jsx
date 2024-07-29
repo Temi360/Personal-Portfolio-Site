@@ -1,6 +1,6 @@
 import React from "react";
 import projectData from "./projectData";
-import ProjectListingsTemplate from "./ProjectTemplate";
+import ProjectListingsTemplate from "./ProjectListingsTemplate";
 
 import "./portfolio_page.css";
 

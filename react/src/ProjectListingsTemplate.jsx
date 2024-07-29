@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import leftChevron from "./leftChevron.svg";
 import rightChevron from "./rightChevron.svg";
 import "./portfolio_page.css";
 import projectData from "./projectData";
 
-function ProjectListingsTemplate({ title, projectImage, projectDescription }) {
+function ProjectListingsTemplate() {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const handleNextProject = () => {
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projectData.length);
+  };
+
+  const handlePreviousProject = () => {
+    setCurrentProjectIndex(
+      (prevIndex) => (prevIndex - 1 + projectData.length) % projectData.length
+    );
+  };
+
+  const currentProject = projectData[currentProjectIndex];
+
   return (
     <>
       <div className="folderBackgroundDiv">
@@ -16,13 +30,24 @@ function ProjectListingsTemplate({ title, projectImage, projectDescription }) {
           </div>
         </div>
         <div className="portfolioContentPreview">
-          <img src={leftChevron} alt="left Arrow" />
-          <img src={projectImage} id="windyScenePreviewImg" alt="" />
+          <img
+            onClick={handlePreviousProject}
+            src={leftChevron}
+            alt="left Arrow"
+          />
+          <img
+            src={currentProject.projectImage}
+            id="windyScenePreviewImg"
+            alt=""
+          />
           <div class="portfolioPreviewText jost ">
-            <h2 class="portfolioProjectTitle"> {title}</h2>
-            <p className="contentDescriptionText"> {projectDescription}</p>
+            <h2 class="portfolioProjectTitle"> {currentProject.title}</h2>
+            <p className="contentDescriptionText">
+              {" "}
+              {currentProject.projectDescription}
+            </p>
 
-            <Link to="/project">
+            <Link to={`/project/${currentProject.id}`}>
               <svg
                 id="viewProject"
                 width="200"
@@ -278,7 +303,11 @@ function ProjectListingsTemplate({ title, projectImage, projectDescription }) {
             </div>
           </div>
 
-          <img src={rightChevron} alt="right Arrow" />
+          <img
+            onClick={handleNextProject}
+            src={rightChevron}
+            alt="right Arrow"
+          />
         </div>
         <svg
           width="1133"
