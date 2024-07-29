@@ -20,19 +20,13 @@ function ProjectTemplate({
   duration,
   stackImages,
   projectDescription,
-  ideation,
-  map,
-  sketches,
-  revision,
-  finalProduct,
-  takeaways,
+  //   ideation,
+  //   map,
+  //   sketches,
+  //   revision,
+  //   finalProduct,
+  //   takeaways,
 }) {
-  const { id } = useParams();
-  const project = projectData.find((project) => id === parseInt(id));
-  if (!project) {
-    return <div>Project not found</div>;
-  }
-
   return (
     <>
       <div className="projectTemplate">

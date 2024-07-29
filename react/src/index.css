@@ -39,7 +39,7 @@
 
 .pageWrapper {
   overflow: auto; /* or overflow-y: scroll; */
-
+  background-color: var(--grey);
   background-image: url("FixedBackgroundLines.svg");
   background-size: cover; /* Optional: Ensures the image covers the whole div */
   background-position: center; /* Optional: Centers the image */
@@ -68,16 +68,17 @@
   list-style-type: none;
   text-decoration: none;
   float: left;
+  transition: color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
+
 .contact:hover {
   cursor: pointer;
 }
 /* Style rule set for individual li link */
-.navbar ul li a {
-  text-decoration: none;
-  color: var(--purple);
-}
 
+.navbar ul li:hover {
+  color: var(--orange);
+}
 #homeIconNavbarDiv {
   margin-top: -10px;
 }

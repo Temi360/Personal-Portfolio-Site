@@ -6,8 +6,8 @@
   color: var(--darkDarkGrey);
 }
 #windyScenePreviewImg {
+  position: relative;
   width: 30%;
-  margin: 40px;
 }
 
 p {
