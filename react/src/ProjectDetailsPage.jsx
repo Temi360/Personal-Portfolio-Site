@@ -7,20 +7,25 @@ import projectData from "./projectData";
 import "./portfolio_page.css";
 
 const ProjectsDetailsPage = () => {
+  const { id } = useParams();
+  const projectId = parseInt(id, 10);
+  const project = projectData.find((proj) => proj.id === projectId);
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <div className="projects-page">
-      {projectData.map((project) => (
-        <ProjectTemplate
-          key={project.id}
-          title={project.title}
-          projectImage={project.projectImage}
-          type={project.type}
-          role={project.role}
-          duration={project.duration}
-          stackImages={project.stackImages}
-          projectDescription={project.projectDescription}
-        />
-      ))}
+      <ProjectTemplate
+        key={projectId}
+        title={project.title}
+        projectImage={project.projectImage}
+        type={project.type}
+        role={project.role}
+        duration={project.duration}
+        stackImages={project.stackImages}
+        projectDescription={project.projectDescription}
+      />
     </div>
   );
 };
