@@ -9,13 +9,19 @@ import "./computer_page.css";
 import audio from "./click-sound.mp3";
 
 function DeskPage() {
+  gsap.registerPlugin(MotionPathPlugin);
+
   const svgRef = useRef(null);
   const audioRef = useRef(null);
+  const leafRef = useRef(null);
 
   const [fanOn, setFanOn] = useState(false);
   const fanClass = fanOn ? "blades-rotate" : "";
   const hairClass = fanOn ? "hair-blows" : "";
   const postItClass = fanOn ? "postIt-blows" : "";
+
+  const [isShaking, setIsShaking] = useState(false);
+  const leafShakeClass = isShaking ? "shake" : "";
 
   const [lightOn, setLightOn] = useState(false);
   const lampClass = lightOn ? "displayBlock" : "";
@@ -61,12 +67,22 @@ function DeskPage() {
         audioRef.current.pause();
       }
     }
-    // if (musicOn) {
-    //   audioRef.current.play();
-    // } else {
 
-    //   audioRef.current.pause();
-    // }
+    if (leafRef.current) {
+      if (fanOn) {
+        setIsShaking(true);
+        const shakeTimeout = setTimeout(() => {
+          setIsShaking(false);
+          gsap.to(leafRef.current, {
+            duration: 3,
+            motionPath:
+              "M 1 21.9912 C 21 58.2112 82.5003 46.7111 79.5 21.9911 C 77.8948 8.76551 61.0034 -9.72117 46.9997 7.49095 C 29.5 29 36.9033 61.5957 79.5 57.5 C 105.5 55.0001 159.95 38.5001 147 55.5 C 128.868 79.3032 48.5 65.5 42.5 75.5 C 35.0503 92.0001 76.5 90.5 97.5 90.5",
+          });
+        }, 2000); // Wait 2 seconds before starting the GSAP animation
+
+        return () => clearTimeout(shakeTimeout);
+      }
+    }
 
     const blink = () => {
       setEyesBlink(true);
@@ -86,7 +102,7 @@ function DeskPage() {
     return () => {
       draggable.forEach((draggableInstance) => draggableInstance.kill());
     };
-  }, [musicOn]);
+  }, [musicOn, fanOn]);
 
   const slideUpTransition = {
     initial: {
@@ -124,9 +140,9 @@ function DeskPage() {
         <div className="deskBackground">
           <svg
             ref={svgRef}
-            width="800"
-            height="633.87"
-            viewBox="0 0 758 480"
+            width="1500"
+            height="1000"
+            viewBox="0 0 758 900"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -210,7 +226,9 @@ function DeskPage() {
                   fill="#63734E"
                 />
                 <path
-                  id="leaf2"
+                  className={leafShakeClass}
+                  ref={leafRef}
+                  id="animatedLeaf"
                   d="M695.408 328.399C701.113 334.693 694.998 346.122 681.235 338.06L667.669 330.268C665.881 329.241 666.504 325.377 668.443 324.674C676.232 321.853 685.68 317.666 695.408 328.399Z"
                   fill="#A1B489"
                   stroke="#63734E"
