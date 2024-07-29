@@ -52,6 +52,22 @@ function DeskPage() {
   const blinkClass = eyesBlink ? "eyelids-closed" : " ";
 
   useEffect(() => {
+    if (audioRef.current) {
+      if (musicOn) {
+        audioRef.current.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+    // if (musicOn) {
+    //   audioRef.current.play();
+    // } else {
+
+    //   audioRef.current.pause();
+    // }
+
     const blink = () => {
       setEyesBlink(true);
     };
@@ -62,11 +78,6 @@ function DeskPage() {
     const blinkInterval = setInterval(blink, 3000);
     const stopBlinkInterval = setInterval(stopBlink, 6000);
 
-    if (musicOn) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
     const draggable = Draggable.create("#handOnMouse", {
       bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
     });
@@ -75,7 +86,8 @@ function DeskPage() {
     return () => {
       draggable.forEach((draggableInstance) => draggableInstance.kill());
     };
-  }, []);
+  }, [musicOn]);
+
   const slideUpTransition = {
     initial: {
       y: "100%",
