@@ -23,7 +23,7 @@ function ComputerPage() {
     setPopupVisible(false);
   };
 
-  const [clickedElement, setClickedElement] = useState(null);
+  const [clickedElement, setClickedElement] = useState("left");
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const rightButtonClass =

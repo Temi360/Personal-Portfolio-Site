@@ -2,6 +2,7 @@
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
+  cursor: url("customCursor.png"), auto;
 
   --purple: #9caffe;
   --darkPurple: #8693cb;
@@ -29,6 +30,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .backgroundDiv {
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
@@ -71,9 +73,6 @@
   transition: color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-.contact:hover {
-  cursor: pointer;
-}
 /* Style rule set for individual li link */
 
 .navbar ul li:hover {
@@ -97,10 +96,35 @@ a {
   text-decoration: inherit;
 }*/
 
-a {
+a,
+button,
+[role="button"],
+[onClick],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   margin: 0;
   padding: 0;
+  cursor: url("linkCursor.png"), pointer;
 }
-a:hover {
-  color: var(--black);
+li {
+  cursor: url("linkCursor.png"), pointer;
+}
+#rightArrowButtonAndText,
+#leftArrowButtonAndText,
+#headphones,
+#lampButton,
+#aboutMePostits,
+#fanButtons {
+  cursor: url("linkCursor.png"), pointer;
+}
+#handOnMouse {
+  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+}
+.grab {
+  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+}
+
+.grabbing {
+  cursor: url("grabCursor.png"), grabbing; /* Custom grabbing cursor */
 }

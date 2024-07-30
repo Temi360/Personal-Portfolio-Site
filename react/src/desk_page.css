@@ -97,9 +97,44 @@ light {
 }
 /* clock */
 #minuteHand {
-  transform-origin: 120px, 20px;
+  transform-origin: 90px, 20px;
   transform-box: fill-box;
   animation: clockMoving 60s infinite;
+}
+#tail {
+  transform-origin: 50px, 50px; /* Adjust this value to the pivot point of the tail */
+  transform-box: fill-box;
+  animation: catTail 1.5s ease-in-out infinite;
+}
+
+#clockEyes {
+  animation: movingClockEyes 1.5s ease-in-out infinite;
+}
+@keyframes movingClockEyes {
+  0% {
+    transform: translateX(-3px);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: translateX(-3px);
+  }
+}
+@keyframes catTail {
+  0% {
+    transform: rotate(7deg);
+  }
+
+  50% {
+    transform: rotate(-7deg);
+  }
+
+  100% {
+    transform: rotate(7deg);
+  }
 }
 
 @keyframes clockMoving {

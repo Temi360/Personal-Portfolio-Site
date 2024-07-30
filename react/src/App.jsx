@@ -14,6 +14,8 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 import ProjectListings from "./ProjectListingsPage";
 import ProjectData from "./projectData";
 import ResumeModal from "./ResumeModal";
+import { useReducedMotion } from "framer-motion";
+
 function App() {
   const location = useLocation();
   return (
