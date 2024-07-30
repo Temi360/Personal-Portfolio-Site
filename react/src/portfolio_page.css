@@ -6,13 +6,13 @@
   color: var(--darkDarkGrey);
 }
 #windyScenePreviewImg {
-  position: relative;
   width: 30%;
 }
 
 p {
   /* font-size: 23px; */
   font-weight: 400;
+  color: var(--darkDarkGrey);
 }
 .projectText {
   font-size: 20px;
@@ -29,12 +29,16 @@ p {
   overflow-wrap: break-word;
   text-align: left;
 }
+h2 {
+  padding-left: 30px;
+}
 .portfolioContentPreview {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  transform: translate(0%, 20%);
+  justify-content: flex-end;
+  transform: translate(0%, 25%);
+  margin-bottom: 40px;
 }
 .PreviewContactIcons {
   display: flex;
@@ -91,6 +95,7 @@ div {
   position: absolute;
   } */
 .contentDescriptionText {
+  /* margin-right: 30px; */
   margin-top: 0;
 }
 #wearHats {
@@ -101,7 +106,8 @@ div {
   position: absolute;
 }
 
-#viewProject {
+#viewProjectButton {
+  margin-top: 20px;
   margin-left: 300px;
 }
 
@@ -186,6 +192,7 @@ div {
   position: absolute;
   position: sticky;
   float: right;
+  margin-right: 20px;
   margin-top: -1000px;
   top: 400px;
 }
@@ -289,4 +296,8 @@ iframe {
   display: grid;
   place-items: center;
   gap: 20px;
+}
+
+.arrow {
+  margin: 20px;
 }

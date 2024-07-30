@@ -14,7 +14,7 @@ function DeskPage() {
   const svgRef = useRef(null);
   const audioRef = useRef(null);
   const leafRef = useRef(null);
-
+  // const fanRef = useRef(null);
   const [fanOn, setFanOn] = useState(false);
   const fanClass = fanOn ? "blades-rotate" : "";
   const hairClass = fanOn ? "hair-blows" : "";

@@ -4,7 +4,7 @@ import figmaIcon from "./figmaIcon.svg";
 const projectData = [
   {
     id: 1,
-    title: "Anylytics.ai: Data Copilot",
+    title: "Anylytics.ai",
     projectImage: AnylyticsImage,
     type: "UI/UX",
     role: "Lead Designer",
