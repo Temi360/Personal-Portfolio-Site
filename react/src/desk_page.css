@@ -233,3 +233,8 @@ light {
   animation: shake 0.7s alternate; /* Shake animation duration */
   animation-iteration-count: 4; /* Repeat the animation */
 }
+
+#computer:hover {
+  transform: translate(0px, -5px);
+  transition: transform 0.3s ease-in-out;
+}
