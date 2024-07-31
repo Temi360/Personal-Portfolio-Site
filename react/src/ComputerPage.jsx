@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
 import { Route, Routes, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import About from "./AboutMePopUp";
+import About from "./PopUp";
 import "./aboutMe.css";
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -11,15 +11,12 @@ import profile from "./profilePic.svg";
 function ComputerPage() {
   const svgRef = useRef(null);
 
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   const openPopUp = () => {
-    setIsPopUpOpen(true);
     setPopupVisible(true);
   };
   const closePopUp = () => {
-    setIsPopUpOpen(false);
     setPopupVisible(false);
   };
 
@@ -1050,11 +1047,7 @@ function ComputerPage() {
         </svg>
       </m.div>
 
-      <About
-        isOpen={isPopUpOpen}
-        onClose={closePopUp}
-        isVisible={isPopupVisible}
-      >
+      <About onClose={closePopUp} isVisible={isPopupVisible}>
         <h2 className="aboutHeader">About Me!</h2>
         <div className="aboutMeTextAndImage">
           <img alt="Image of Temi" src={profile} />
@@ -1064,7 +1057,7 @@ function ComputerPage() {
               at Washington University in St.Louis with minors in Human-Computer
               Interaction and Art History. I'm interested in the intersection of
               Design, Computer Science, and Accessibility. In my free time I
-              enjoy knitting, watching love island, and reading mystery books.
+              enjoy knitting, watching Love Island, and reading mystery books.
               I'm super exicted to work with you!
             </p>
           </div>

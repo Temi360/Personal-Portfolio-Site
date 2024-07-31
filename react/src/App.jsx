@@ -26,11 +26,10 @@ function App() {
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/work" element={<ComputerPage />} />
           <Route path="/desk" element={<DeskPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio" element={<ProjectListings />} />
           <Route path="/resume" element={<ResumeModal />} />
           <Route path="/UIUX" element={<UIUXPage />} />
           <Route path="/project/:id" element={<ProjectDetailsPage />} />
-          <Route path="/ProjectList" element={<ProjectListings />} />
         </Routes>
       </AnimatePresence>
     </div>

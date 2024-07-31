@@ -9,15 +9,12 @@ import mail from "./mail.svg";
 import headIcon from "./headIcon.svg";
 import "./index.css";
 function Navbar() {
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   const openPopUp = () => {
-    setIsPopUpOpen(true);
     setPopupVisible(true);
   };
   const closePopUp = () => {
-    setIsPopUpOpen(false);
     setPopupVisible(false);
   };
 
@@ -37,11 +34,7 @@ function Navbar() {
           <li className="contact" onClick={openPopUp}>
             contact.
           </li>
-          <ContactPopUp
-            isOpen={isPopUpOpen}
-            onClose={closePopUp}
-            isVisible={isPopupVisible}
-          >
+          <ContactPopUp onClose={closePopUp} isVisible={isPopupVisible}>
             <div className="TitleAndIcon">
               <h2 className="popupHeader">Let's Work Together!</h2>
               <img className="headIcon" src={headIcon} />

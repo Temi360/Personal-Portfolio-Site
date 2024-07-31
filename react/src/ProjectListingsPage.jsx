@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion as m } from "framer-motion";
+
 import { Link } from "react-router-dom";
 import leftChevron from "./leftChevron.svg";
 import rightChevron from "./rightChevron.svg";
@@ -22,9 +24,39 @@ const ProjectListingsPage = () => {
 
   const currentProject = projectData[currentProjectIndex];
 
+  const slideInTransition = {
+    initial: {
+      x: "-100%",
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
+    animate: {
+      x: "0%",
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 160,
+        damping: 20,
+        bounce: 0.3,
+        duration: 2,
+        ease: "easeOut",
+      },
+    },
+
+    exit: {
+      x: "-150%",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
+
   return (
     <>
-      <div className="folderBackgroundDiv">
+      <m.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={slideInTransition}
+        className="folderBackgroundDiv"
+      >
         <div className=" justMeFont folderPageTitle">Portfolio</div>
         <div className="menuAndBackButton">
           <div className="justMeFont" id="folderMenu">
@@ -328,7 +360,7 @@ const ProjectListingsPage = () => {
               stroke="#F5F5F5"
               stroke-width="3"
             />
-            <Link to="/portfolio">
+            <Link to="/work">
               <g id="backButton">
                 <path
                   id="backArrow"
@@ -344,7 +376,7 @@ const ProjectListingsPage = () => {
             </Link>
           </g>
         </svg>
-      </div>
+      </m.div>
     </>
   );
 };

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion as m } from "framer-motion";
 import closeButton from "./contactCloseButton.svg";
+import gsap from "gsap";
 
-const AboutMePopUp = ({ isOpen, onClose, children, isVisible }) => {
-  if (!isOpen) return null;
+const AboutMePopUp = ({ isVisible, onClose, children }) => {
   const popupRef = useRef(null);
   useEffect(() => {
     if (isVisible) {
@@ -21,8 +21,9 @@ const AboutMePopUp = ({ isOpen, onClose, children, isVisible }) => {
         onComplete: onClose,
       });
     }
-  }, [isVisible, onClose]);
-  if (!isOpen) return null;
+  }, [isVisible]);
+  if (!isVisible) return null;
+
   return (
     <div className="about-overlay" onClick={onClose}>
       <div ref={popupRef} className="about-wrapper">

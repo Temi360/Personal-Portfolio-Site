@@ -3,7 +3,7 @@ import { motion as m } from "framer-motion";
 import closeButton from "./contactCloseButton.svg";
 import gsap from "gsap";
 
-const ContactPopUp = ({ isOpen, onClose, isVisible, children }) => {
+const ContactPopUp = ({ isVisible, onClose, children }) => {
   const popupRef = useRef(null);
   useEffect(() => {
     if (isVisible) {
@@ -21,8 +21,9 @@ const ContactPopUp = ({ isOpen, onClose, isVisible, children }) => {
         onComplete: onClose,
       });
     }
-  }, [isVisible, onClose]);
-  if (!isOpen) return null;
+  }, [isVisible]);
+  if (!isVisible) return null;
+
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div ref={popupRef} className="popup-wrapper">
