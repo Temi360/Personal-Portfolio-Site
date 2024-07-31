@@ -9,6 +9,11 @@
   width: 30%;
 }
 
+#backButton {
+  width: 140px;
+  margin-top: -30px;
+  position: absolute;
+}
 p {
   /* font-size: 23px; */
   font-weight: 400;
@@ -190,7 +195,7 @@ div {
   position: absolute;
   position: sticky;
   float: right;
-  margin-right: 20px;
+  margin-right: 130px;
   margin-top: -1000px;
   top: 400px;
 }

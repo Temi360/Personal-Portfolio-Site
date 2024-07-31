@@ -12,12 +12,14 @@ import loFiWireframes from "./loFiWireframes.svg";
 import uxTestingLabel from "./uxLabel.svg";
 import lightBulb from "./lightBulb.svg";
 import finalPrototype from "./finalPrototypeLabel.svg";
+import backButton from "./backButton.svg";
 // import figmaPrototypePreview from "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9HNmO5BZpIjKC42HdgYeuK%2FLessAnnoying-Project%3Fpage-id%3D138%253A4%26node-id%3D507-569%26viewport%3D-130%252C162%252C0.26%26t%3Dp5F1iQ2nPGi6v5Fl-1%26scaling%3Dscale-down%26content-scaling%3Dfixed";
 
 function ProjectPage() {
   return (
     <>
       <div className="portfolioProjectTitleAndImage">
+        <img src={backButton} alt="button to go back to portfolio page" />
         <img
           src={windyScenePreview}
           id="mainPortfolioImage"
