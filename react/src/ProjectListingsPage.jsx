@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { motion as m } from "framer-motion";
-
 import { Link } from "react-router-dom";
 import leftChevron from "./leftChevron.svg";
 import rightChevron from "./rightChevron.svg";
@@ -8,6 +6,7 @@ import viewProject from "./viewProjectButton.svg";
 import "./portfolio_page.css";
 import projectData from "./projectData";
 import "./portfolio_page.css";
+import { motion as m } from "framer-motion";
 
 const ProjectListingsPage = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);

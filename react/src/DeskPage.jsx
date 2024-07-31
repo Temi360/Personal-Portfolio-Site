@@ -1163,11 +1163,7 @@ function DeskPage() {
                   />
                 </g>
               </g>
-              <g
-                onMouseEnter={() => handleMouseEnter("fan")}
-                onMouseLeave={handleMouseLeave}
-                id="fan"
-              >
+              <g onClick={() => setFanOn(!fanOn)} id="fan">
                 <g
                   onMouseEnter={() => handleMouseEnter("fan")}
                   onMouseLeave={handleMouseLeave}
@@ -1272,7 +1268,7 @@ function DeskPage() {
                     d="M160.485 302.5C161.985 306 169.485 307 173.985 318.5"
                     stroke="#F5F5F5"
                   />
-                  <g onClick={() => setFanOn(!fanOn)} id="fanButtons">
+                  <g id="fanButtons">
                     <path
                       id="Vector 172"
                       d="M179.485 301.485V305.5H172.485V303.27V301.485C174.885 299.701 178.152 300.742 179.485 301.485Z"
