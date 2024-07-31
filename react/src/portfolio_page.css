@@ -10,9 +10,8 @@
 }
 
 #backButton {
-  width: 140px;
+  width: 100px;
   margin-top: -30px;
-  position: absolute;
 }
 p {
   /* font-size: 23px; */
