@@ -9,13 +9,19 @@ import "./computer_page.css";
 import audio from "./click-sound.mp3";
 
 function DeskPage() {
+  gsap.registerPlugin(MotionPathPlugin);
+
   const svgRef = useRef(null);
   const audioRef = useRef(null);
-
+  const leafRef = useRef(null);
+  // const fanRef = useRef(null);
   const [fanOn, setFanOn] = useState(false);
   const fanClass = fanOn ? "blades-rotate" : "";
   const hairClass = fanOn ? "hair-blows" : "";
   const postItClass = fanOn ? "postIt-blows" : "";
+
+  const [isShaking, setIsShaking] = useState(false);
+  const leafShakeClass = isShaking ? "shake" : "";
 
   const [lightOn, setLightOn] = useState(false);
   const lampClass = lightOn ? "displayBlock" : "";
@@ -52,6 +58,38 @@ function DeskPage() {
   const blinkClass = eyesBlink ? "eyelids-closed" : " ";
 
   useEffect(() => {
+    if (audioRef.current) {
+      if (musicOn) {
+        audioRef.current.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [musicOn]);
+
+  useEffect(() => {
+    if (leafRef.current) {
+      if (fanOn) {
+        setIsShaking(true);
+        const shakeTimeout = setTimeout(() => {
+          setIsShaking(false);
+          gsap.to(leafRef.current, {
+            duration: 3,
+            motionPath: {
+              path: "M0.970764 5.0774C30.4708 30.4285 71.5001 23.5 69.5 8.50006C68.3105 -0.420837 56.5001 -1.40935 48.5294 8.50006C42.9215 15.472 37.802 43.1755 78.0001 28.5C109.5 17 114.5 39.5 78.0001 44.5C67.7877 45.899 24.5501 47.0197 22.5001 58.5C20 72.5 59.5001 86.5 78.0001 86.5",
+              autoRotate: true,
+            },
+          });
+        }, 2000); // Wait 2 seconds before starting the GSAP animation
+
+        return () => clearTimeout(shakeTimeout);
+      }
+    }
+  }, [fanOn]);
+
+  useEffect(() => {
     const blink = () => {
       setEyesBlink(true);
     };
@@ -62,11 +100,14 @@ function DeskPage() {
     const blinkInterval = setInterval(blink, 3000);
     const stopBlinkInterval = setInterval(stopBlink, 6000);
 
-    if (musicOn) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
+    // Cleanup function to clear intervals on component unmount
+    return () => {
+      clearInterval(blinkInterval);
+      clearInterval(stopBlinkInterval);
+    };
+  }, []);
+
+  useEffect(() => {
     const draggable = Draggable.create("#handOnMouse", {
       bounds: { minX: 10, minY: 0, maxX: 40, maxY: 8 },
     });
@@ -76,31 +117,45 @@ function DeskPage() {
       draggable.forEach((draggableInstance) => draggableInstance.kill());
     };
   }, []);
+  const slideUpTransition = {
+    initial: {
+      y: "100%",
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
+    animate: {
+      y: "0%",
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        bounce: 0.3,
+        duration: 2,
+        ease: "easeOut",
+      },
+    },
+
+    exit: {
+      y: "-150%",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
 
   return (
     <>
       <m.div
-        key="desk"
-        className="deskPageWrapper"
-        initial={{ y: "100%" }}
-        animate={{ y: "0%" }}
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 20,
-          bounce: 0.3,
-          duration: 2,
-          ease: "easeOut",
-        }}
-        exit={{ opacity: 1 }}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={slideUpTransition}
       >
         <audio ref={audioRef} id="click-sound" src={audio}></audio>
         <div className="deskBackground">
           <svg
             ref={svgRef}
-            width="800"
-            height="633.87"
-            viewBox="0 0 758 480"
+            width="1500"
+            height="1000"
+            viewBox="0 0 758 900"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -183,13 +238,7 @@ function DeskPage() {
                   d="M630.651 293.218C624.353 287.517 629.31 275.541 643.802 282.205L658.071 288.62C659.952 289.465 659.712 293.372 657.852 294.263C650.38 297.839 641.391 302.938 630.651 293.218Z"
                   fill="#63734E"
                 />
-                <path
-                  id="leaf2"
-                  d="M695.408 328.399C701.113 334.693 694.998 346.122 681.235 338.06L667.669 330.268C665.881 329.241 666.504 325.377 668.443 324.674C676.232 321.853 685.68 317.666 695.408 328.399Z"
-                  fill="#A1B489"
-                  stroke="#63734E"
-                  strokeWidth="2"
-                />
+
                 <path
                   id="leaf1"
                   d="M642.488 338.598C634.031 337.796 630.842 325.232 646.443 321.907L661.715 318.516C663.728 318.069 665.873 321.343 664.914 323.169C661.064 330.504 656.909 339.966 642.488 338.598Z"
@@ -200,6 +249,15 @@ function DeskPage() {
                   d="M659 286C664.667 303.833 668.5 348.5 667 374"
                   stroke="#63734E"
                   strokeWidth="4"
+                />
+                <path
+                  className={leafShakeClass}
+                  ref={leafRef}
+                  id="animatedLeaf"
+                  d="M695.408 328.399C701.113 334.693 694.998 346.122 681.235 338.06L667.669 330.268C665.881 329.241 666.504 325.377 668.443 324.674C676.232 321.853 685.68 317.666 695.408 328.399Z"
+                  fill="#A1B489"
+                  stroke="#63734E"
+                  strokeWidth="2"
                 />
               </g>
               <path
@@ -221,6 +279,21 @@ function DeskPage() {
                       id="Vector 231"
                       d="M473.939 134.066L476.669 107.691C480.309 107.539 488.383 107.233 491.56 107.233C492.305 111.59 490 138 490 142.5C490 149.948 489.327 155.701 488.83 158.606C488.334 159.6 486.646 161.45 483.866 160.9C478.903 161.588 473.939 142.323 473.939 140.488V134.066Z"
                       fill="#F14D08"
+                    />
+                    <path
+                      id="Vector 240"
+                      d="M476.057 143.387C475.139 142.277 485.533 137 489 137L489 143.387C486.067 143.85 476.975 144.497 476.057 143.387Z"
+                      fill="#AF371C"
+                    />
+                    <path
+                      id="Vector 239"
+                      d="M489.931 132.843C490.99 131.654 479 126 475 126L475 132.843C478.383 133.339 488.872 134.033 489.931 132.843Z"
+                      fill="#AF371C"
+                    />
+                    <path
+                      id="Vector 238"
+                      d="M476.066 121.843C475.007 120.654 486.997 115 490.997 115L490.997 121.843C487.614 122.339 477.125 123.033 476.066 121.843Z"
+                      fill="#AF371C"
                     />
                   </g>
                   <path
@@ -244,36 +317,7 @@ function DeskPage() {
                     ry="4.5"
                     fill="#F5F5F5"
                   />
-                  <path
-                    id="Vector 227"
-                    d="M469.582 24C470.608 25.1613 471.89 27.4871 469.582 29.5C466.696 27.5645 468.043 25.1613 469.582 24Z"
-                    fill="#020001"
-                    stroke="#020001"
-                    strokeWidth="2"
-                  />
-                  <path
-                    id="Vector 237"
-                    d="M497.696 24C498.722 25.1613 500.004 27.4871 497.696 29.5C494.81 27.5645 496.157 25.1613 497.696 24Z"
-                    fill="#020001"
-                    stroke="#020001"
-                    strokeWidth="2"
-                  />
-                  <ellipse
-                    id="Ellipse 55"
-                    cx="495.283"
-                    cy="26.3227"
-                    rx="2.4819"
-                    ry="0.992762"
-                    fill="#F5F5F5"
-                  />
-                  <ellipse
-                    id="Ellipse 56"
-                    cx="466.989"
-                    cy="26.3227"
-                    rx="2.4819"
-                    ry="0.992762"
-                    fill="#F5F5F5"
-                  />
+
                   <path
                     id="Ellipse 57"
                     d="M488 30C488 31.6569 486.433 33 484.5 33C482.567 33 481 31.6569 481 30C481 28.3431 482.567 27 484.5 27C486.433 27 488 28.3431 488 30Z"
@@ -310,21 +354,43 @@ function DeskPage() {
                     d="M481.352 46.9904C479.047 44.1473 471.905 43.2786 468.623 43.1996L468.382 45.3319L465.5 48.412L468.382 50.5443C468.463 51.0971 468.623 52.4397 468.623 53.3874C473.042 54.3351 478.951 52.2028 481.352 51.0182H486.636C488.366 53.4822 495.683 53.6243 499.126 53.3874L498.646 52.2028L502.729 48.6489L499.126 45.8058C498.966 45.5688 498.646 44.8581 498.646 43.9104C494.034 42.015 488.718 44.7001 486.636 46.2796C486.316 46.5166 484.811 46.9904 481.352 46.9904Z"
                     fill="#F5F5F5"
                   />
-                  <path
-                    id="Vector 238"
-                    d="M476.066 121.843C475.007 120.654 486.997 115 490.997 115L490.997 121.843C487.614 122.339 477.125 123.033 476.066 121.843Z"
-                    fill="#AF371C"
-                  />
-                  <path
-                    id="Vector 240"
-                    d="M476.057 143.387C475.139 142.277 485.533 137 489 137L489 143.387C486.067 143.85 476.975 144.497 476.057 143.387Z"
-                    fill="#AF371C"
-                  />
-                  <path
-                    id="Vector 239"
-                    d="M489.931 132.843C490.99 131.654 479 126 475 126L475 132.843C478.383 133.339 488.872 134.033 489.931 132.843Z"
-                    fill="#AF371C"
-                  />
+                  <g id="clockEyes">
+                    <g id="rightClockEye">
+                      <path
+                        id="Vector 237"
+                        d="M497.696 24C498.722 25.1613 500.004 27.4871 497.696 29.5C494.81 27.5645 496.157 25.1613 497.696 24Z"
+                        fill="#020001"
+                        stroke="#020001"
+                        strokeWidth="2"
+                      />
+                      <ellipse
+                        id="Ellipse 55"
+                        cx="495.283"
+                        cy="26.3227"
+                        rx="2.4819"
+                        ry="0.992762"
+                        fill="#F5F5F5"
+                      />
+                    </g>
+                    <g id="leftClockEye">
+                      <path
+                        id="Vector 227"
+                        d="M469.582 24C470.608 25.1613 471.89 27.4871 469.582 29.5C466.696 27.5645 468.043 25.1613 469.582 24Z"
+                        fill="#020001"
+                        stroke="#020001"
+                        strokeWidth="2"
+                      />
+
+                      <ellipse
+                        id="Ellipse 56"
+                        cx="466.989"
+                        cy="26.3227"
+                        rx="2.4819"
+                        ry="0.992762"
+                        fill="#F5F5F5"
+                      />
+                    </g>
+                  </g>
                 </g>
                 <g id="mat" filter="url(#filter1_d_226_4)">
                   <ellipse
@@ -341,11 +407,7 @@ function DeskPage() {
                     fill="#DADFF5"
                     stroke="#F5F5F5"
                   />
-                  <path
-                    id="Vector 238_2"
-                    d="M460.836 439.55C468.836 441.583 501.236 442.397 504.836 437.11"
-                    stroke="#9CAFFE"
-                  />
+
                   <ellipse
                     id="Ellipse 60"
                     cx="456.836"
@@ -1101,12 +1163,12 @@ function DeskPage() {
                   />
                 </g>
               </g>
-              <g
-                onMouseEnter={() => handleMouseEnter("fan")}
-                onMouseLeave={handleMouseLeave}
-                id="fan"
-              >
-                <g id="fanBase">
+              <g onClick={() => setFanOn(!fanOn)} id="fan">
+                <g
+                  onMouseEnter={() => handleMouseEnter("fan")}
+                  onMouseLeave={handleMouseLeave}
+                  id="fanBase"
+                >
                   <g id="Vector 83">
                     <path
                       d="M249.383 326.013L249.383 421.603C249.386 426.27 247.362 435.501 239.236 435.095L151.386 435.025C137.315 424.514 119.987 407.6 119.985 406C119.984 404.4 119.482 349.291 119.449 305L196.477 302.592C198.038 302.543 199.589 302.861 201.005 303.519L249.383 326.013Z"
@@ -1206,7 +1268,7 @@ function DeskPage() {
                     d="M160.485 302.5C161.985 306 169.485 307 173.985 318.5"
                     stroke="#F5F5F5"
                   />
-                  <g onClick={() => setFanOn(!fanOn)} id="fanButtons">
+                  <g id="fanButtons">
                     <path
                       id="Vector 172"
                       d="M179.485 301.485V305.5H172.485V303.27V301.485C174.885 299.701 178.152 300.742 179.485 301.485Z"

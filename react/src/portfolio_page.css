@@ -1,5 +1,3 @@
-
-
 .justMeFont {
   font-family: "Just Me Again Down Here", cursive;
   font-weight: 550;
@@ -9,18 +7,21 @@
 }
 #windyScenePreviewImg {
   width: 30%;
-  margin: 40px;
 }
-h2 {
-  color: var(--black);
-  font-size: 40px;
-  margin: 0;
-  font-weight: 550;
+
+#backButton {
+  width: 100px;
+  margin-top: -30px;
 }
 p {
-  font-size: 23px;
+  /* font-size: 23px; */
   font-weight: 400;
   color: var(--darkDarkGrey);
+}
+.projectText {
+  font-size: 20px;
+  color: var(--darkDarkGrey);
+  text-align: left;
 }
 .portfolioPreviewText {
   display: flex;
@@ -32,14 +33,18 @@ p {
   overflow-wrap: break-word;
   text-align: left;
 }
+h2 {
+  padding-left: 30px;
+}
 .portfolioContentPreview {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  transform: translate(0%, 20%);
+  justify-content: flex-end;
+  transform: translate(0%, 25%);
+  margin-bottom: 40px;
 }
-.PreviewContactIcons{
+.PreviewContactIcons {
   display: flex;
   justify-content: right;
 }
@@ -55,6 +60,9 @@ p {
 
   font-size: 30px;
   position: absolute;
+}
+div {
+  color: var(--black);
 }
 #folderMenu {
   display: flex;
@@ -87,10 +95,9 @@ p {
   padding-left: 10px;
   transform: translate(35%, 80%);
 }
-/* svg{
-  position: absolute;
-  } */
+
 .contentDescriptionText {
+  /* margin-right: 30px; */
   margin-top: 0;
 }
 #wearHats {
@@ -101,7 +108,8 @@ p {
   position: absolute;
 }
 
-#viewProject {
+#viewProjectButton {
+  margin-top: 20px;
   margin-left: 300px;
 }
 
@@ -114,6 +122,8 @@ p {
 }
 
 .portfolioProjectTitle {
+  color: var(--black);
+  font-size: 40px;
   font-weight: 500;
   font-size: 60px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
@@ -122,12 +132,11 @@ p {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
+  align-items: flex-start;
 }
 
-.biggerPortfolioImage {
-  margin-right: 20px;
-  width: 600px;
-  height: 700px;
+.mainPortfolioImage {
+  border-radius: 20px;
 }
 
 .typeRoleDuration {
@@ -156,48 +165,38 @@ p {
 
 .stackContainer {
   margin-top: 10px;
-  margin-left: 30;
+  margin-left: 0;
   display: flex;
   flex-direction: row;
 }
 
 .stackItems {
-  padding-left: 20;
   padding-right: 20px;
 }
 
 .stackLabel {
   color: var(--darkDarkGrey);
   font-weight: 500;
+  padding: 20px;
 }
 
 .theProblemBox {
-  padding: 0;
-  width: 200px;;
-  height: 50px;
-  display: flex;
-  justify-content: center;
+  padding-left: 20px;
   margin-top: 50px;
-  overflow-wrap: break-word;
-  color: var(--darkOrange);
-  font-size: 40px;
-  font-weight: 550;
-  
 }
 
 .theProblemContainer {
   margin-top: -30px;
   width: 600px;
   text-align: left;
-
 }
 .stickySidebar {
-  position: relative;
-  margin-top: -300px;
-  margin-bottom: 300px;
-  margin-left: 1400px;
+  position: absolute;
   position: sticky;
-  top: 400px; 
+  float: right;
+  margin-right: 130px;
+  margin-top: -1000px;
+  top: 400px;
 }
 
 .firstDottedLine {
@@ -213,10 +212,10 @@ p {
 .leftAlignedTextContainer {
   display: flex;
   flex-direction: row;
-  text-align: left;
+  float: left;
   position: absolute;
-  margin-top: 150;
-  margin-left: 40;
+  margin-top: 150px;
+  margin-left: 300px;
   width: 600px;
   overflow-wrap: break-word;
 }
@@ -226,41 +225,67 @@ p {
   justify-content: center;
 }
 .LoFiWireframesBox {
-  margin-left: 20;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
-.LoFiWireframeLabelAndPen {
-  display: flex;
-  justify-content: center;
+.userTestingContainer {
+  display: grid;
+  grid-template-columns: fr 1fr;
+  margin-left: 300px;
+  gap: 20px;
 }
 
-.userTestingText{
-  margin-top: 20px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+.userTestingText {
+  line-height: 50px;
   text-align: left;
   height: auto; /* Maintain the aspect ratio */
-    width: 700;
-
+  width: 700;
 }
 
-
-.thirdDottedLine{
-  margin-right: 100%;
+.thirdDottedLine {
+  margin-top: 20px;
   position: relative;
 }
 
-.lightBulb{
-  transform: translate(320%, 200%)
+.lightBulb {
+  position: absolute;
+  transform: translate(700%, 400%);
 }
 
-.fourthDottedLine{
+.fourthDottedLine {
   position: relative;
   transform: scaleX(-1);
-  margin-left: 600px;
-  margin-top: 400px;
+  margin-right: 400px;
+  margin-top: 0px;
+}
+
+.finalPrototypeLabel {
+  display: grid;
+  place-items: center;
+  margin-left: 70px;
+}
+
+.prototypePreview {
+  display: grid;
+  place-items: center;
+}
+
+.takeawaysHeader {
+  font-size: 60px;
+  color: var(--purple);
+}
+
+iframe {
+  border-radius: 20px;
+}
+
+.takeawaysText {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+}
+
+.arrow {
+  margin: 20px;
 }
