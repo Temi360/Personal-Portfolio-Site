@@ -33,7 +33,9 @@
   animation: fanBlowing 0.2s steps(12, end) infinite;
 }
 .blades-slow-down {
-  animation: fanSlowing 3s ease-out 1;
+  transform-origin: 40px 30px;
+  transform-box: fill-box;
+  animation: fanSlowing 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 .hair-blows {
   transform-origin: 130px 20px;

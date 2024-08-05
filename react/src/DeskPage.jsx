@@ -19,12 +19,6 @@ function DeskPage() {
   const [fanOn, setFanOn] = useState(false);
   const [fanSlowingDown, setFanSlowingDown] = useState(false);
 
-  const fanClass = fanOn
-    ? "blades-rotate"
-    : fanSlowingDown
-    ? "blades-slow-down "
-    : "";
-
   const hairClass = fanOn ? "hair-blows" : "";
   const postItClass = fanOn ? "postIt-blows" : "";
 
@@ -95,7 +89,7 @@ function DeskPage() {
 
         return () => clearTimeout(shakeTimeout);
       }
-    } else if (!fanOn && fanSlowingDown) {
+    } else if (fanSlowingDown) {
       const timeout = setTimeout(() => {
         setFanSlowingDown(false);
       }, 3000);
@@ -113,6 +107,12 @@ function DeskPage() {
       setFanSlowingDown(false);
     }
   };
+
+  const fanClass = fanOn
+    ? "blades-rotate"
+    : fanSlowingDown
+    ? "blades-slow-down "
+    : "";
 
   useEffect(() => {
     const blink = () => {
@@ -1188,7 +1188,7 @@ function DeskPage() {
                   />
                 </g>
               </g>
-              <g onClick={() => setFanOn(!fanOn)} id="fan">
+              <g onClick={toggleFan} id="fan">
                 <g
                   onMouseEnter={() => handleMouseEnter("fan")}
                   onMouseLeave={handleMouseLeave}
@@ -1249,7 +1249,7 @@ function DeskPage() {
                     stroke="#9CAFFE"
                   />
                 </g>
-                <g onClick={toggleFan} id="fanBody">
+                <g id="fanBody">
                   <path
                     id="Ellipse 25"
                     d="M228.485 227V227.047L228.49 227.095C229.487 237.583 225.4 249.857 218.259 259.814C211.114 269.775 201.053 277.229 190.275 278.337C178.114 279.587 165.427 273.233 155.595 263.458C145.772 253.691 138.992 240.697 138.485 228.979C138.492 218.044 143.316 206.784 151.015 198.252C158.718 189.717 169.214 184 180.485 184C191.811 184 203.835 189.265 213.038 197.334C222.247 205.408 228.485 216.155 228.485 227Z"
