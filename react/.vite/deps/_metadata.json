@@ -1,8 +1,64 @@
 {
-  "hash": "ece75c5a",
+  "hash": "8976e8d3",
   "configHash": "f84d1465",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "84511b68",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "7bc91575",
+  "browserHash": "60fd5442",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "bf8116b3",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "5f725810",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "94d0484a",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "84f28e41",
+      "needsInterop": false
+    },
+    "gsap/Draggable": {
+      "src": "../../node_modules/gsap/Draggable.js",
+      "file": "gsap_Draggable.js",
+      "fileHash": "edd7bd3d",
+      "needsInterop": false
+    },
+    "gsap/MotionPathPlugin": {
+      "src": "../../node_modules/gsap/MotionPathPlugin.js",
+      "file": "gsap_MotionPathPlugin.js",
+      "fileHash": "b47ff056",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "df94b3f2",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HCGKX5ED": {
+      "file": "chunk-HCGKX5ED.js"
+    },
+    "chunk-WNPTCGAH": {
+      "file": "chunk-WNPTCGAH.js"
+    },
+    "chunk-I3XYRQQ4": {
+      "file": "chunk-I3XYRQQ4.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
 }

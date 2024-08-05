@@ -1,0 +1,98 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-wrapper {
+  position: relative; /* Ensure the positioning context */
+  display: inline-block;
+  padding: 20px;
+  background-color: var(--black);
+  border-radius: 15px;
+}
+.popup-content {
+  font-family: "Just Me Again Down Here", cursive;
+  background-color: var(--black);
+  padding: 40px;
+  border: 3px dashed var(--purple);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popupHeader {
+  font-size: 60px;
+  color: var(--grey);
+  line-height: 1;
+  width: 250px;
+  overflow-wrap: break-word;
+}
+
+.popupButton-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.popUpButton {
+  margin: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  background-color: var(--grey);
+  font-size: 35px;
+  color: var(--black);
+  margin-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.link-button {
+  text-decoration: none; /* Remove underline from link */
+  color: var(--grey); /* White text color for the link */
+  display: block; /* Make the link fill the button */
+}
+
+.popUpButton:hover {
+  background: var(--purple); /* Darker background on hover */
+}
+
+.popUpButton:focus {
+  outline: none; /* Remove focus outline */
+}
+.icon {
+  padding: 2px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.TitleAndIcon {
+  display: flex;
+  flex-direction: row;
+}
+.nameAndAddress {
+  display: flex;
+  justify-content: right;
+}
+
+p {
+  color: var(--grey);
+}

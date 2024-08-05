@@ -1,0 +1,130 @@
+:root {
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  cursor: url("customCursor.png"), auto;
+
+  --purple: #9caffe;
+  --darkPurple: #8693cb;
+  --fadedPurple: #dadff5;
+  --orange: #f14d08;
+  --darkOrange: #af371c;
+  --fadedOrange: #efad92;
+  --grey: #f5f5f5;
+  --darkDarkGrey: #908c8c;
+  --fadedGrey: #e9e8e8;
+  --black: #020001;
+  --brown: #c28f73;
+  --darkBrown: #9a6053;
+  --darkDarkBrown: #2f120b;
+  --yellow: #fff96e;
+  --green: #a1b489;
+  --darkGreen: #63734e;
+  --fadedGreen: #e3eadb;
+  --darkBlue: #687493;
+  --fadedBlue: #d5e2ec;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.backgroundDiv {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Optional: Ensures the image covers the whole div */
+  background-position: center; /* Optional: Centers the image */
+  background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+}
+
+.pageWrapper {
+  overflow: auto; /* or overflow-y: scroll; */
+  background-color: var(--grey);
+  background-image: url("FixedBackgroundLines.svg");
+  background-size: cover; /* Optional: Ensures the image covers the whole div */
+  background-position: center; /* Optional: Centers the image */
+  background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+.navbar {
+  padding: 0;
+  margin: 0;
+  z-index: 20;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Style rule set for individual li */
+.navbar ul li {
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--purple);
+  padding-top: 20px;
+  margin-right: 120px;
+  list-style-type: none;
+  text-decoration: none;
+  float: left;
+  transition: color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Style rule set for individual li link */
+
+.navbar ul li:hover {
+  color: var(--orange);
+}
+#homeIconNavbarDiv {
+  margin-top: -10px;
+}
+#homeIconNavbarDiv:hover {
+  transform: rotate(-50deg);
+  transition: transform, 0.3s ease-in-out;
+}
+
+#contactPosition {
+  margin-top: 7px;
+}
+/* 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}*/
+
+a,
+button,
+[role="button"],
+[onClick],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  margin: 0;
+  padding: 0;
+  cursor: url("linkCursor.png"), pointer;
+}
+li {
+  cursor: url("linkCursor.png"), pointer;
+}
+#rightArrowButtonAndText,
+#leftArrowButtonAndText,
+#headphones,
+#lampButton,
+#aboutMePostits,
+#fan {
+  cursor: url("linkCursor.png"), pointer;
+}
+#handOnMouse {
+  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+}
+.grab {
+  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+}
+
+.grabbing {
+  cursor: url("grabCursor.png"), grabbing; /* Custom grabbing cursor */
+}
