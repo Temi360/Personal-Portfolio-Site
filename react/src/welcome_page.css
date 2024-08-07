@@ -6,50 +6,49 @@ body {
   margin: 0; /* Remove default margin */
 }
 
-#welcomePageName {
-  margin-top: 0px;
-}
-
 #hairWelcome {
   fill: var(--grey);
 }
 #eyebrowsWelcome {
   fill: var(--grey);
 }
-#welcomePageIconClick {
-  margin-top: 300px;
-  margin-right: 90px;
-  stroke: var(--grey);
-  fill: var(--grey);
+#clickMeLabel {
+  margin-right: 30px;
+}
+#clickMeContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-#clickMeGroup {
+#welcomePageIconClick {
   stroke: var(--grey);
-  fill: var(--grey);
 }
-#welcomePageIconClick:hover #iconClick {
+
+#welcomePageIconClick:hover {
   stroke: var(--orange);
   transform: rotate(40deg);
   transform-origin: center;
   transform-box: fill-box;
   transition: stroke, transform 0.3s ease;
 }
-/* #welcomePageIconClick:hover #hairWelcome{
-  fill: var(--orange);
-  stroke: var(--orange);
-  transition: all transform 0.3s ease;
 
-} 
-#welcomePageIconClick:hover #eyebrowsWelcome{
+#welcomePageIconClick:hover #hairWelcome {
   fill: var(--orange);
   stroke: var(--orange);
   transition: all transform 0.3s ease;
 }
-#welcomePageIconClick:hover #clickMeGroup{
+#welcomePageIconClick:hover #eyebrowsWelcome {
   fill: var(--orange);
   stroke: var(--orange);
   transition: all transform 0.3s ease;
-} */
+}
+#welcomePageIconClick:hover #clickMeGroup {
+  fill: var(--orange);
+  stroke: var(--orange);
+  transition: all transform 0.3s ease;
+}
 
 .WelcomePageNameAndIconWrapper {
   top: 0;
@@ -59,7 +58,7 @@ body {
   position: absolute;
 }
 .WelcomePageNameAndIcon {
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -77,13 +76,6 @@ body {
 #clickMe:hover {
   transform: rotate(-50deg);
   transition: transform, 0.3s ease-in-out;
-}
-/* loading page */
-#loadingIcon {
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
 .slideUpTransition {
