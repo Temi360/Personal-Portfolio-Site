@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "framer-motion": "^11.3.22",
     "gsap": "^3.12.5",
     "postcss": "^8.4.39",
     "react": "^18.3.1",
