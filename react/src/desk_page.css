@@ -1,32 +1,7 @@
-/* colors */
-:root {
-  --purple: #9caffe;
-  --darkPurple: #8693cb;
-  --fadedPurple: #dadff5;
-  --orange: #f14d08;
-  --darkOrange: #af371c;
-  --grey: #f5f5f5;
-  --darkDarkGrey: #908c8c;
-  --fadedGrey: #e9e8e8;
-  --black: #020001;
-  --brown: #c28f73;
-  --darkBrown: #9a6053;
-  --darkDarkBrown: #2f120b;
-  --yellow: #fff96e;
-  --green: #a1b489;
-  --darkGreen: #63734e;
-  --fadedGreen: #e3eadb;
-  --darkBlue: #687493;
-  --fadedBlue: #d5e2ec;
-}
-/* .hover-target:hover {
-  cursor: url('images/click.svg'), auto;
-} */
 .deskBackground {
   margin-top: 2px;
   display: flex;
   justify-content: space-around;
-  /* margin-bottom:-100px; */
 }
 
 #handContainer {
@@ -46,10 +21,7 @@
   stroke: var(--black);
   stroke-width: 2px;
 }
-/* 
-light {
-  display: none;
-} */
+
 .displayBlock {
   fill: var(--yellow);
   transition: display 0.5s ease-in-out;
@@ -58,7 +30,12 @@ light {
 .blades-rotate {
   transform-origin: 40px 30px;
   transform-box: fill-box;
-  animation: fanBlowing 0.1s linear infinite;
+  animation: fanBlowing 0.2s steps(12, end) infinite;
+}
+.blades-slow-down {
+  transform-origin: 40px 30px;
+  transform-box: fill-box;
+  animation: fanSlowing 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 .hair-blows {
   transform-origin: 130px 20px;
@@ -72,10 +49,18 @@ light {
 }
 
 @keyframes fanBlowing {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fanSlowing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -230,8 +215,8 @@ light {
 .shake {
   transform-box: fill-box;
   transform-origin: 120px, 20px;
-  animation: shake 0.7s alternate; /* Shake animation duration */
-  animation-iteration-count: 4; /* Repeat the animation */
+  animation: shake 0.7s alternate;
+  animation-iteration-count: 4;
 }
 
 #computer:hover {

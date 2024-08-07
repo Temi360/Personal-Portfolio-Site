@@ -14,9 +14,11 @@ function DeskPage() {
   const svgRef = useRef(null);
   const audioRef = useRef(null);
   const leafRef = useRef(null);
-  // const fanRef = useRef(null);
+
+  const fanRef = useRef(null);
   const [fanOn, setFanOn] = useState(false);
-  const fanClass = fanOn ? "blades-rotate" : "";
+  const [fanSlowingDown, setFanSlowingDown] = useState(false);
+
   const hairClass = fanOn ? "hair-blows" : "";
   const postItClass = fanOn ? "postIt-blows" : "";
 
@@ -43,6 +45,7 @@ function DeskPage() {
     hoveredElement === "headphones" && eyesMove ? "eyesToHeadphones" : "";
   const eyesToMouseClass =
     hoveredElement === "mouse" && eyesMove ? "eyesToMouse" : "";
+
   const handleMouseEnter = (element) => {
     setHoveredElement(element);
     setEyesMove(true);
@@ -70,8 +73,8 @@ function DeskPage() {
   }, [musicOn]);
 
   useEffect(() => {
-    if (leafRef.current) {
-      if (fanOn) {
+    if (fanOn) {
+      if (leafRef.current) {
         setIsShaking(true);
         const shakeTimeout = setTimeout(() => {
           setIsShaking(false);
@@ -86,8 +89,30 @@ function DeskPage() {
 
         return () => clearTimeout(shakeTimeout);
       }
+    } else if (fanSlowingDown) {
+      const timeout = setTimeout(() => {
+        setFanSlowingDown(false);
+      }, 3000);
+
+      return () => clearTimeout(timeout);
     }
-  }, [fanOn]);
+  }, [fanOn, fanSlowingDown]);
+
+  const toggleFan = () => {
+    if (fanOn) {
+      setFanOn(false);
+      setFanSlowingDown(true);
+    } else {
+      setFanOn(true);
+      setFanSlowingDown(false);
+    }
+  };
+
+  const fanClass = fanOn
+    ? "blades-rotate"
+    : fanSlowingDown
+    ? "blades-slow-down "
+    : "";
 
   useEffect(() => {
     const blink = () => {
@@ -1163,7 +1188,7 @@ function DeskPage() {
                   />
                 </g>
               </g>
-              <g onClick={() => setFanOn(!fanOn)} id="fan">
+              <g onClick={toggleFan} id="fan">
                 <g
                   onMouseEnter={() => handleMouseEnter("fan")}
                   onMouseLeave={handleMouseLeave}
