@@ -6,7 +6,7 @@ import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import "./desk_page.css";
 import "./computer_page.css";
-import audio from "./click-sound.mp3";
+// import audio from "./click-sound.mp3";
 
 function DeskPage() {
   gsap.registerPlugin(MotionPathPlugin);
@@ -60,17 +60,17 @@ function DeskPage() {
   const eyesClass = eyesBlink ? "eyes-closed" : " ";
   const blinkClass = eyesBlink ? "eyelids-closed" : " ";
 
-  useEffect(() => {
-    if (audioRef.current) {
-      if (musicOn) {
-        audioRef.current.play().catch((error) => {
-          console.error("Error playing audio:", error);
-        });
-      } else {
-        audioRef.current.pause();
-      }
-    }
-  }, [musicOn]);
+  // useEffect(() => {
+  //   if (audioRef.current) {
+  //     if (musicOn) {
+  //       audioRef.current.play().catch((error) => {
+  //         console.error("Error playing audio:", error);
+  //       });
+  //     } else {
+  //       audioRef.current.pause();
+  //     }
+  //   }
+  // }, [musicOn]);
 
   useEffect(() => {
     if (fanOn) {
@@ -165,6 +165,7 @@ function DeskPage() {
       transition: { duration: 0.7, ease: "easeInOut" },
     },
   };
+  // <audio ref={audioRef} id="click-sound" src={audio}></audio>
 
   return (
     <>
@@ -174,7 +175,6 @@ function DeskPage() {
         exit="exit"
         variants={slideUpTransition}
       >
-        <audio ref={audioRef} id="click-sound" src={audio}></audio>
         <div className="deskBackground">
           <svg
             ref={svgRef}
