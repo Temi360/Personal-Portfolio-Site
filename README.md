@@ -1,8 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hello, my name is Temi Ijisesan and welcome to my personal portfolio site! I created this application using REACT, HTML, and CSS using Javascript animation libraries such as GSAP to make my animations come to life. As a designer, I wanted to focus on developing my frontend programming skills by creating a super interactive project. Most of the site uses SVGs to create complex animations. Feel free to explore my code to further understand how I used these frontend languages and frameworks!
