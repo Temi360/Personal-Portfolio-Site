@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import closeButton from "./contactCloseButton.svg";
 import gsap from "gsap";
 
 const ContactPopUp = ({ isVisible, onClose, children }) => {
@@ -28,7 +27,10 @@ const ContactPopUp = ({ isVisible, onClose, children }) => {
       <div ref={popupRef} className="popup-wrapper">
         <div className="popup-content" onClick={(e) => e.stopPropagation()}>
           <button className="popup-close" onClick={onClose}>
-            <img src={closeButton} alt="Close Pop Up button" />
+            <img
+              src={"./assets/contactCloseButton.svg"}
+              alt="Close Pop Up button"
+            />
           </button>
           {children}
         </div>

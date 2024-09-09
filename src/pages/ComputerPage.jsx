@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./computer_page.css";
+import "./../styles/computerPage.css";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import AboutPopup from "../components/popUp";
-import "./aboutMe.css";
+import "./../styles/aboutMe.css";
 import { Draggable } from "gsap/Draggable";
 
 function ComputerPage() {

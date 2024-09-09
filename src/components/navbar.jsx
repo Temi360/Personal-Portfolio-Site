@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ContactPopUp from "./ContactPopUp";
 import "./../styles/popup.css";
-import homeIcon from "./homeIcon.svg";
-import linkedin from "./linkedin.svg";
-import mail from "./mail.svg";
-import headIcon from "./headIcon.svg";
-
 
 function Navbar() {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -24,7 +19,7 @@ function Navbar() {
         <ul>
           <li id="homeIconNavbarDiv">
             <Link to="/welcome">
-              <img src={homeIcon} />
+              <img src={"./assets/homeIcon.svg"} />
             </Link>
           </li>
           <li>designer, coder, storyteller...</li>
@@ -37,18 +32,15 @@ function Navbar() {
           <ContactPopUp onClose={closePopUp} isVisible={isPopupVisible}>
             <div className="TitleAndIcon">
               <h2 className="popupHeader">Let's Work Together!</h2>
-              <img className="headIcon" src={headIcon} />
+              <img className="headIcon" src={"./assets/headIcon.svg"} />
             </div>
             <div className="popupButton-container">
-              <a
-                href="mailto:your-temilolu360@gmail.com"
-                className="link-button"
-              >
+              <a href="mailto:temilolu360@gmail.com" className="link-button">
                 <button className="popUpButton">
                   {" "}
                   <img
                     className="icon"
-                    src={mail}
+                    src={"./assets/mail.svg"}
                     alt="icon that connects to email"
                   />
                   Email
@@ -63,7 +55,7 @@ function Navbar() {
                 <button className="popUpButton">
                   <img
                     className="icon"
-                    src={linkedin}
+                    src={"./assets/linkedin.svg"}
                     alt="icon that connects to linkedin page"
                   />
                   Connect

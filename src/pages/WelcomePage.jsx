@@ -1,7 +1,6 @@
 import React from "react";
 import { motion as m } from "framer-motion";
 import "./../styles/welcomePage.css";
-import ClickMeLabel from "./clickMeGroup.svg";
 import { Link } from "react-router-dom";
 
 const backgroundColorChange = {
@@ -123,7 +122,7 @@ const WelcomePage = ({ children }) => (
           </defs>
         </svg>
         <div id="clickMeContainer">
-          <img id="clickMeLabel" src={ClickMeLabel} />
+          <img id="clickMeLabel" src={"./assets/clickMeGroup.svg"} />
           <Link to="/desk">
             <svg
               id="welcomePageIconClick"
