@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
 import { Route, Routes, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import About from "../PopUp";
+import About from "../components/popUp";
 import "./aboutMe.css";
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";

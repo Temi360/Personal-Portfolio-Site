@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./portfolio_page.css";
 import greyLine from "./greyLine.svg";
 import { useParams } from "react-router-dom";
-import projectData from "./projectData";
+import projectData from "./components/projectData";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 

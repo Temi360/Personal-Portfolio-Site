@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { Route, Routes, Link } from "react-router-dom";
-import ContactPopUp from "./ContactPopUp";
+import ContactPopUp from "./contactPopUp";
 import "./popup.css";
 import homeIcon from "./home_icon.svg";
 import linkedin from "./linkedin.svg";

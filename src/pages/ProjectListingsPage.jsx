@@ -4,7 +4,7 @@ import leftChevron from "./leftChevron.svg";
 import rightChevron from "./rightChevron.svg";
 import viewProject from "./viewProjectButton.svg";
 import "./portfolio_page.css";
-import projectData from "../projectData";
+import projectData from "../components/projectData";
 import "./portfolio_page.css";
 import { motion as m } from "framer-motion";
 
