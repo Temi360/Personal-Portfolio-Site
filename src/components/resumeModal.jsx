@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import "./computer_page.css";
-// import resumePDF from "./Ijisesan_Temi_Portfolio_Resume.pdf";
+import resumePDF from "./Ijisesan_Temi_Portfolio_Resume.pdf";
 
 const ResumePage = () => {
   return (
