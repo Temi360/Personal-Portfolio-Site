@@ -6,7 +6,6 @@ import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import "./desk_page.css";
 import "./computer_page.css";
-// import audio from "./click-sound.mp3";
 
 function DeskPage() {
   gsap.registerPlugin(MotionPathPlugin);
