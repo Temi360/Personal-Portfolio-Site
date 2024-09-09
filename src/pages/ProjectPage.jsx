@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import "./portfolio_page.css";
-import { Route, Routes, Link } from "react-router-dom";
+import React from "react";
+import "./../styles/portfolioPage.css";
 import greyLine from "./greyLine.svg";
 import windyScenePreview from "./theWindyScenePreview.svg";
 import theProblem from "./theProblem.svg";

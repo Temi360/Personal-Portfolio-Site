@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import leftChevron from "./leftChevron.svg";
-import rightChevron from "./rightChevron.svg";
-import viewProject from "./viewProjectButton.svg";
-import "./portfolio_page.css";
 import projectData from "../components/projectData";
-import "./portfolio_page.css";
+import "./../styles/portfolioPage.css";
 import { motion as m } from "framer-motion";
 
 const ProjectListingsPage = () => {
@@ -66,7 +62,7 @@ const ProjectListingsPage = () => {
           <img
             className="arrow"
             onClick={handlePreviousProject}
-            src={leftChevron}
+            src={"./assets/leftChevron.svg"}
             alt="left Arrow"
           />
 
@@ -86,7 +82,7 @@ const ProjectListingsPage = () => {
             <Link to={`/project/${currentProject.id}`}>
               <img
                 id="viewProjectButton"
-                src={viewProject}
+                src={"./asset/viewProjectButton.svg"}
                 alt="button to view the current Project"
               />
             </Link>
@@ -319,7 +315,7 @@ const ProjectListingsPage = () => {
 
           <img
             onClick={handleNextProject}
-            src={rightChevron}
+            src={"./assets/rightChevron.svg"}
             alt="right Arrow"
             className="arrow"
           />

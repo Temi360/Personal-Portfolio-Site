@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import "./portfolio_page.css";
-import { Route, Routes, Link } from "react-router-dom";
+import React from "react";
+import "./../styles/portfolioPage.css";
+import {  Link } from "react-router-dom";
 import leftChevron from "./leftChevron.svg";
 import rightChevron from "./rightChevron.svg";
 import windyScenePreview from "./theWindyScenePreview.svg";
