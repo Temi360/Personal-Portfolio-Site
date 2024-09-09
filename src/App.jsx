@@ -20,6 +20,7 @@ function App() {
       <Navbar />
       <AnimatePresence mode={"wait"} initial={"false"}>
         <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<WelcomePage />} />
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/work" element={<ComputerPage />} />
           <Route path="/desk" element={<DeskPage />} />

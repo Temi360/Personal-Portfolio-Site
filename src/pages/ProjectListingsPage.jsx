@@ -52,7 +52,7 @@ const ProjectListingsPage = () => {
         variants={slideInTransition}
         className="folderBackgroundDiv"
       >
-        <div className=" justMeFont folderPageTitle">Portfolio</div>
+        <div className="justMeFont folderPageTitle">Portfolio</div>
         <div className="menuAndBackButton">
           <div className="justMeFont" id="folderMenu">
             Home &gt; Work &gt; Portfolio
@@ -82,7 +82,7 @@ const ProjectListingsPage = () => {
             <Link to={`/project/${currentProject.id}`}>
               <img
                 id="viewProjectButton"
-                src={"./asset/viewProjectButton.svg"}
+                src={"./assets/viewProjectButton.svg"}
                 alt="button to view the current Project"
               />
             </Link>
