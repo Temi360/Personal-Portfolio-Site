@@ -1,10 +1,10 @@
-// ProjectsPage.js
 import React from "react";
 import { useParams } from "react-router-dom";
-
-import ProjectTemplate from "../ProjectTemplate";
+import ProjectTemplate from "../components/ProjectTemplate";
 import projectData from "../components/projectData";
-import "./portfolio_page.css";
+import "./../styles/portfolioPage.css";
+
+
 
 const ProjectsDetailsPage = () => {
   const { id } = useParams();

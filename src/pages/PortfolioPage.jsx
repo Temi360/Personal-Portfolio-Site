@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import "./portfolio_page.css";
-import { Route, Routes, Link } from "react-router-dom";
+import React from "react";
+import "./../styles/portfolioPage.css";
+import { Link } from "react-router-dom";
 
 function PortfolioPage() {
   return (
@@ -8,12 +8,12 @@ function PortfolioPage() {
       <div className="folderBackgroundDiv">
         <div className=" justMeFont folderPageTitle">Portfolio</div>
         <div className="menuAndBackButton">
-          <div className = "justMeFont" id = "folderMenu">
-            Home  &gt; Work  &gt; Portfolio
+          <div className="justMeFont" id="folderMenu">
+            Home &gt; Work &gt; Portfolio
           </div>
         </div>
         <div className="text">
-          <h3 className = "justMeFont" id="wearHats">
+          <h3 className="justMeFont" id="wearHats">
             As a creative, I wear many hats ...
           </h3>
           <div id="folders" className="folders">
