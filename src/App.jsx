@@ -1,20 +1,17 @@
 import React from "react";
 import Navbar from "./navbar";
-import "./tailwind.css"; // Import Tailwind CSS
+import "./tailwind.css";
 import "./App.css";
-import { Route, Routes, Link, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./index.css";
 import ComputerPage from "./ComputerPage";
 import DeskPage from "./DeskPage";
 import WelcomePage from "./WelcomePage";
-import PortfolioPage from "./PortfolioPage";
 import UIUXPage from "./UIUXPage";
 import ProjectDetailsPage from "./ProjectDetailsPage";
 import ProjectListings from "./ProjectListingsPage";
-import ProjectData from "./projectData";
 import ResumeModal from "./ResumeModal";
-import { useReducedMotion } from "framer-motion";
 
 function App() {
   const location = useLocation();
