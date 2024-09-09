@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./computer_page.css";
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import About from "../components/popUp";
+import AboutPopup from "../components/popUp";
 import "./aboutMe.css";
 import { Draggable } from "gsap/Draggable";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import profile from "./profilePic.svg";
 
 function ComputerPage() {
   const svgRef = useRef(null);
@@ -27,7 +25,6 @@ function ComputerPage() {
     clickedElement === "right" && buttonClicked ? "buttonClicked" : "";
   const leftButtonClass =
     clickedElement === "left" && buttonClicked ? "buttonClicked" : "";
-  // const enterButtonClass = clickedElement === "enter" ? "buttonClicked " : "";
 
   const portfolioButtonClass =
     clickedElement === "left" ? "borderColorChange" : "";
@@ -36,6 +33,7 @@ function ComputerPage() {
     clickedElement === "right" ? "borderColorChange" : "";
 
   const targetPageRef = useRef(null);
+
   const hasBorderClass = () => {
     console.log(clickedElement);
     return targetPageRef.current?.classList.contains("borderColorChange");
@@ -74,6 +72,7 @@ function ComputerPage() {
       bounds: { minX: 10, minY: 0, maxX: -80, maxY: 0 },
     });
   }, []);
+
   const slideInTransition = {
     initial: {
       x: "-100%",
@@ -1056,10 +1055,10 @@ function ComputerPage() {
         </svg>
       </m.div>
 
-      <About onClose={closePopUp} isVisible={isPopupVisible}>
+      <AboutPopup onClose={closePopUp} isVisible={isPopupVisible}>
         <h2 className="aboutHeader">About Me!</h2>
         <div className="aboutMeTextAndImage">
-          <img alt="Image of Temi" src={profile} />
+          <img alt="Image of Temi" src={"/assets/profilePic.svg"} />
           <div className="aboutMeBlurb">
             <p>
               Hi my name is Temi Ijisesan! I am a Communication Design student
@@ -1072,7 +1071,7 @@ function ComputerPage() {
           </div>
         </div>
         <div className="linkedinAndMailIcons">
-          <a href="mailto:your-temilolu360@gmail.com" className="link-button">
+          <a href="mailto:temilolu360@gmail.com" className="link-button">
             <svg
               className="mail"
               width="42"
@@ -1121,7 +1120,7 @@ function ComputerPage() {
             </svg>
           </a>
         </div>
-      </About>
+      </AboutPopup>
     </>
   );
 }
