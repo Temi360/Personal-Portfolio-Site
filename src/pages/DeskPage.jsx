@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import "./desk_page.css";
-import "./computer_page.css";
+import "./../styles/deskPage.css";
+import "./../styles/computerPage.css";
 
 function DeskPage() {
   gsap.registerPlugin(MotionPathPlugin);
