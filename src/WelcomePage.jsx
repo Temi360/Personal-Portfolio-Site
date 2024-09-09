@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { motion as m } from "framer-motion";
 import "./welcome_page.css";
 import ClickMeLabel from "./clickMeGroup.svg";
