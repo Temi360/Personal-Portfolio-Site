@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-
-import { Route, Routes, Link } from "react-router-dom";
-import ContactPopUp from "./contactPopUp";
-import "./popup.css";
-import homeIcon from "./home_icon.svg";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ContactPopUp from "./ContactPopUp";
+import "./../styles/popup.css";
+import homeIcon from "./homeIcon.svg";
 import linkedin from "./linkedin.svg";
 import mail from "./mail.svg";
 import headIcon from "./headIcon.svg";
-import "./index.css";
+
+
 function Navbar() {
   const [isPopupVisible, setPopupVisible] = useState(false);
 
