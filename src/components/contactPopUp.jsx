@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion as m } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import closeButton from "./contactCloseButton.svg";
 import gsap from "gsap";
 
