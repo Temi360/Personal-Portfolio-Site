@@ -2,8 +2,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import ProjectTemplate from "./ProjectTemplate";
-import projectData from "./projectData";
+import ProjectTemplate from "../ProjectTemplate";
+import projectData from "../projectData";
 import "./portfolio_page.css";
 
 const ProjectsDetailsPage = () => {
