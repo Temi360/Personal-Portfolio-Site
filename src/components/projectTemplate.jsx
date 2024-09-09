@@ -1,19 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import "./portfolio_page.css";
-import greyLine from "./greyLine.svg";
-import { useParams } from "react-router-dom";
-import projectData from "./components/projectData";
+import React from "react";
+import "./../styles/portfolioPage.css";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-
-import theProblem from "./theProblem.svg";
-import plant from "./plant.svg";
-import loFiWireframeLabelAndPen from "./LoFiWireframeLabelAndPen.svg";
-import loFiWireframes from "./loFiWireframes.svg";
-import uxTestingLabel from "./uxLabel.svg";
-import lightBulb from "./lightBulb.svg";
-import finalPrototype from "./finalPrototypeLabel.svg";
-import backButton from "./backButton.svg";
 
 function ProjectTemplate({
   title,
@@ -23,12 +11,6 @@ function ProjectTemplate({
   duration,
   stackImages,
   projectDescription,
-  //   ideation,
-  //   map,
-  //   sketches,
-  //   revision,
-  //   finalProduct,
-  //   takeaways,
 }) {
   const appearTransition = {
     initial: {
@@ -64,7 +46,10 @@ function ProjectTemplate({
         <div className="portfolioProjectTitleAndImage">
           <Link to="/portfolio">
             <div id="backButton">
-              <img src={backButton} alt="button to go back to portfolio page" />
+              <img
+                src={"/assets/backButton.svg"}
+                alt="button to go back to portfolio page"
+              />
             </div>
           </Link>
           <img
@@ -81,7 +66,10 @@ function ProjectTemplate({
                 </h3>
                 <p className="projectText  projectAttributeItems">{type}</p>
               </div>
-              <img className="typeRoleDurationItems" src={greyLine} />
+              <img
+                className="typeRoleDurationItems"
+                src={"/assets/greyLine.svg"}
+              />
 
               <div className="projectAttributes">
                 <h3 className=" justMeFont projectAttributeItems typeRoleDurationItems">
@@ -89,7 +77,10 @@ function ProjectTemplate({
                 </h3>
                 <p className="projectText  projectAttributeItems">{role}</p>
               </div>
-              <img className="typeRoleDurationItems" src={greyLine} />
+              <img
+                className="typeRoleDurationItems"
+                src={"/assets/greyLine.svg"}
+              />
               <div className="projectAttributes">
                 <h3 className=" justMeFont projectAttributeItems typeRoleDurationItems">
                   Duration{" "}
@@ -105,9 +96,9 @@ function ProjectTemplate({
             </div>
             <div class="theProblemContainer">
               <div class="theProblemBox">
-                <img src={theProblem} />
+                <img src={"/assets/theProblem.svg"} />
               </div>
-              <p className=" projectText ">{projectDescription}</p>
+              <p className="projectText ">{projectDescription}</p>
             </div>
           </div>
         </div>
