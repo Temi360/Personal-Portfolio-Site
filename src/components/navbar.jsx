@@ -15,14 +15,16 @@ function Navbar() {
 
   return (
     <div>
-      <div className="navbar">
+      <div className="navbar ">
         <ul>
           <li id="homeIconNavbarDiv">
             <Link to="/welcome">
               <img src={"./assets/homeIcon.svg"} />
             </Link>
           </li>
-          <li>designer, coder, storyteller...</li>
+          <li className="">designer, coder, storyteller...</li>
+          <p className="text-red-400 font-bold">I love coding</p>
+
           <Link to="/work">
             <li>work.</li>
           </Link>
