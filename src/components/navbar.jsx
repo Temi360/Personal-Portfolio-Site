@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ContactPopUp from "./ContactPopUp";
 import "./../styles/popup.css";
+import { Drawer } from "vaul";
 
 function Navbar() {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -13,15 +14,20 @@ function Navbar() {
     setPopupVisible(false);
   };
 
+  const MobileNav = () => {
+    <div>My name is Temi.</div>;
+  };
+
   return (
     <div>
       <div className="navbar">
-        <ul>
-          <li id="homeIconNavbarDiv">
-            <Link to="/welcome">
-              <img src={"./assets/homeIcon.svg"} />
-            </Link>
-          </li>
+        <div id="homeIconNavbarDiv" className="my-3">
+          <Link to="/welcome">
+            <img src={"./assets/homeIcon.svg"} className="w-20 h-20" />
+          </Link>
+        </div>
+
+        <ul className="md:flex hidden">
           <li className="flex">designer, coder, storyteller...</li>
 
           <Link to="/work">
@@ -65,6 +71,21 @@ function Navbar() {
             </div>
           </ContactPopUp>
         </ul>
+
+        <Drawer.Root>
+          <Drawer.Trigger>
+            <button className="md:hidden" aria-label="Toggle Menu">
+              <img src={"./assets/menuIcon.svg"} className="w-20 h-20" />
+            </button>
+          </Drawer.Trigger>
+          <Drawer.Portal>
+            <Drawer.Content>
+              <Drawer.Handle />
+              <MobileNav />
+            </Drawer.Content>
+            <Drawer.Overlay />
+          </Drawer.Portal>
+        </Drawer.Root>
       </div>
     </div>
   );

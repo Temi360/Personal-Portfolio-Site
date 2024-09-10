@@ -78,9 +78,7 @@
 .navbar ul li:hover {
   color: var(--orange);
 }
-#homeIconNavbarDiv {
-  margin-top: -10px;
-}
+
 #homeIconNavbarDiv:hover {
   transform: rotate(-50deg);
   transition: transform, 0.3s ease-in-out;
