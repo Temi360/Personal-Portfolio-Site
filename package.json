@@ -13,15 +13,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1",
     "autoprefixer": "^10.4.19",
     "framer-motion": "^11.3.22",
+    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "postcss": "^8.4.39",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.4.6",
+    "vaul": "^0.9.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
