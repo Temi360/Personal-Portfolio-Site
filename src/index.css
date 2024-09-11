@@ -60,6 +60,7 @@
   display: flex;
 }
 /* Style rule set for individual li */
+.nav-items,
 .navbar ul li {
   font-weight: 500;
   font-size: 30px;
@@ -74,6 +75,7 @@
 
 /* Style rule set for individual li link */
 
+/* .nav-items, */
 .navbar ul li:hover {
   color: var(--orange);
 }

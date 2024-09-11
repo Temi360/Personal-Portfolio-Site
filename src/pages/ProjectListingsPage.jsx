@@ -73,7 +73,7 @@ const ProjectListingsPage = () => {
             alt=" Current Project Image"
           />
 
-          <div class="portfolioPreviewText jost ">
+          <div class="portfolioPreviewText jost">
             <h2 class="portfolioProjectTitle"> {currentProject.title}</h2>
             <p className="contentDescriptionText">
               {" "}
