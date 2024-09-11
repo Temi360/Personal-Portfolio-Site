@@ -4,6 +4,7 @@ import { motion as m } from "framer-motion";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import "./../index.css";
 import "./../styles/deskPage.css";
 import "./../styles/computerPage.css";
 

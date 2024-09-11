@@ -2,7 +2,7 @@
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
-  cursor: url("customCursor.png"), auto;
+  cursor: url("./../public/assets/customCursor.png"), auto;
 
   --purple: #9caffe;
   --darkPurple: #8693cb;
@@ -29,6 +29,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --linkCursorUrl: url("./../public/assets/linkCursor.png");
+  --grabCursorUrl: url("./../public/assets/grabCursor.png");
 }
 
 .backgroundDiv {
@@ -42,7 +44,7 @@
 .pageWrapper {
   overflow: auto; /* or overflow-y: scroll; */
   background-color: var(--grey);
-  background-image: url("FixedBackgroundLines.svg");
+  background-image: url("./../public/assets/FixedBackgroundLines.svg");
   background-size: cover; /* Optional: Ensures the image covers the whole div */
   background-position: center; /* Optional: Centers the image */
   background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
@@ -100,10 +102,10 @@ input[type="submit"],
 input[type="reset"] {
   margin: 0;
   padding: 0;
-  cursor: url("linkCursor.png"), pointer;
+  cursor: var(--linkCursorUrl), pointer;
 }
 li {
-  cursor: url("linkCursor.png"), pointer;
+  cursor: var(--linkCursorUrl), pointer;
 }
 #rightArrowButtonAndText,
 #leftArrowButtonAndText,
@@ -111,15 +113,16 @@ li {
 #lampButton,
 #aboutMePostits,
 #fan {
-  cursor: url("linkCursor.png"), pointer;
+  cursor: var(--linkCursorUrl), pointer;
 }
-#handOnMouse {
-  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+#handOnMouse,
+#mouse {
+  cursor: var(--grabCursorUrl); /* Custom grab cursor */
 }
 .grab {
-  cursor: url("grabCursor.png"), grab; /* Custom grab cursor */
+  cursor: var(--grabCursorUrl); /* Custom grab cursor */
 }
 
 .grabbing {
-  cursor: url("grabCursor.png"), grabbing; /* Custom grabbing cursor */
+  cursor: var(--grabCursorUrl); /* Custom grabbing cursor */
 }
