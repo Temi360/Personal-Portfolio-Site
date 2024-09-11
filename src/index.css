@@ -53,12 +53,9 @@
   position: fixed;
 }
 .navbar {
-  padding: 0;
-  margin: 0;
   z-index: 20;
   position: relative;
   display: flex;
-  justify-content: space-evenly;
 }
 /* Style rule set for individual li */
 .navbar ul li {

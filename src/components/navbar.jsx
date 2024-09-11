@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ContactPopUp from "./ContactPopUp";
 import "./../styles/popup.css";
 import { Drawer } from "vaul";
+import { Menu } from "lucide-react";
 
 function Navbar() {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -15,19 +16,22 @@ function Navbar() {
   };
 
   const MobileNav = () => {
-    <div>My name is Temi.</div>;
+    <div className="text-black bg-red-500 absolute">My name is Temi.</div>;
   };
 
   return (
     <div>
-      <div className="navbar">
-        <div id="homeIconNavbarDiv" className="my-3">
+      <div className="navbar w-full flex items-center justify-between lg:justify-evenly p-3 lg:p-0">
+        <div id="homeIconNavbarDiv" className="mt-1">
           <Link to="/welcome">
-            <img src={"./assets/homeIcon.svg"} className="w-20 h-20" />
+            <img
+              src={"./assets/homeIcon.svg"}
+              className="w-16 h-16 lg:w-20 lg:h-20"
+            />
           </Link>
         </div>
 
-        <ul className="md:flex hidden">
+        <ul className="lg:flex hidden">
           <li className="flex">designer, coder, storyteller...</li>
 
           <Link to="/work">
@@ -72,11 +76,12 @@ function Navbar() {
           </ContactPopUp>
         </ul>
 
+        <MobileNav />
+
+
         <Drawer.Root>
           <Drawer.Trigger>
-            <button className="md:hidden" aria-label="Toggle Menu">
-              <img src={"./assets/menuIcon.svg"} className="w-20 h-20" />
-            </button>
+            <Menu size="32" color="#f14d08" className="lg:hidden" />
           </Drawer.Trigger>
           <Drawer.Portal>
             <Drawer.Content>
