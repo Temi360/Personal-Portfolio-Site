@@ -58,7 +58,7 @@ const WelcomePage = ({ children }) => (
       animate="animate"
       exit="exit"
       variants={backgroundColorChange}
-      className="WelcomePageNameAndIconWrapper"
+      className="WelcomePageNameAndIconWrapper md:bottom-0 bottom-2"
     >
       {children}
       <m.div
@@ -67,7 +67,7 @@ const WelcomePage = ({ children }) => (
         animate="animate"
         exit="exit"
         variants={expandTransition}
-        className="WelcomePageNameAndIcon"
+        className="WelcomePageNameAndIcon  flex flex-wrap md:p-0 p-3"
         alt="Text that spells the name Temi"
       >
         <svg
