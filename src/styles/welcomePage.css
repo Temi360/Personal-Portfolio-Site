@@ -15,6 +15,13 @@ body {
   margin-right: 30px;
 }
 
+#clickMeContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 #welcomePageIconClick {
   stroke: var(--grey);
 }
