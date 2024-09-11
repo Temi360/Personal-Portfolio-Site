@@ -50,8 +50,9 @@ const ProjectListingsPage = () => {
         animate="animate"
         exit="exit"
         variants={slideInTransition}
-        className="folderBackgroundDiv"
+        className="folderBackgroundDiv "
       >
+        <br />
         <div className="justMeFont folderPageTitle">Portfolio</div>
         <div className="menuAndBackButton">
           <div className="justMeFont" id="folderMenu">
@@ -321,8 +322,6 @@ const ProjectListingsPage = () => {
           />
         </div>
         <svg
-          width="1133"
-          height="550"
           viewBox="0 0 1133 550"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

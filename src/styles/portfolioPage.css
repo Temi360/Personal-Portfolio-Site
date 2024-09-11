@@ -13,6 +13,7 @@
   width: 100px;
   margin-top: -30px;
 }
+
 p {
   /* font-size: 23px; */
   font-weight: 400;
@@ -77,13 +78,18 @@ div {
   font-size: 30px;
 }
 
+/*
+  I can't make this responsive.
+  Do you've a mobile design for it?
+  That should help.
+*/
+
 .folderBackgroundDiv {
   width: 1133px;
-  height: 550px;
+  height: 200px;
   margin: auto;
   position: relative;
   justify-content: center;
-  height: 100%;
 }
 
 .folders {
