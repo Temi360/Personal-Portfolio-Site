@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ContactPopUp from "./ContactPopUp";
+import ContactPopUp from "./contactPopUp";
 import "./../styles/popup.css";
 import { Drawer } from "vaul";
 import { Menu, X } from "lucide-react";
