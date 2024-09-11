@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ProjectTemplate from "../components/ProjectTemplate";
+import ProjectTemplate from "../components/projectTemplate";
 import projectData from "../components/projectData";
 import "./../styles/portfolioPage.css";
 
