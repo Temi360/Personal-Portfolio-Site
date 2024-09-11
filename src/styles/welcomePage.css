@@ -1,0 +1,83 @@
+body {
+  /*background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; /* Center the image */
+  margin: 0; /* Remove default margin */
+}
+
+#hairWelcome {
+  fill: var(--grey);
+}
+#eyebrowsWelcome {
+  fill: var(--grey);
+}
+#clickMeLabel {
+  margin-right: 30px;
+}
+
+#clickMeContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#welcomePageIconClick {
+  stroke: var(--grey);
+}
+
+#welcomePageIconClick:hover {
+  stroke: var(--orange);
+  transform: rotate(40deg);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: stroke, transform 0.3s ease;
+}
+
+#welcomePageIconClick:hover #hairWelcome {
+  fill: var(--orange);
+  stroke: var(--orange);
+  transition: all transform 0.3s ease;
+}
+#welcomePageIconClick:hover #eyebrowsWelcome {
+  fill: var(--orange);
+  stroke: var(--orange);
+  transition: all transform 0.3s ease;
+}
+#welcomePageIconClick:hover #clickMeGroup {
+  fill: var(--orange);
+  stroke: var(--orange);
+  transition: all transform 0.3s ease;
+}
+
+.WelcomePageNameAndIconWrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.WelcomePageNameAndIcon {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+#clickMe {
+  stroke: var(--grey);
+  fill: var(--grey);
+  float: right;
+  margin-right: 100px;
+  margin-top: -350px;
+}
+
+#clickMe:hover {
+  transform: rotate(-50deg);
+  transition: transform, 0.3s ease-in-out;
+}
+
+.slideUpTransition {
+  transform: translate(-1500px, 0px);
+  transition: transform 2s ease;
+}
